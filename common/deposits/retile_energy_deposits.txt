@@ -1,0 +1,124 @@
+## Possible Deposit Variables ##
+# resources, resource and amount
+# potential trigger (planet scope)
+# blocked_modifier - applied to planet
+# constant_modifier - applied to planet always
+# station = station class in orbit to gather
+# blocker_swap_types = {}
+# all_blocker_swap_types = yes/no
+# use_weights_for_blocker_swap_types = yes/no
+# terraforming_swap_types = { }
+# should_swap_deposit_on_terraforming = yes/no
+# all_terraforming_swap_types = yes/no
+# use_weights_for_terraforming_swap_types = yes/no
+
+@high = 12
+@med = 6
+@low = 3
+
+@high_rare = 0.5
+@mid_rare = 0.3
+@low_rare = 0.1
+
+@planet_type_bonus = 1.5
+
+###############
+#### ENERGY ###
+###############
+
+d_arid_highlands = {
+	time = 480
+	icon = d_arid_highlands
+	is_for_colonizeable = yes
+	#use_for_min_max_adjustments = yes
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_hot_springs
+		d_buzzing_plains # gaia
+	}
+	
+	blocker_swap_types = {
+		d_arid_highlands_active
+	}
+	
+	category = deposit_cat_energy
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = 150
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = { exists = owner }
+		planet_amenities_add = -5
+	}
+	
+	potential = {
+		is_dry = yes	
+	}
+	
+	drop_weight = {
+		weight = @high
+		modifier = {
+			factor = @planet_type_bonus
+			is_dry = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+d_arid_highlands_active = {
+	time = 240
+	icon = "producers/d_arid_highlands"
+	is_for_colonizeable = yes
+	#use_for_min_max_adjustments = yes
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_hot_springs
+		d_buzzing_plains # gaia
+	}
+	
+	blocker_swap_types = {
+		d_arid_highlands
+	}
+	
+	category = deposit_cat_energy
+	
+	resources = {
+		category = deposit_producers
+		produces = {
+			trigger = { exists = owner }
+			energy = 10
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = { exists = owner }
+		planet_amenities_add = 50
+	}
+	
+	potential = {
+		is_dry = yes	
+	}
+	
+	drop_weight = {
+		weight = @high
+		modifier = {
+			factor = @planet_type_bonus
+			is_dry = yes
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}

@@ -1,6 +1,8 @@
 ﻿l_english:
 # Global
 planet_pops_consumer_goods_upkeep_mult:0 "£pop£ Pop £consumer_goods£ §Y$consumer_goods$§ Consumption"
+ PRODUCES_RESOURCES:0 "Produces: \n    "
+ REQUIRES_RESOURCES:0 "Upkeep: \n    "
 # Ethics
  ethic_pacifist:0 "Diplomat"
  ethic_fanatic_pacifist:0 "Fanatic Diplomat"
