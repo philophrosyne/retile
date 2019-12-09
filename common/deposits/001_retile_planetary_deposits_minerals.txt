@@ -1,0 +1,371 @@
+## Possible Deposit Variables ##
+# resources, resource and amount
+# potential trigger (planet scope)
+# blocked_modifier - applied to planet
+# constant_modifier - applied to planet always
+# station = station class in orbit to gather
+# blocker_swap_types = {}
+# all_blocker_swap_types = yes/no
+# use_weights_for_blocker_swap_types = yes/no
+# terraforming_swap_types = { }
+# should_swap_deposit_on_terraforming = yes/no
+# all_terraforming_swap_types = yes/no
+# use_weights_for_terraforming_swap_types = yes/no
+
+########################
+### Natural Deposits ###
+########################
+
+d_mineral_striations = {
+	time = @retile_rural_exploit_time_low
+	category = deposit_cat_minerals
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			minerals = @retile_rural_exploit_cost_low
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = { exists = owner }
+		planet_amenities_add = @retile_rural_eco_clean_low
+	}
+	
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0.01
+		#does not occur naturally, but needs a non-zero weight
+	}
+	
+	potential = {
+		is_planet_class = pc_gaia
+	}
+	
+	blocker_swap_types = {
+		d_mineral_striations_active
+	}
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_mineral_fields
+		d_veiny_cliffs
+	}
+}
+
+d_veiny_cliffs = {
+	time = @retile_rural_exploit_time_low
+	category = deposit_cat_minerals
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			minerals = @retile_rural_exploit_cost_low
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = { exists = owner }
+		planet_amenities_add = @retile_rural_eco_clean_low
+	}
+	
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = @retile_drop_high
+		modifier = {
+			factor = @retile_planet_type_bonus
+			is_cold = yes
+		}		
+	}
+	
+	potential = {
+		OR = {
+			is_planet_class = pc_alpine
+			is_planet_class = pc_arctic
+			is_planet_class = pc_arid
+			is_planet_class = pc_continental
+			is_planet_class = pc_nuked
+		}
+	}
+	
+	blocker_swap_types = {
+		d_veiny_cliffs_active
+	}
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_mineral_fields
+		d_mineral_striations # gaia
+	}
+}
+
+d_mineral_fields = {
+	time = @retile_rural_exploit_time_low
+	category = deposit_cat_minerals
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			minerals = @retile_rural_exploit_cost_low
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = { exists = owner }
+		planet_amenities_add = @retile_rural_eco_clean_low
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = @retile_drop_high	
+		modifier = {
+			factor = @retile_planet_type_bonus
+			is_cold = yes
+		}			
+	}
+	
+	potential = {
+		OR = {
+			is_planet_class = pc_tropical
+			is_planet_class = pc_savannah
+			is_planet_class = pc_desert
+			is_planet_class = pc_ocean
+			is_planet_class = pc_tundra
+		}
+	}
+	
+	blocker_swap_types = {
+		d_mineral_fields_active
+	}
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_veiny_cliffs
+		d_mineral_striations # gaia
+	}
+}
+
+d_prosperous_mesa = {
+	time = @retile_rural_exploit_time_med
+	category = deposit_cat_minerals
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			minerals = @retile_rural_exploit_cost_med
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = { exists = owner }
+		planet_amenities_add = @retile_rural_eco_clean_med
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = @retile_drop_med
+		modifier = {
+			factor = @retile_planet_type_bonus
+			is_cold = yes
+		}
+	}
+	
+	potential = {
+		OR = {
+			is_planet_class = pc_continental
+			is_planet_class = pc_tropical
+			is_planet_class = pc_savannah
+			is_planet_class = pc_desert
+			is_planet_class = pc_gaia
+			is_planet_class = pc_relic
+		}
+	}
+	
+	blocker_swap_types = {
+		d_prosperous_mesa_active
+	}
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_ore_rich_caverns
+	}
+}
+
+d_ore_rich_caverns = {
+	time = @retile_rural_exploit_time_med
+	category = deposit_cat_minerals
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			minerals = @retile_rural_exploit_cost_med
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = { exists = owner }
+		planet_amenities_add = @retile_rural_eco_clean_med
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = @retile_drop_med
+		modifier = {
+			factor = @retile_planet_type_bonus
+			is_cold = yes
+		}
+	}
+	
+	potential = {
+		OR = {
+			is_planet_class = pc_ocean
+			is_planet_class = pc_alpine
+			is_planet_class = pc_arctic
+			is_planet_class = pc_arid
+			is_planet_class = pc_tundra
+			is_planet_class = pc_nuked
+			is_planet_class = pc_gaia
+			is_planet_class = pc_relic
+		}
+	}
+	
+	blocker_swap_types = {
+		d_ore_rich_caverns_active
+	}
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_prosperous_mesa
+	}
+}
+ 
+d_rich_mountain = {
+	time = @retile_rural_exploit_time_high
+	category = deposit_cat_minerals
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			minerals = @retile_rural_exploit_cost_high
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = { exists = owner }
+		planet_amenities_add = @retile_rural_eco_clean_high
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = @retile_drop_low
+		modifier = {
+			factor = @retile_planet_type_bonus
+			is_cold = yes
+		}
+	}
+	
+	potential = {
+		OR = {
+			is_planet_class = pc_continental
+			is_planet_class = pc_desert
+			is_planet_class = pc_alpine
+			is_planet_class = pc_arctic
+			is_planet_class = pc_arid
+			is_planet_class = pc_tundra
+			is_planet_class = pc_gaia
+			is_planet_class = pc_relic
+		}
+	}
+	
+	blocker_swap_types = {
+		d_rich_mountain_active
+	}
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_submerged_ore_veins
+	}
+}
+
+d_submerged_ore_veins = {
+	time = @retile_rural_exploit_time_high
+	category = deposit_cat_minerals
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			minerals = @retile_rural_exploit_cost_high
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = { exists = owner }
+		planet_amenities_add = @retile_rural_eco_clean_high
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = @retile_drop_low
+		modifier = {
+			factor = @retile_planet_type_bonus
+			is_cold = yes
+		}
+	}
+	
+	potential = {
+		OR = {
+			is_planet_class = pc_ocean
+			is_planet_class = pc_tropical
+			is_planet_class = pc_savannah
+			is_planet_class = pc_nuked
+			is_planet_class = pc_gaia
+			is_planet_class = pc_relic
+		}
+	}
+	
+	blocker_swap_types = {
+		d_submerged_ore_veins_active
+	}
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_rich_mountain
+	}	
+}

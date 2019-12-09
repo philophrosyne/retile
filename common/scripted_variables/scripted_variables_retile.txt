@@ -1,0 +1,42 @@
+
+#### Planetary Deposit Variables
+
+@retile_drop_high = 12
+@retile_drop_med = 6
+@retile_drop_low = 3
+
+@retile_drop_high_rare = 0.5
+@retile_drop_med_rare = 0.3
+@retile_drop_low_rare = 0.1
+
+@retile_drop_planet_type_bonus = 1.5
+
+@retile_rural_production_low = 5
+@retile_rural_production_med = 10
+@retile_rural_production_high = 15
+
+@retile_rural_production_low_rare = 1
+@retile_rural_production_med_rare = 2
+@retile_rural_production_high_rare = 3
+
+@retile_rural_exploit_time_low = 360
+@retile_rural_exploit_time_med = 720
+@retile_rural_exploit_time_high = 1080
+
+@retile_rural_restore_time_low = 120
+@retile_rural_restore_time_med = 240
+@retile_rural_restore_time_high = 360
+
+@retile_rural_exploit_cost_low = 300
+@retile_rural_exploit_cost_med = 600
+@retile_rural_exploit_cost_high = 900
+
+@retile_rural_pollution_low = 10
+@retile_rural_pollution_med = 20
+@retile_rural_pollution_high = 30
+
+@retile_rural_eco_clean_low = -5
+@retile_rural_eco_clean_med = -10
+@retile_rural_eco_clean_high = -15
+
+@retile_planet_type_bonus = 1.5

@@ -5,6 +5,7 @@ deposit_cat_blockers = {
 	blocker = yes # Counts as blockers
 }
 deposit_cat_rare = { 
+	blocker = yes
 	important = yes	# Shows up as rare deposits in planetview
 }
 deposit_cat_rare_blocker = { 
