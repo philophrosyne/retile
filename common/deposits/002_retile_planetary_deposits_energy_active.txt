@@ -289,7 +289,7 @@ d_frozen_gas_lake_active = {
 
 d_geothermal_vent_active = {
 	time = @retile_rural_restore_time_high
-	icon = d_energy_exploited_2
+	icon = d_energy_exploited_3
 	category = deposit_cat_energy
 	is_for_colonizeable = yes
 	
