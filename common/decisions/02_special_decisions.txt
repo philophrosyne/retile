@@ -281,12 +281,12 @@ decision_mastery_of_nature = {
 			is_planet_class = pc_machine
 		}
 		owner = { always = no }
-		NOT = { has_modifier = mastery_of_nature_retile }
+		NOT = { has_modifier = mastery_of_nature }
 	}
 	
 	effect = {
 		add_modifier = {
-			modifier = mastery_of_nature_retile
+			modifier = mastery_of_nature
 			days = -1
 		}
 	}

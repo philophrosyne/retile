@@ -2,6 +2,8 @@
 pm_class_b = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_class_b.dds"
 	pop_environment_tolerance = -0.10
+	deposits_active_food_produces_mult = -0.1
+	deposits_active_energy_produces_mult = 0.1
 	planet_jobs_food_produces_mult = -0.10
 	planet_jobs_energy_produces_mult = 0.10
 	icon_frame = 2
@@ -10,6 +12,8 @@ pm_class_b = {
 pm_class_a = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_class_a.dds"
 	pop_environment_tolerance = -0.05
+	deposits_active_food_produces_mult = -0.05
+	deposits_active_energy_produces_mult = 0.05
 	planet_jobs_food_produces_mult = -0.05
 	planet_jobs_energy_produces_mult = 0.05
 	icon_frame = 2
@@ -24,12 +28,14 @@ pm_class_g = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_class_g.dds"
 	pop_environment_tolerance = 0.10
 	planet_jobs_food_produces_mult = 0.10
+	deposits_active_food_produces_mult = 0.1
 	icon_frame = 1
 }
 
 pm_class_k = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_class_k.dds"
 	pop_environment_tolerance = -0.05
+	deposits_active_food_produces_mult = -0.05
 	planet_jobs_food_produces_mult = -0.05
 	planet_jobs_physics_research_produces_mult = 0.05
 	icon_frame = 2
@@ -39,6 +45,7 @@ pm_class_m = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_class_m.dds"
 	pop_environment_tolerance = -0.10
 	planet_jobs_food_produces_mult = -0.10
+	deposits_active_food_produces_mult = -0.1
 	planet_jobs_physics_research_produces_mult = 0.10
 	icon_frame = 2
 }
@@ -47,6 +54,7 @@ pm_class_m_giant = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_class_m.dds"
 	pop_environment_tolerance = -0.10
 	planet_jobs_food_produces_mult = -0.10
+	deposits_active_food_produces_mult = -0.1
 	planet_jobs_physics_research_produces_mult = 0.10
 	icon_frame = 2
 }
@@ -55,6 +63,7 @@ pm_class_t = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_class_t.dds"
 	pop_environment_tolerance = -0.20
 	planet_jobs_food_produces_mult = -0.20
+	deposits_active_food_produces_mult = -0.2
 	planet_jobs_society_research_produces_mult = 0.20
 	icon_frame = 3
 }
@@ -63,6 +72,7 @@ pm_class_black_hole = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_black_hole.dds"
 	pop_environment_tolerance = -0.50
 	planet_jobs_food_produces_mult = -0.50
+	deposits_active_food_produces_mult = -0.5
 	planet_jobs_physics_research_produces_mult = 0.50
 	icon_frame = 3
 }
@@ -71,6 +81,7 @@ pm_class_neutron_star = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_star_neutron.dds"
 	pop_environment_tolerance = -0.30
 	planet_jobs_food_produces_mult = -0.30
+	deposits_active_food_produces_mult = -0.3
 	planet_jobs_physics_research_produces_mult = 0.30
 	icon_frame = 3
 }
@@ -79,6 +90,7 @@ pm_class_pulsar = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_star_pulsar.dds"
 	pop_environment_tolerance = -0.30
 	planet_jobs_food_produces_mult = -0.30
+	deposits_active_food_produces_mult = -0.3
 	planet_jobs_physics_research_produces_mult = 0.30
 	icon_frame = 3
 }
@@ -88,6 +100,8 @@ pm_class_binary_1 = {
 	pop_environment_tolerance = -0.20
 	planet_jobs_food_produces_mult = -0.20
 	planet_jobs_energy_produces_mult = 0.10
+	deposits_active_food_produces_mult = -0.2
+	deposits_active_energy_produces_mult = 0.1
 	planet_jobs_physics_research_produces_mult = 0.10
 	icon_frame = 3
 }
@@ -97,6 +111,8 @@ pm_class_binary_2 = {
 	pop_environment_tolerance = -0.20
 	planet_jobs_food_produces_mult = -0.20
 	planet_jobs_energy_produces_mult = 0.10
+	deposits_active_food_produces_mult = -0.2
+	deposits_active_energy_produces_mult = 0.1
 	planet_jobs_physics_research_produces_mult = 0.10
 	icon_frame = 3
 }
@@ -105,6 +121,7 @@ pm_class_binary_3 = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_binary_stars.dds"
 	pop_environment_tolerance = 0.05
 	planet_jobs_food_produces_mult = 0.05
+	deposits_active_food_produces_mult = 0.05
 	icon_frame = 1
 }
 
@@ -112,6 +129,7 @@ pm_class_binary_4 = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_binary_stars.dds"
 	pop_environment_tolerance = 0.10
 	planet_jobs_food_produces_mult = 0.10
+	deposits_active_food_produces_mult = 0.1
 	icon_frame = 1
 }
 
@@ -120,6 +138,8 @@ pm_class_binary_5 = {
 	pop_environment_tolerance = -0.10
 	planet_jobs_food_produces_mult = -0.10
 	planet_jobs_energy_produces_mult = 0.10
+	deposits_active_food_produces_mult = -0.1
+	deposits_active_energy_produces_mult = 0.1
 	icon_frame = 2
 }
 
@@ -127,6 +147,7 @@ pm_class_binary_6 = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_binary_stars.dds"
 	pop_environment_tolerance = 0.05
 	planet_jobs_food_produces_mult = 0.05
+	deposits_active_food_produces_mult = 0.05
 	icon_frame = 1
 }
 
@@ -134,6 +155,7 @@ pm_class_binary_7 = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_binary_stars.dds"
 	pop_environment_tolerance = 0.05
 	planet_jobs_food_produces_mult = 0.05
+	deposits_active_food_produces_mult = 0.05
 	icon_frame = 2
 }
 
@@ -147,6 +169,8 @@ pm_class_binary_9 = {
 	pop_environment_tolerance = -0.05
 	planet_jobs_food_produces_mult = -0.05
 	planet_jobs_energy_produces_mult = 0.05
+	deposits_active_food_produces_mult = -0.05
+	deposits_active_energy_produces_mult = 0.05
 	icon_frame = 2
 }
 
@@ -155,6 +179,8 @@ pm_class_binary_10 = {
 	pop_environment_tolerance = -0.10
 	planet_jobs_food_produces_mult = -0.10
 	planet_jobs_energy_produces_mult = 0.05
+	deposits_active_food_produces_mult = -0.1
+	deposits_active_energy_produces_mult = 0.05
 	planet_jobs_society_research_produces_mult = 0.05
 	icon_frame = 2
 }
@@ -164,6 +190,8 @@ pm_class_trinary_1 = {
 	pop_environment_tolerance = -0.05
 	planet_jobs_food_produces_mult = -0.05
 	planet_jobs_energy_produces_mult = 0.05
+	deposits_active_food_produces_mult = -0.05
+	deposits_active_energy_produces_mult = 0.05
 	icon_frame = 2
 }
 
@@ -172,6 +200,8 @@ pm_class_trinary_2 = {
 	pop_environment_tolerance = -0.10
 	planet_jobs_food_produces_mult = -0.10
 	planet_jobs_energy_produces_mult = 0.10
+	deposits_active_food_produces_mult = -0.1
+	deposits_active_energy_produces_mult = 0.1
 	icon_frame = 2
 }
 
@@ -180,6 +210,8 @@ pm_class_trinary_3 = {
 	pop_environment_tolerance = -0.10
 	planet_jobs_food_produces_mult = -0.10
 	planet_jobs_energy_produces_mult = 0.10
+	deposits_active_food_produces_mult = -0.1
+	deposits_active_energy_produces_mult = 0.1
 	icon_frame = 2
 }
 
@@ -188,14 +220,16 @@ pm_class_trinary_4 = {
 	pop_environment_tolerance = -0.10
 	planet_jobs_food_produces_mult = -0.10
 	planet_jobs_energy_produces_mult = 0.05
+	deposits_active_food_produces_mult = -0.1
+	deposits_active_energy_produces_mult = 0.05
 	planet_jobs_society_research_produces_mult = 0.05
 	icon_frame = 2
 }
 
 slow_rotation = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_slow_rotation.dds"
-	district_mining_max = 2
-	district_farming_max = -2
+	deposits_active_food_produces_mult = -0.1
+	deposits_active_minerals_produces_mult = 0.1
 	icon_frame = 2
 }
 
@@ -227,7 +261,7 @@ ring_system = {
 calm_weather = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_calm_weather.dds"
 	pop_environment_tolerance = 0.10
-	district_generator_max = -2
+	deposits_active_energy_produces_mult = -0.2
 	icon_frame = 1
 }
 
@@ -259,6 +293,7 @@ recently_terraformed_3 = {
 drought = { # Hot x2, Wet x1, Cold x0, No Ecu/Relic
 	icon = "gfx/interface/icons/planet_modifiers/pm_drought.dds"
 	planet_jobs_food_produces_mult = -0.20
+	deposits_active_food_produces_mult = -0.2
 	pop_growth_speed = -0.10
 	icon_frame = 3
 }

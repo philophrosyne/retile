@@ -22,14 +22,13 @@ d_buzzing_plains = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		cost = {
-			minerals = @retile_rural_exploit_cost_low
+			alloys = @retile_rural_exploit_cost_low
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_low
 	}
 	
@@ -64,14 +63,13 @@ d_arid_highlands = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		cost = {
-			minerals = @retile_rural_exploit_cost_low
+			alloys = @retile_rural_exploit_cost_low
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_low
 	}
 	
@@ -109,14 +107,13 @@ d_hot_springs = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		cost = {
-			minerals = @retile_rural_exploit_cost_low
+			alloys = @retile_rural_exploit_cost_low
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_low
 	}
 	
@@ -158,14 +155,13 @@ d_rushing_waterfalls = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		cost = {
-			minerals = @retile_rural_exploit_cost_low
+			alloys = @retile_rural_exploit_cost_low
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_low
 	}
 	
@@ -203,14 +199,13 @@ d_searing_desert = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		cost = {
-			minerals = @retile_rural_exploit_cost_med
+			alloys = @retile_rural_exploit_cost_med
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_med
 	}
 	
@@ -253,14 +248,13 @@ d_frozen_gas_lake = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		cost = {
-			minerals = @retile_rural_exploit_cost_med
+			alloys = @retile_rural_exploit_cost_med
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_med
 	}
 	
@@ -303,14 +297,13 @@ d_geothermal_vent = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		cost = {
-			minerals = @retile_rural_exploit_cost_high
+			alloys = @retile_rural_exploit_cost_high
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_high
 	}
 	
@@ -354,14 +347,13 @@ d_underwater_vent = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		cost = {
-			minerals = @retile_rural_exploit_cost_high
+			alloys = @retile_rural_exploit_cost_high
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_high
 	}
 	
@@ -404,14 +396,13 @@ d_tempestous_mountain = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		cost = {
-			minerals = @retile_rural_exploit_cost_high
+			alloys = @retile_rural_exploit_cost_high
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_high
 	}
 	

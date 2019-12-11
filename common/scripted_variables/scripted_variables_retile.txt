@@ -1,4 +1,12 @@
 
+### District Variables
+
+@retile_city_cost = 500
+@retile_city_upkeep = 5
+@retile_city_build_time = 900
+
+
+
 #### Basic Planetary Deposit Variables
 
 @retile_drop_high = 12
@@ -9,6 +17,10 @@
 @retile_rural_production_med = 10
 @retile_rural_production_high = 15
 
+@retile_rural_housing_low = 0.25
+@retile_rural_housing_med = 0.5
+@retile_rural_housing_high = 0.75
+
 @retile_rural_exploit_time_low = 360
 @retile_rural_exploit_time_med = 720
 @retile_rural_exploit_time_high = 1080
@@ -17,9 +29,9 @@
 @retile_rural_restore_time_med = 240
 @retile_rural_restore_time_high = 360
 
-@retile_rural_exploit_cost_low = 300
-@retile_rural_exploit_cost_med = 600
-@retile_rural_exploit_cost_high = 900
+@retile_rural_exploit_cost_low = 150
+@retile_rural_exploit_cost_med = 300
+@retile_rural_exploit_cost_high = 450
 
 @retile_rural_pollution_low = 10
 @retile_rural_pollution_med = 20
@@ -41,6 +53,10 @@
 @retile_rural_production_med_rare = 2
 @retile_rural_production_high_rare = 3
 
+@retile_rural_housing_low_rare = 0.25
+@retile_rural_housing_med_rare = 0.5
+@retile_rural_housing_high_rare = 0.75
+
 @retile_rural_exploit_time_low_rare = 540
 @retile_rural_exploit_time_med_rare = 1080
 @retile_rural_exploit_time_high_rare = 1620
@@ -49,9 +65,9 @@
 @retile_rural_restore_time_med_rare = 360
 @retile_rural_restore_time_high_rare = 540
 
-@retile_rural_exploit_cost_low_rare = 450
-@retile_rural_exploit_cost_med_rare = 900
-@retile_rural_exploit_cost_high_rare = 1350
+@retile_rural_exploit_cost_low_rare = 225
+@retile_rural_exploit_cost_med_rare = 450
+@retile_rural_exploit_cost_high_rare = 675
 
 @retile_rural_pollution_low_rare = 10
 @retile_rural_pollution_med_rare = 20
@@ -63,6 +79,27 @@
 
 @retile_planet_type_bonus_rare = 1.5
 
+#### Arcology Deposit Variables
+
+@retile_arcology_bonus_low = 0.03
+@retile_arcology_bonus_med = 0.06
+@retile_arcology_bonus_high = 0.09
+
+@retile_arcology_districts_low = 0.5
+@retile_arcology_districts_med = 1
+@retile_arcology_districts_high = 1.5
+
+@retile_arcology_exploit_time_low = 540
+@retile_arcology_exploit_time_med = 1080
+@retile_arcology_exploit_time_high = 1620
+
+@retile_arcology_exploit_cost_low = 225
+@retile_arcology_exploit_cost_med = 450
+@retile_arcology_exploit_cost_high = 675
+
+@retile_arcology_pollution_low = 10
+@retile_arcology_pollution_med = 20
+@retile_arcology_pollution_high = 30
 
 #### Preserved vanilla values
 

@@ -8,14 +8,13 @@ d_dust_caverns = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		cost = {
-			minerals = @retile_rural_exploit_cost_low_rare
+			alloys = @retile_rural_exploit_cost_low_rare
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_low_rare
 	}
 	
@@ -61,16 +60,15 @@ d_dust_caverns_active = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		produces = {
-			trigger = { exists = owner }
 			volatile_motes = @retile_rural_production_low_rare
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_pollution_low_rare
+		#planet_housing_add = @retile_rural_housing_low_rare
 	}
 	
 	ai_weight = {
@@ -96,14 +94,13 @@ d_dust_desert = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		cost = {
-			minerals = @retile_rural_exploit_cost_med_rare
+			alloys = @retile_rural_exploit_cost_med_rare
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_med_rare
 	}
 	
@@ -149,16 +146,15 @@ d_dust_desert_active = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		produces = {
-			trigger = { exists = owner }
 			volatile_motes = @retile_rural_production_med_rare
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_pollution_med_rare
+		#planet_housing_add = @retile_rural_housing_med_rare
 	}
 	
 	ai_weight = {
@@ -188,14 +184,13 @@ d_bubbling_swamp = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		cost = {
-			minerals = @retile_rural_exploit_cost_low_rare
+			alloys = @retile_rural_exploit_cost_low_rare
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_low_rare
 	}
 	
@@ -241,16 +236,15 @@ d_bubbling_swamp_active = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		produces = {
-			trigger = { exists = owner }
 			exotic_gases = @retile_rural_production_low_rare
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_pollution_low_rare
+		#planet_housing_add = @retile_rural_housing_low_rare
 	}
 	
 	ai_weight = {
@@ -276,14 +270,13 @@ d_fuming_bog = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		cost = {
-			minerals = @retile_rural_exploit_cost_med_rare
+			alloys = @retile_rural_exploit_cost_med_rare
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_med_rare
 	}
 	
@@ -329,16 +322,15 @@ d_fuming_bog_active = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		produces = {
-			trigger = { exists = owner }
 			exotic_gases = @retile_rural_production_med_rare
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_pollution_med_rare
+		#planet_housing_add = @retile_rural_housing_med_rare
 	}
 	
 	ai_weight = {
@@ -368,14 +360,13 @@ d_crystalline_caverns = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		cost = {
-			minerals = @retile_rural_exploit_cost_low_rare
+			alloys = @retile_rural_exploit_cost_low_rare
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_low_rare
 	}
 	
@@ -421,16 +412,15 @@ d_crystalline_caverns_active = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		produces = {
-			trigger = { exists = owner }
 			exotic_gases = @retile_rural_production_low_rare
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_pollution_low_rare
+		#planet_housing_add = @retile_rural_housing_low_rare
 	}
 	
 	ai_weight = {
@@ -456,14 +446,13 @@ d_crystal_forest = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		cost = {
-			minerals = @retile_rural_exploit_cost_med_rare
+			alloys = @retile_rural_exploit_cost_med_rare
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_med_rare
 	}
 	
@@ -509,16 +498,15 @@ d_crystal_forest_active = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		produces = {
-			trigger = { exists = owner }
 			exotic_gases = @retile_rural_production_med_rare
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_pollution_med_rare
+		#planet_housing_add = @retile_rural_housing_med_rare
 	}
 	
 	ai_weight = {
@@ -544,14 +532,13 @@ d_crystal_reef = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		cost = {
-			minerals = @retile_rural_exploit_cost_med_rare
+			alloys = @retile_rural_exploit_cost_med_rare
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_med_rare
 	}
 	
@@ -597,16 +584,15 @@ d_crystal_reef_active = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		produces = {
-			trigger = { exists = owner }
 			exotic_gases = @retile_rural_production_med_rare
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_pollution_med_rare
+		#planet_housing_add = @retile_rural_housing_med_rare
 	}
 	
 	ai_weight = {
@@ -636,14 +622,13 @@ d_betharian_deposit = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		cost = {
-			minerals = @retile_rural_exploit_cost_high_rare
+			alloys = @retile_rural_exploit_cost_high_rare
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_high_rare
 	}
 	
@@ -674,28 +659,26 @@ d_betharian_deposit = {
 	}
 	
 	blocker_swap_types = {
-		d_betharian_deposit_active
+		d_betharian_planet_deposit_active
 	}
 	
 	prerequisites = { tech_mine_betharian } 
 }
 
-d_betharian_deposit_active = {
+d_betharian_planet_deposit_active = {
 	time = @retile_rural_restore_time_high_rare
 	#icon = d_crystals_exploited
 	category = deposit_cat_rare_producer
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		produces = {
-			trigger = { exists = owner }
 			energy = 50
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_pollution_high_rare
 	}
 	
@@ -722,14 +705,13 @@ d_alien_pets_deposit = {
 	is_for_colonizeable = yes
 	
 	resources = {
-		category = deposit_producers
+		category = planet_deposits_active
 		cost = {
-			minerals = @retile_rural_exploit_cost_high_rare
+			alloys = @retile_rural_exploit_cost_high_rare
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_high_rare
 	}
 	
@@ -760,20 +742,19 @@ d_alien_pets_deposit = {
 	}
 	
 	blocker_swap_types = {
-		d_alien_pets_deposit_active
+		d_alien_pets_planet_deposit_active
 	}
 	
 	prerequisites = { tech_alien_life_studies } 
 }
 
-d_alien_pets_deposit_active = {
+d_alien_pets_planet_deposit_active = {
 	time = @retile_rural_restore_time_high_rare
 	#icon = d_crystals_exploited
 	category = deposit_cat_rare_producer
 	is_for_colonizeable = yes
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = -100
 		planet_stability_add = 5
 	}

@@ -31,6 +31,7 @@ non_playable_ai_empire = {
 empire_size_over_cap = {
 	campaigns_cost_mult = 0.01
 	leader_upkeep_empire_size_mult = 0.01
+	leader_upkeep_empire_size_mult = 0.01
 	leader_cost_empire_size_mult = 0.01
 }
 
@@ -370,9 +371,9 @@ unstable_tectonics = {
 
 tidal_locked = {
 	pop_environment_tolerance = -0.10
-	district_generator_max = -2
-	district_mining_max = -2
-	district_farming_max = -2
+	planet_deposits_active_food_produces_mult = -0.2
+	planet_deposits_active_energy_produces_mult = -0.2
+	planet_deposits_active_minerals_produces_mult = -0.2
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_tidal_locked.dds"
 	icon_frame = 3
@@ -384,23 +385,21 @@ chthonian_planet = {
 }
 
 asteroid_impacts = {
-	planet_jobs_minerals_produces_mult = 0.10
-	district_mining_max = 1
+	planet_deposits_active_minerals_produces_mult = 0.1
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_impacts.dds"
 	icon_frame = 1
 }
 
 extensive_moon_system = {
-	planet_jobs_minerals_produces_mult = 0.20
-	district_mining_max = 2
+	planet_deposits_active_minerals_produces_mult = 0.2
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_extensive_moon_system.dds"
 	icon_frame = 1
 }
 
 carbon_world = {
-	planet_jobs_minerals_produces_mult = 0.20
+	planet_deposits_active_minerals_produces_mult = 0.2
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_carbon_world.dds"
 	icon_frame = 1
@@ -416,24 +415,21 @@ wild_storms = {
 }
 
 mineral_rich = {
-	planet_jobs_minerals_produces_mult = 0.20
-	district_mining_max = 2
+	planet_deposits_active_minerals_produces_mult = 0.2
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_mineral_rich.dds"
 	icon_frame = 1
 }
 
 ultra_rich = {
-	planet_jobs_minerals_produces_mult = 0.30
-	district_mining_max = 4
+	planet_deposits_active_minerals_produces_mult = 0.3
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_ultra_rich.dds"
 	icon_frame = 1
 }
 
 mineral_poor = {
-	planet_jobs_minerals_produces_mult = -0.20
-	district_mining_max = -2
+	planet_deposits_active_minerals_produces_mult = -0.2
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_mineral_poor.dds"
 	icon_frame = 3
@@ -447,16 +443,14 @@ titanic_life = {
 }
 
 eat_the_titans = {
-	district_farming_max = 4
-	planet_jobs_food_produces_mult = 0.30
+	planet_deposits_active_food_produces_mult = 0.3
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_titanic_life.dds"
 	icon_frame = 1
 }
 
 asteroid_belt = {
-	planet_jobs_minerals_produces_mult = 0.10
-	district_mining_max = 1
+	planet_deposits_active_minerals_produces_mult = 0.1
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_belt.dds"
 	icon_frame = 1
@@ -498,8 +492,7 @@ atmospheric_hallucinogen_good = {
 
 lush_planet = {
 	planet_amenities_mult = -0.05
-	planet_jobs_food_produces_mult = 0.10
-	district_farming_max = 2
+	planet_deposits_active_food_produces_mult = 0.1
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_lush.dds"
 	icon_frame = 1
@@ -507,8 +500,7 @@ lush_planet = {
 
 bleak_planet = {
 	planet_amenities_mult = 0.25
-	planet_jobs_food_produces_mult = -0.10
-	district_farming_max = -2
+	planet_deposits_active_food_produces_mult = -0.1
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_bleak.dds"
 	icon_frame = 3
@@ -517,9 +509,9 @@ bleak_planet = {
 irradiated_planet = {
 	pop_environment_tolerance = -0.10
 	planet_amenities_add = 100
-	planet_jobs_food_produces_mult = -0.50
-	district_farming_max = -4
-	district_mining_max = 2
+	planet_jobs_food_produces_mult = -0.5
+	planet_deposits_active_food_produces_mult = -0.5
+	planet_deposits_active_energy_produces_mult = 0.1
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_irradiated.dds"
 	icon_frame = 3
@@ -529,6 +521,7 @@ low_gravity = {
 	planet_buildings_cost_mult = -0.10
 	planet_districts_cost_mult = -0.10
 	planet_pops_upkeep_mult = -0.10
+	planet_deposits_active_cost_mult = -0.10
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_low_gravity.dds"
 	icon_frame = 2
@@ -538,6 +531,7 @@ high_gravity = {
 	planet_buildings_cost_mult = 0.10
 	planet_districts_cost_mult = 0.10
 	planet_pops_upkeep_mult = 0.10
+	planet_deposits_active_cost_mult = 0.10
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_high_gravity.dds"
 	icon_frame = 2
@@ -586,12 +580,12 @@ subterranean_ocean = {
 }
 
 colony_enclaves = {
-	planet_jobs_minerals_produces_mult = -0.3
+	planet_deposits_active_minerals_produces_mult = -0.3
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 }
 
 primitive_reservation = {
-	planet_jobs_minerals_produces_mult = -0.1
+	planet_deposits_active_energy_produces_mult = -0.1
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 }
 
@@ -714,8 +708,7 @@ gas_giant_colony = {
 
 abandoned_terraforming = {
 	planet_amenities_mult = 0.3
-	planet_jobs_food_produces_mult = -0.20
-	district_farming_max = -3
+	planet_deposits_active_energy_produces_mult = -0.2
 	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_impacts.dds"
 	icon_frame = 3
 }
@@ -733,6 +726,7 @@ mutant_stalker = {
 
 wasteland_infrastructure = {
 	planet_districts_cost_mult = -0.25
+	planet_deposits_active_cost_mult = -0.25
 	icon = "gfx/interface/icons/planet_modifiers/pm_factory.dds"
 }
 
@@ -850,7 +844,7 @@ magnetic_disruption = {
 }
 
 forest_fire = {
-	planet_jobs_food_produces_mult = -0.1
+	planet_deposits_active_food_produces_mult = -0.1
 	planet_amenities_add = 100
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_wasteland.dds"
@@ -858,12 +852,14 @@ forest_fire = {
 }
 
 nationalist_corruption = {
+	planet_deposits_active_produces_mult = -0.1
 	planet_jobs_produces_mult = -0.1
 	icon = "gfx/interface/icons/planet_modifiers/pm_nationalist_corruption.dds"
 	icon_frame = 3
 }
 
 planet_separatist_strikes = {
+	planet_deposits_active_produces_mult = -0.4
 	planet_jobs_produces_mult = -0.4
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_separatist_supporter.dds"
 	icon_frame = 3
@@ -1069,6 +1065,7 @@ skill_scientist = {
 
 skill_governor = {
 	planet_jobs_produces_mult = 0.02
+	planet_deposits_active_produces_mult = 0.02
 	planet_stability_add = 1
 }
 
@@ -1174,6 +1171,8 @@ recently_liberated = {
 }
 
 ai_strength = {
+	planet_deposits_active_minerals_produces_mult = 10
+	planet_deposits_active_energy_produces_mult = 10
 	planet_jobs_minerals_produces_mult = 10
 	planet_jobs_energy_produces_mult = 10
 	planet_jobs_physics_research_produces_mult = 5
@@ -1326,8 +1325,10 @@ per_neighbor_rival = {
 
 # Ghost Signal Pop Modifier
 pop_ghost_signal_5 = {
-	planet_jobs_minerals_produces_mult = -0.70
-	planet_jobs_energy_produces_mult = -0.70
+	planet_deposits_active_energy_produces_mult = -0.7
+	planet_deposits_active_minerals_produces_mult = -0.7
+	planet_jobs_minerals_produces_mult = -0.7
+	planet_jobs_energy_produces_mult = -0.7
 	planet_jobs_physics_research_produces_mult = -0.70
 	planet_jobs_society_research_produces_mult = -0.70
 	planet_jobs_engineering_research_produces_mult = -0.70
@@ -1336,6 +1337,8 @@ pop_ghost_signal_5 = {
 }
 
 pop_ghost_signal_4 = {
+	planet_deposits_active_energy_produces_mult = -0.55
+	planet_deposits_active_minerals_produces_mult = -0.55
 	planet_jobs_minerals_produces_mult = -0.55
 	planet_jobs_energy_produces_mult = -0.55
 	planet_jobs_physics_research_produces_mult = -0.55
@@ -1346,8 +1349,10 @@ pop_ghost_signal_4 = {
 }
 
 pop_ghost_signal_3 = {
-	planet_jobs_minerals_produces_mult = -0.40
-	planet_jobs_energy_produces_mult = -0.40
+	planet_deposits_active_energy_produces_mult = -0.4
+	planet_deposits_active_minerals_produces_mult = -0.4
+	planet_jobs_minerals_produces_mult = -0.4
+	planet_jobs_energy_produces_mult = -0.4
 	planet_jobs_physics_research_produces_mult = -0.40
 	planet_jobs_society_research_produces_mult = -0.40
 	planet_jobs_engineering_research_produces_mult = -0.40
@@ -1356,6 +1361,8 @@ pop_ghost_signal_3 = {
 }
 
 pop_ghost_signal_2 = {
+	planet_deposits_active_energy_produces_mult = -0.25
+	planet_deposits_active_minerals_produces_mult = -0.25
 	planet_jobs_minerals_produces_mult = -0.25
 	planet_jobs_energy_produces_mult = -0.25
 	planet_jobs_physics_research_produces_mult = -0.25
@@ -1366,6 +1373,8 @@ pop_ghost_signal_2 = {
 }
 
 pop_ghost_signal_1 = {
+	planet_deposits_active_energy_produces_mult = -0.1
+	planet_deposits_active_minerals_produces_mult = -0.1
 	planet_jobs_minerals_produces_mult = -0.10
 	planet_jobs_energy_produces_mult = -0.10
 	planet_jobs_physics_research_produces_mult = -0.10
@@ -1407,6 +1416,8 @@ synth_planet_paranoia = {
 }
 
 pop_ghost_signal_5_machine = {
+	planet_deposits_active_energy_produces_mult = -0.4
+	planet_deposits_active_minerals_produces_mult = -0.4
 	planet_jobs_minerals_produces_mult = -0.40
 	planet_jobs_energy_produces_mult = -0.40
 	planet_jobs_physics_research_produces_mult = -0.40
@@ -1415,6 +1426,8 @@ pop_ghost_signal_5_machine = {
 }
 
 pop_ghost_signal_4_machine = {
+	planet_deposits_active_energy_produces_mult = -0.25
+	planet_deposits_active_minerals_produces_mult = -0.25
 	planet_jobs_minerals_produces_mult = -0.25
 	planet_jobs_energy_produces_mult = -0.25
 	planet_jobs_physics_research_produces_mult = -0.25

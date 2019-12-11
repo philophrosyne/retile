@@ -75,12 +75,13 @@ racket_energy_extractor = {
 racket_generator_regulator = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
 	icon_frame = 1
-	planet_technician_energy_produces_mult = 0.25
+	planet_deposits_active_energy_produces_mult = 0.25
 }
 
 contingency_sabotage = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_contingency_sabotage.dds"
 	icon_frame = 1
+	planet_deposits_active_energy_produces_mult = -0.2
 	planet_jobs_energy_produces_mult = -0.20
 }
 
@@ -170,6 +171,7 @@ planet_culture_shock = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_slave_riots.dds"
 	icon_frame = 3
 	planet_jobs_produces_mult = -0.33
+	planet_deposits_active_produces_mult = -0.33
 	planet_stability_add = -20
 }
 
@@ -179,6 +181,7 @@ martial_law = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_martial_law.dds"
 	icon_frame = 2
 	planet_jobs_produces_mult = -0.25
+	planet_deposits_active_produces_mult = -0.25
 	pop_growth_speed = -0.5
 	pop_growth_from_immigration = -0.5
 	pop_assembly_speed = -0.5
@@ -189,6 +192,7 @@ hunter_killer_drones = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_martial_law_hive.dds"
 	icon_frame = 2
 	planet_jobs_produces_mult = -0.33
+	planet_deposits_active_produces_mult = -0.33
 	pop_growth_speed = -0.5
 	pop_growth_from_immigration = -0.5
 	pop_assembly_speed = -0.5
@@ -199,6 +203,7 @@ compliance_protocols = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_martial_law_machine.dds"
 	icon_frame = 2
 	planet_jobs_produces_mult = -0.33
+	planet_deposits_active_produces_mult = -0.33
 	pop_growth_speed = -0.5
 	pop_growth_from_immigration = -0.5
 	pop_assembly_speed = -0.5
@@ -368,13 +373,14 @@ planet_population_expelled = {
 mastery_of_nature = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_mastery_of_nature.dds"
 	icon_frame = 1
-	planet_max_districts_add = 2
+	deposits_active_energy_produces_mult = 0.3
+	deposits_active_minerals_produces_mult = 0.3
+	deposits_active_food_produces_mult = 0.3
 }
 
 resort_colony = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_resort_planet.dds"
 	icon_frame = 1
-	pop_environment_tolerance = 0.20
 	custom_tooltip = resort_colony_empire_effects
 	show_only_custom_tooltip = no
 	# This only works on timed planet modifiers!
@@ -385,7 +391,7 @@ penal_colony = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_penal_colony.dds"
 	icon_frame = 2
 	planet_crime_mult = 1
-	planet_immigration_pull_mult = 0.25
+	planet_immigration_pull_mult = 0.33
 	custom_tooltip = penal_colony_empire_effects
 	show_only_custom_tooltip = no
 	# This only works on timed planet modifiers!
@@ -401,7 +407,7 @@ slave_colony = {
 resort_colony_other_planets = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_resort_planet.dds"
 	icon_frame = 1
-	pop_happiness = 0.05
+	pop_happiness = 0.5
 	planet_immigration_pull_mult = 0.15
 }
 
@@ -420,6 +426,7 @@ species_crossbreeding = {
 divine_algorithm = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_robots.dds"
 	icon_frame = 1
+	planet_deposits_active_energy_produces_mult = 0.1
 	planet_jobs_energy_produces_mult = 0.10
 	job_technician_drone_add = 1
 }
@@ -452,18 +459,20 @@ minerals_relic = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_resources.dds"
 	icon_frame = 1
 	planet_jobs_minerals_produces_mult = 0.10
+	planet_deposits_active_minerals_produces_mult = 0.1
 }
 
 energy_relic = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_resources.dds"
 	icon_frame = 1
 	planet_jobs_energy_produces_mult = 0.10
+	planet_deposits_active_energy_produces_mult = 0.1
 }
 
 artist_monument_erected = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
 	icon_frame = 1
-	pop_happiness = 0.10
+	pop_happiness = 0.5
 	planet_immigration_pull_mult = 0.50
 }
 
@@ -504,6 +513,7 @@ bribed_officials = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
 	icon_frame = 3
 	planet_jobs_produces_mult = -0.10
+	planet_deposits_active_produces_mult = -0.1
 	job_criminal_add = 1
 	planet_housing_add = 1
 }
@@ -541,6 +551,7 @@ cartel_war = {
 protection_racket = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
 	icon_frame = 3
+	planet_deposits_active_produces_mult = -0.2
 	planet_jobs_produces_mult = -0.20
 }
 

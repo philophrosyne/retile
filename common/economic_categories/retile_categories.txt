@@ -64,7 +64,7 @@ station_researchers = {
 		cost
 	}
 }
-deposit_producers = {
+planet_deposits_active = {
 	parent = planet_structures
 	generate_mult_modifiers = {
 		produces

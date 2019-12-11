@@ -1,17 +1,12 @@
-deposit_cat_food = { blocker = yes}
-deposit_cat_energy = { blocker = yes }
-deposit_cat_minerals = { blocker = yes }
-deposit_cat_blockers = { 
-	blocker = yes # Counts as blockers
-}
-deposit_cat_rare = {
-	important = yes	# Shows up as rare deposits in planetview
-}
-deposit_cat_rare_producer = { 
-	blocker = yes
-	important = yes	# Shows up as rare deposits in planetview
-}
-deposit_cat_rare_blocker = { 
-	blocker = yes # Counts as blockers
-	important = yes	# Shows up as rare deposits in planetview
-}
+deposit_cat_food = 				{	blocker = yes						}
+deposit_cat_food_active = 		{	blocker = yes						}
+deposit_cat_energy = 			{	blocker = yes						}
+deposit_cat_energy_active =		{	blocker = yes						}
+deposit_cat_minerals = 			{	blocker = yes						}
+deposit_cat_minerals_active =	{	blocker = yes						}
+deposit_cat_arcology = 			{	blocker = yes						}
+deposit_cat_arcology_active = 	{										}
+deposit_cat_blockers = 			{	blocker = yes						}
+deposit_cat_rare = 				{					important = yes		}
+deposit_cat_rare_producer = 	{	blocker = yes	important = yes		}
+deposit_cat_rare_blocker = 		{	blocker = yes	important = yes		}

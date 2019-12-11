@@ -1,0 +1,30 @@
+
+Resort Colony:
+	- Regular planets only.
+	- Entertainer "unemployment" job added - grants very tiny empire-wide bonus. (happiness maybe, idk...)
+	- Rural deposits can't be exploited.
+	- Regular districts not available.
+	- Get special housing district.
+Penal Colony:
+	- Regular planets only.
+	- Prisoner "unemployment" job added - grants production increase from rural deposits.
+	- Regular districts not available.
+	- Get special overseer district.
+Slave Colony:
+	- Regular Planets only.
+	- Thrall "unemployment" job added - grants bonus pop growth.
+	- Regular districts not available.
+	- Get special housing district...
+Trash Colony:
+	- Regular Planets only.
+	- Rely on regular custodian "unemployment" job.
+	- Get flexible garbage modifier that adds pollution based on empire pollution production.
+	- Regular districts not available.
+	- Get special housing district
+Arcology Project
+	- Regular Planets only.
+	- Transform rural deposits (active or not) into exploitable rural arcology deposits.
+		- All exploited arcology deposits increase max districts by a small amount, plus a random percent bonus:
+			- Exploited former energy deposits grant a small bonus to research or trade
+			- Exploited former mineral deposits grant a small bonus to alloys or supplies
+			- Exploited former food deposits grant a small bonus to unity or pop growth

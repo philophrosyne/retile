@@ -61,6 +61,7 @@ explosive_fungifoam_housing = {
 pm_planetary_mechanocalibrator = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_engineering_research.dds"
 	icon_frame = 1
+	planet_deposits_active_energy_produces_mult = 0.1
 	planet_jobs_energy_produces_mult = 0.10
 }
 
@@ -100,18 +101,21 @@ planet_artifact_relays_hivemind = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_minor_artifact_decision.dds"
 	custom_tooltip = decision_artifact_relays_hivemind_effect
 	planet_jobs_simple_drone_produces_mult = 0
+	planet_deposits_active_produces_mult = 0
 }
 
 planet_artifact_relays_machine = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_minor_artifact_decision.dds"
 	custom_tooltip = decision_artifact_relays_machine_effect
 	planet_jobs_simple_drone_produces_mult = 0
+	planet_deposits_active_produces_mult = 0
 }
 
 lithoids_arc_site_minerals = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_archaeology.dds"
 	icon_frame = 3
 	planet_jobs_minerals_produces_mult = -0.50
+	planet_deposits_active_produces_mult = -0.5
 }
 
 artifact_find_military_application_army = {
@@ -144,15 +148,15 @@ artifact_find_peaceful_application_consumer_goods = {
 }
 
 artifact_find_peaceful_application_amenities = {
-	pop_amenities_usage_mult = -0.05
+	planet_amenities_mult = -0.05
 }
 
 artifact_find_peaceful_application_amenities_hivemind = {
-	pop_amenities_usage_mult = -0.05
+	planet_amenities_mult = -0.05
 }
 
 artifact_find_peaceful_application_amenities_machine = {
-	pop_amenities_usage_mult = -0.05
+	planet_amenities_mult = -0.05
 }
 
 artifact_find_peaceful_application_leader_improvement = {
@@ -284,6 +288,7 @@ artifact_zroni_research_completed = {
 the_memorex = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_surreal_visions.dds"
 	planet_jobs_produces_mult = 0.20
+	planet_deposits_active_produces_mult = 0.2
 	planet_stability_add = 10
 }
 

@@ -24,12 +24,11 @@ d_mineral_striations = {
 	resources = {
 		category = deposit_blockers
 		cost = {
-			minerals = @retile_rural_exploit_cost_low
+			alloys = @retile_rural_exploit_cost_low
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_low
 	}
 	
@@ -67,12 +66,11 @@ d_veiny_cliffs = {
 	resources = {
 		category = deposit_blockers
 		cost = {
-			minerals = @retile_rural_exploit_cost_low
+			alloys = @retile_rural_exploit_cost_low
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_low
 	}
 	
@@ -119,12 +117,11 @@ d_mineral_fields = {
 	resources = {
 		category = deposit_blockers
 		cost = {
-			minerals = @retile_rural_exploit_cost_low
+			alloys = @retile_rural_exploit_cost_low
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_low
 	}
 	
@@ -170,12 +167,11 @@ d_prosperous_mesa = {
 	resources = {
 		category = deposit_blockers
 		cost = {
-			minerals = @retile_rural_exploit_cost_med
+			alloys = @retile_rural_exploit_cost_med
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_med
 	}
 	
@@ -221,12 +217,11 @@ d_ore_rich_caverns = {
 	resources = {
 		category = deposit_blockers
 		cost = {
-			minerals = @retile_rural_exploit_cost_med
+			alloys = @retile_rural_exploit_cost_med
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_med
 	}
 	
@@ -274,12 +269,11 @@ d_rich_mountain = {
 	resources = {
 		category = deposit_blockers
 		cost = {
-			minerals = @retile_rural_exploit_cost_high
+			alloys = @retile_rural_exploit_cost_high
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_high
 	}
 	
@@ -327,12 +321,11 @@ d_submerged_ore_veins = {
 	resources = {
 		category = deposit_blockers
 		cost = {
-			minerals = @retile_rural_exploit_cost_high
+			alloys = @retile_rural_exploit_cost_high
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = { exists = owner }
+	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_high
 	}
 	
