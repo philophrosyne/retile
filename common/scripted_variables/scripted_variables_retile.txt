@@ -22,30 +22,37 @@
 @retile_rural_production_low = 5
 @retile_rural_production_med = 10
 @retile_rural_production_high = 15
+@retile_rural_production_ultra = 20
 
 @retile_rural_housing_low = 0.25
 @retile_rural_housing_med = 0.5
 @retile_rural_housing_high = 0.75
+@retile_rural_housing_ultra = 1.0
 
 @retile_rural_exploit_time_low = 360
 @retile_rural_exploit_time_med = 720
 @retile_rural_exploit_time_high = 1080
+@retile_rural_exploit_time_ultra = 1440
 
 @retile_rural_restore_time_low = 120
 @retile_rural_restore_time_med = 240
 @retile_rural_restore_time_high = 360
+@retile_rural_restore_time_ultra = 480
 
 @retile_rural_exploit_cost_low = 150
 @retile_rural_exploit_cost_med = 300
 @retile_rural_exploit_cost_high = 450
+@retile_rural_exploit_cost_ultra = 600
 
 @retile_rural_pollution_low = 10
 @retile_rural_pollution_med = 20
 @retile_rural_pollution_high = 30
+@retile_rural_pollution_ultra = 40
 
 @retile_rural_eco_clean_low = -5
 @retile_rural_eco_clean_med = -10
 @retile_rural_eco_clean_high = -15
+@retile_rural_eco_clean_ultra = -20
 
 #### Rare Planetary Deposit Variables
 
@@ -56,30 +63,37 @@
 @retile_rural_production_low_rare = 1
 @retile_rural_production_med_rare = 2
 @retile_rural_production_high_rare = 3
+@retile_rural_production_ultra_rare = 4
 
 @retile_rural_housing_low_rare = 0.25
 @retile_rural_housing_med_rare = 0.5
 @retile_rural_housing_high_rare = 0.75
+@retile_rural_housing_ultra_rare = 1.0
 
 @retile_rural_exploit_time_low_rare = 540
 @retile_rural_exploit_time_med_rare = 1080
 @retile_rural_exploit_time_high_rare = 1620
+@retile_rural_exploit_time_ultra_rare = 2160
 
 @retile_rural_restore_time_low_rare = 180
 @retile_rural_restore_time_med_rare = 360
 @retile_rural_restore_time_high_rare = 540
+@retile_rural_restore_time_ultra_rare = 720
 
 @retile_rural_exploit_cost_low_rare = 225
 @retile_rural_exploit_cost_med_rare = 450
 @retile_rural_exploit_cost_high_rare = 675
+@retile_rural_exploit_cost_ultra_rare = 900
 
 @retile_rural_pollution_low_rare = 10
 @retile_rural_pollution_med_rare = 20
 @retile_rural_pollution_high_rare = 30
+@retile_rural_pollution_ultra_rare = 40
 
 @retile_rural_eco_clean_low_rare = -5
 @retile_rural_eco_clean_med_rare = -10
 @retile_rural_eco_clean_high_rare = -15
+@retile_rural_eco_clean_ultra_rare = -20
 
 @retile_planet_type_bonus_rare = 1.5
 

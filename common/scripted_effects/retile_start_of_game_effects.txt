@@ -110,31 +110,6 @@ generate_start_buildings_and_districts = {
 		#add_building = building_factory_1
 	}
 	
-	# Additional resources based on empire type and possible subspecies
-	owner = {
-		if = {
-			limit = { is_lithoid_empire = no }
-			if = {
-				limit = { has_country_flag = lithoid_subspecies }
-				add_resource = { food = 100	}
-				add_resource = { minerals = 100 }
-			}
-			else = {
-				add_resource = { food = 200 }
-			}
-		}
-		else = {
-			if = {
-				limit = { has_country_flag = non_lithoid_subspecies }
-				add_resource = { food = 100	}
-				add_resource = { minerals = 100 }
-			}
-			else = {
-				add_resource = { minerals = 200 }
-			}
-		}
-	}
-	
 	# capital world planet flags
 	if = {
 		limit = { owner = { is_country_type = default } }
