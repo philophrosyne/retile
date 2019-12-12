@@ -1,0 +1,47 @@
+#########################################
+#
+# Retile Pop Events
+#
+#########################################
+
+#########################################
+
+namespace = retile_economy
+
+# Pops look for work about once per month...
+planet_event = {
+	id = retile_economy.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		always = yes
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				is_colony = yes
+				is_under_colonization = no
+			}
+			every_deposit = { ### Switch to exploited deposits
+				limit = { OR = {
+					has_deposit_category = deposit_cat_energy
+					has_deposit_category = deposit_cat_food
+					has_deposit_category = deposit_cat_minerals
+					has_deposit_category = deposit_cat_rare_natural
+				} }
+				clear_blocker = yes
+			}
+		} else = {
+			every_deposit = { ### Switch to natural deposits
+				limit = { OR = {
+					has_deposit_category = deposit_cat_energy_active
+					has_deposit_category = deposit_cat_food_active
+					has_deposit_category = deposit_cat_rare_active
+				} }
+				clear_blocker = yes
+			}
+		}
+	}
+}

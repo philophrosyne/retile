@@ -373,9 +373,9 @@ planet_population_expelled = {
 mastery_of_nature = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_mastery_of_nature.dds"
 	icon_frame = 1
-	deposits_active_energy_produces_mult = 0.3
-	deposits_active_minerals_produces_mult = 0.3
-	deposits_active_food_produces_mult = 0.3
+	planet_deposits_active_energy_produces_mult = 0.3
+	planet_deposits_active_minerals_produces_mult = 0.3
+	planet_deposits_active_food_produces_mult = 0.3
 }
 
 resort_colony = {

@@ -12,6 +12,12 @@
 @retile_drop_high = 12
 @retile_drop_med = 6
 @retile_drop_low = 3
+@retile_planet_type_bonus = 1.5
+
+@retile_drop_high_active = 0.03
+@retile_drop_med_active = 0.02
+@retile_drop_low_active = 0.01
+@retile_planet_type_bonus_active = 2
 
 @retile_rural_production_low = 5
 @retile_rural_production_med = 10
@@ -40,8 +46,6 @@
 @retile_rural_eco_clean_low = -5
 @retile_rural_eco_clean_med = -10
 @retile_rural_eco_clean_high = -15
-
-@retile_planet_type_bonus = 1.5
 
 #### Rare Planetary Deposit Variables
 

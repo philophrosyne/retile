@@ -666,6 +666,8 @@
  d_ore_rich_caverns_active_desc:0 "$d_retile_minerals_active_desc$"
  d_rich_mountain_active_desc:0 "$d_retile_minerals_active_desc$"
  d_submerged_ore_veins_active_desc:0 "$d_retile_minerals_active_desc$"
+# Terraforming
+ requires_fully_exploited_planet:0 "$TRIGGER_FAIL$§RAll planetary features must be exploited!§!"
 # Planetary Modifiers
  pm_class_b:0 "Blue Sun"
  pm_class_b_desc:0 "The sun assaults the surface of this world with intense heat and radiation during the day, casting everything in its brilliant blue light."

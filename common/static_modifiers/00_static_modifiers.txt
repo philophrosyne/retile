@@ -330,8 +330,7 @@ lost_owned_pop = {
 
 hazardous_weather = {
 	pop_environment_tolerance = -0.10
-	planet_jobs_energy_produces_mult = 0.10
-	district_generator_max = 2
+	planet_deposits_active_energy_produces_mult = 0.10
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_hazardous_weather.dds"
 	icon_frame = 2
@@ -353,8 +352,7 @@ weak_magnetic_field = {
 }
 
 strong_magnetic_field = {
-	planet_jobs_energy_produces_mult = 0.10
-	district_generator_max = 2
+	planet_deposits_active_energy_produces_mult = 0.10
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_strong_magnetic_field.dds"
 	icon_frame = 1

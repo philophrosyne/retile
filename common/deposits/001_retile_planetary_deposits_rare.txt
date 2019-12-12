@@ -4,7 +4,7 @@
 
 d_dust_caverns = {
 	time = @retile_rural_exploit_time_low_rare
-	category = deposit_cat_rare_producer
+	category = deposit_cat_rare_natural
 	is_for_colonizeable = yes
 	
 	resources = {
@@ -56,7 +56,7 @@ d_dust_caverns = {
 d_dust_caverns_active = {
 	time = @retile_rural_restore_time_low_rare
 	icon = d_motes_exploited
-	category = deposit_cat_rare_producer
+	category = deposit_cat_rare_active
 	is_for_colonizeable = yes
 	
 	resources = {
@@ -90,7 +90,7 @@ d_dust_caverns_active = {
 
 d_dust_desert = {
 	time = @retile_rural_exploit_time_med_rare
-	category = deposit_cat_rare_producer
+	category = deposit_cat_rare_natural
 	is_for_colonizeable = yes
 	
 	resources = {
@@ -142,7 +142,7 @@ d_dust_desert = {
 d_dust_desert_active = {
 	time = @retile_rural_restore_time_med_rare
 	icon = d_motes_exploited
-	category = deposit_cat_rare_producer
+	category = deposit_cat_rare_active
 	is_for_colonizeable = yes
 	
 	resources = {
@@ -180,7 +180,7 @@ d_dust_desert_active = {
 
 d_bubbling_swamp = {
 	time = @retile_rural_exploit_time_low_rare
-	category = deposit_cat_rare_producer
+	category = deposit_cat_rare_natural
 	is_for_colonizeable = yes
 	
 	resources = {
@@ -232,7 +232,7 @@ d_bubbling_swamp = {
 d_bubbling_swamp_active = {
 	time = @retile_rural_restore_time_low_rare
 	icon = d_gases_exploited
-	category = deposit_cat_rare_producer
+	category = deposit_cat_rare_active
 	is_for_colonizeable = yes
 	
 	resources = {
@@ -266,7 +266,7 @@ d_bubbling_swamp_active = {
 
 d_fuming_bog = {
 	time = @retile_rural_exploit_time_med_rare
-	category = deposit_cat_rare_producer
+	category = deposit_cat_rare_natural
 	is_for_colonizeable = yes
 	
 	resources = {
@@ -318,7 +318,7 @@ d_fuming_bog = {
 d_fuming_bog_active = {
 	time = @retile_rural_restore_time_med_rare
 	icon = d_gases_exploited
-	category = deposit_cat_rare_producer
+	category = deposit_cat_rare_active
 	is_for_colonizeable = yes
 	
 	resources = {
@@ -356,7 +356,7 @@ d_fuming_bog_active = {
 
 d_crystalline_caverns = {
 	time = @retile_rural_exploit_time_low_rare
-	category = deposit_cat_rare_producer
+	category = deposit_cat_rare_natural
 	is_for_colonizeable = yes
 	
 	resources = {
@@ -408,7 +408,7 @@ d_crystalline_caverns = {
 d_crystalline_caverns_active = {
 	time = @retile_rural_restore_time_low_rare
 	icon = d_crystals_exploited
-	category = deposit_cat_rare_producer
+	category = deposit_cat_rare_active
 	is_for_colonizeable = yes
 	
 	resources = {
@@ -442,7 +442,7 @@ d_crystalline_caverns_active = {
 
 d_crystal_forest = {
 	time = @retile_rural_exploit_time_med_rare
-	category = deposit_cat_rare_producer
+	category = deposit_cat_rare_natural
 	is_for_colonizeable = yes
 	
 	resources = {
@@ -494,7 +494,7 @@ d_crystal_forest = {
 d_crystal_forest_active = {
 	time = @retile_rural_restore_time_med_rare
 	icon = d_crystals_exploited
-	category = deposit_cat_rare_producer
+	category = deposit_cat_rare_active
 	is_for_colonizeable = yes
 	
 	resources = {
@@ -528,7 +528,7 @@ d_crystal_forest_active = {
 
 d_crystal_reef = {
 	time = @retile_rural_exploit_time_med_rare
-	category = deposit_cat_rare_producer
+	category = deposit_cat_rare_natural
 	is_for_colonizeable = yes
 	
 	resources = {
@@ -580,7 +580,7 @@ d_crystal_reef = {
 d_crystal_reef_active = {
 	time = @retile_rural_restore_time_med_rare
 	icon = d_crystals_exploited
-	category = deposit_cat_rare_producer
+	category = deposit_cat_rare_active
 	is_for_colonizeable = yes
 	
 	resources = {
@@ -618,7 +618,7 @@ d_crystal_reef_active = {
 
 d_betharian_deposit = {
 	time = @retile_rural_exploit_time_high_rare
-	category = deposit_cat_rare_producer
+	category = deposit_cat_rare_natural
 	is_for_colonizeable = yes
 	
 	resources = {
@@ -668,7 +668,7 @@ d_betharian_deposit = {
 d_betharian_planet_deposit_active = {
 	time = @retile_rural_restore_time_high_rare
 	#icon = d_crystals_exploited
-	category = deposit_cat_rare_producer
+	category = deposit_cat_rare_active
 	is_for_colonizeable = yes
 	
 	resources = {
@@ -701,7 +701,7 @@ d_betharian_planet_deposit_active = {
 
 d_alien_pets_deposit = {
 	time = @retile_rural_exploit_time_high_rare
-	category = deposit_cat_rare_producer
+	category = deposit_cat_rare_natural
 	is_for_colonizeable = yes
 	
 	resources = {
@@ -751,7 +751,7 @@ d_alien_pets_deposit = {
 d_alien_pets_planet_deposit_active = {
 	time = @retile_rural_restore_time_high_rare
 	#icon = d_crystals_exploited
-	category = deposit_cat_rare_producer
+	category = deposit_cat_rare_active
 	is_for_colonizeable = yes
 	
 	planet_modifier = {

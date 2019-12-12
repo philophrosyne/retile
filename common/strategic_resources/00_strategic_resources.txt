@@ -75,7 +75,8 @@ energy = {
 }
 
 minerals = {
-	max = -1000000
+	max = -1
+	fixed_max_amount = yes
 	deficit_modifier = minerals_deficit #found in static modifiers
 	ai_weight = {
 		weight = 1
@@ -83,7 +84,8 @@ minerals = {
 }
 
 food = {
-	max = -1000000
+	max = -1
+	fixed_max_amount = yes
 	deficit_modifier = food_deficit #found in static modifiers
 	ai_weight = {
 		weight = 1

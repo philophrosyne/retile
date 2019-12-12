@@ -1,3 +1,6 @@
+# Use weight 0.01 for deposits that don't naturally occur
+# 	- otherwise terraforming problems
+
 ## Possible Deposit Variables ##
 # resources, resource and amount
 # potential trigger (planet scope)
@@ -39,7 +42,7 @@ d_mineral_striations_active = {
 	}
 	
 	drop_weight = {
-		weight = 0
+		weight = 0.01
 	}
 	
 	potential = {
@@ -53,8 +56,9 @@ d_mineral_striations_active = {
 	use_weights_for_terraforming_swap_types = yes
 	should_swap_deposit_on_terraforming = yes
 	terraforming_swap_types = {
-		d_mineral_fields_active
-		d_veiny_cliffs_active
+		d_mineral_fields
+		d_veiny_cliffs
+		d_mineral_striations
 	}
 }
 
@@ -81,7 +85,11 @@ d_veiny_cliffs_active = {
 	}
 	
 	drop_weight = {
-		weight = 0
+		weight = @retile_drop_high_active
+		modifier = {
+			factor = @retile_planet_type_bonus_active
+			is_cold = yes
+		}		
 	}
 	
 	potential = {
@@ -101,8 +109,9 @@ d_veiny_cliffs_active = {
 	use_weights_for_terraforming_swap_types = yes
 	should_swap_deposit_on_terraforming = yes
 	terraforming_swap_types = {
-		d_mineral_fields_active
-		d_mineral_striations_active		# gaia
+		d_mineral_fields
+		d_veiny_cliffs
+		d_mineral_striations
 	}
 }
 
@@ -129,7 +138,11 @@ d_mineral_fields_active = {
 	}
 	
 	drop_weight = {
-		weight = 0
+		weight = @retile_drop_high_active	
+		modifier = {
+			factor = @retile_planet_type_bonus_active
+			is_cold = yes
+		}			
 	}
 	
 	potential = {
@@ -149,8 +162,9 @@ d_mineral_fields_active = {
 	use_weights_for_terraforming_swap_types = yes
 	should_swap_deposit_on_terraforming = yes
 	terraforming_swap_types = {
-		d_veiny_cliffs_active
-		d_mineral_striations_active # gaia
+		d_mineral_fields
+		d_veiny_cliffs
+		d_mineral_striations
 	}
 }
 
@@ -177,7 +191,11 @@ d_prosperous_mesa_active = {
 	}
 	
 	drop_weight = {
-		weight = 0
+		weight = @retile_drop_med_active
+		modifier = {
+			factor = @retile_planet_type_bonus_active
+			is_cold = yes
+		}
 	}
 	
 	potential = {
@@ -198,7 +216,8 @@ d_prosperous_mesa_active = {
 	use_weights_for_terraforming_swap_types = yes
 	should_swap_deposit_on_terraforming = yes
 	terraforming_swap_types = {
-		d_ore_rich_caverns_active
+		d_ore_rich_caverns
+		d_prosperous_mesa
 	}
 }
 
@@ -225,7 +244,11 @@ d_ore_rich_caverns_active = {
 	}
 	
 	drop_weight = {
-		weight = 0
+		weight = @retile_drop_med_active
+		modifier = {
+			factor = @retile_planet_type_bonus_active
+			is_cold = yes
+		}
 	}
 	
 	potential = {
@@ -248,7 +271,8 @@ d_ore_rich_caverns_active = {
 	use_weights_for_terraforming_swap_types = yes
 	should_swap_deposit_on_terraforming = yes
 	terraforming_swap_types = {
-		d_prosperous_mesa_active
+		d_ore_rich_caverns
+		d_prosperous_mesa
 	}
 }
  
@@ -275,7 +299,11 @@ d_rich_mountain_active = {
 	}
 	
 	drop_weight = {
-		weight = 0
+		weight = @retile_drop_low_active
+		modifier = {
+			factor = @retile_planet_type_bonus_active
+			is_cold = yes
+		}
 	}
 	
 	potential = {
@@ -298,7 +326,8 @@ d_rich_mountain_active = {
 	use_weights_for_terraforming_swap_types = yes
 	should_swap_deposit_on_terraforming = yes
 	terraforming_swap_types = {
-		d_submerged_ore_veins_active
+		d_submerged_ore_veins
+		d_rich_mountain
 	}
 }
 
@@ -325,7 +354,11 @@ d_submerged_ore_veins_active = {
 	}
 	
 	drop_weight = {
-		weight = 0
+		weight = @retile_drop_low_active
+		modifier = {
+			factor = @retile_planet_type_bonus_active
+			is_cold = yes
+		}
 	}
 	
 	potential = {
@@ -346,6 +379,7 @@ d_submerged_ore_veins_active = {
 	use_weights_for_terraforming_swap_types = yes
 	should_swap_deposit_on_terraforming = yes
 	terraforming_swap_types = {
-		d_rich_mountain_active
+		d_submerged_ore_veins
+		d_rich_mountain
 	}	
 }
