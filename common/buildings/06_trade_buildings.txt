@@ -6,77 +6,97 @@
 #############
 # Trade buildings
 #############
-building_commercial_zone = {
-	base_buildtime = 360
+building_marketplace = {
+	base_buildtime = @retile_building_time_low
 	base_cap_amount = 1
 	category = trade
 	can_be_disabled = no
+	upgrades = { building_commercial_zone }
 	
 	potential = {
 		exists = owner
 		owner = { is_regular_empire = yes }
-		NOT = { has_modifier = slave_colony }
 	}
 	
 	allow = {
-		OR = { 
-			retile_urban = yes
-			has_modifier = resort_colony
-		}
-		#retile_ready = yes
+		num_districts = { type = district_clerks value > 0 }
+		NOT = { has_modifier = slave_colony }
+		NOT = { has_modifier = penal_colony }
 	}
 
 	destroy_trigger = {
 		OR = {
 			owner = { is_regular_empire = no }
+			num_districts = { type = district_clerks value < 1 }
 			has_modifier = slave_colony
-			NOR = { 
-				retile_urban = yes
-				has_modifier = resort_colony
-			}
+			has_modifier = penal_colony
 		}
 	}
 	
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = @cost_low
-		}	
+			alloys = @retile_building_cost_low
+			rare_crystals = @retile_building_cost_rare_low
+		}
 		upkeep = {
-			energy = 10
-		}		
+			energy = @retile_building_upkeep_nrg_low
+		}
 	}
 	
-	prerequisites = {
-		"tech_interplanetary_commerce"
-	}
-	
-	show_tech_unlock_if = { 
-		is_regular_empire = yes
+	planet_modifier = {
+		planet_housing_add = @retile_building_housing_low
 	}
 	
 	country_modifier = {
-		country_resource_max_add = 1000
+		country_resource_max_add = @retile_building_storage_low
 	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		modifier = {
-			planet_housing_add = 1
-			job_custodian_add = 1
+	
+	triggered_desc = {
+		trigger = { exists = owner }
+		text = retile_marketplace_effect
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+building_commercial_zone = {
+	base_buildtime = @retile_building_time_med
+	can_build = no
+	category = trade
+	can_be_disabled = no
+	prerequisites = { tech_interplanetary_commerce }
+	upgrades = { building_commercial_megaplex }
+	show_tech_unlock_if = { is_regular_empire = yes }
+	
+	destroy_trigger = {
+		OR = {
+			owner = { is_regular_empire = no }
+			num_districts = { type = district_clerks value < 1 }
+			has_modifier = slave_colony
+			has_modifier = penal_colony
 		}
 	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @retile_building_cost_med
+			rare_crystals = @retile_building_cost_rare_med
 		}
-		modifier = {
-			planet_housing_add = 1
-			job_maintenance_drone_add = 1
+		upkeep = {
+			energy = @retile_building_upkeep_nrg_med
 		}
+	}
+	
+	planet_modifier = {
+		planet_housing_add = @retile_building_housing_med
+	}
+	
+	country_modifier = {
+		country_resource_max_add = @retile_building_storage_med
 	}
 	
 	triggered_desc = {
@@ -84,141 +104,76 @@ building_commercial_zone = {
 		text = retile_commercial_zone_effect
 	}
 	
-	upgrades = {
-		"building_commercial_megaplex"
-	}
-	
-	ai_weight = {
-		weight = 0
-		
-		modifier = {	# Help solve energy problems!!!
-			weight = 200000
-			OR = {
-				is_capital = yes
-				owner = { has_monthly_income = { resource = energy value < 25 } }
-			}
-		}
-		modifier = {	# goods security
-			weight = 20000
-			owner = { has_monthly_income = { resource = consumer_goods value < 25 } }
-		}
-		modifier = {	# Stock Exchange!!! (rarely relevant - ai should only build this one first...
-			factor = 5
-			has_building = building_galactic_stock_exchange
-		}
+	ai_weight = {	# always upgrade
+		weight = 100000
 	}
 }
 
 building_commercial_megaplex = {
-	base_buildtime = 480
+	base_buildtime = @retile_building_time_high
 	can_build = no
-
 	category = trade
 	can_be_disabled = no
+	prerequisites = { tech_interstellar_economics }
+	show_tech_unlock_if = { is_regular_empire = yes }
 	
 	destroy_trigger = {
 		OR = {
 			owner = { is_regular_empire = no }
+			num_districts = { type = district_clerks value < 1 }
 			has_modifier = slave_colony
-			retile_urban = no
+			has_modifier = penal_colony
 		}
-	}
-	
-	allow = {
-		#retile_ready = yes
-		always = yes
 	}
 	
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = @cost_med
-			rare_crystals = @cost_med
-		}	
+			alloys = @retile_building_cost_high
+			rare_crystals = @retile_building_cost_rare_high
+		}
 		upkeep = {
-			energy = 25
+			energy = @retile_building_upkeep_nrg_high
 		}
 	}
 	
-	prerequisites = {
-		"tech_interstellar_economics"
-	}
-	
-	show_tech_unlock_if = { 
-		is_regular_empire = yes
+	planet_modifier = {
+		planet_housing_add = @retile_building_housing_high
 	}
 	
 	country_modifier = {
-		country_resource_max_add = 2000
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		modifier = {
-			planet_housing_add = 2
-			job_custodian_add = 2
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			planet_housing_add = 2
-			job_maintenance_drone_add = 2
-		}
-	}
-	
-	triggered_desc = {
-		trigger = { exists = owner }
-		text = retile_commercial_megaplex_effect
+		country_resource_max_add = @retile_building_storage_high
 	}
 	
 	ai_weight = {	# always upgrade
 		weight = 100000
 	}
-	
-	ai_resource_production = {
-		energy = 1
-		consumer_goods = 1
-		trigger = {
-			always = yes
-		}
-	}
 }
 
 building_galactic_stock_exchange = {
-	base_buildtime = 480	
+	base_buildtime = @retile_building_time_med
 	base_cap_amount = 1
-
 	category = trade
 	can_be_disabled = no
+	prerequisites = { tech_galactic_markets }
 	
 	potential = {
 		exists = owner
 		owner = { is_regular_empire = yes }
-		NOT = { has_modifier = slave_colony }
 	}
 	
 	allow = {
-		OR = { 
-			retile_urban = yes
-			has_modifier = resort_colony
-		}
-		#retile_ready = yes
+		num_districts = { type = district_clerks value > 0 }
+		NOT = { has_modifier = slave_colony }
+		NOT = { has_modifier = penal_colony }
 	}
-	
+
 	destroy_trigger = {
 		OR = {
 			owner = { is_regular_empire = no }
+			num_districts = { type = district_clerks value < 1 }
 			has_modifier = slave_colony
-			NOR = { 
-				retile_urban = yes
-				has_modifier = resort_colony
-			}
+			has_modifier = penal_colony
 		}
 	}
 	
@@ -229,30 +184,19 @@ building_galactic_stock_exchange = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = @cost_low
+			alloys = @retile_building_cost_med
 		}
 		upkeep = {
-			energy = 25
+			energy = @retile_building_upkeep_nrg_med
 		}
 	}
 	
-	prerequisites = {
-		"tech_galactic_markets"
+	planet_modifier = {
+		planet_housing_add = @retile_building_housing_med
 	}
 	
 	country_modifier = {
-		country_resource_max_add = 2000
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		modifier = {
-			planet_housing_add = 2
-			job_custodian_add = 1
-			job_merchant_add = 1
-		}
+		country_resource_max_add = @retile_building_storage_med
 	}
 	
 	triggered_desc = {
@@ -261,22 +205,6 @@ building_galactic_stock_exchange = {
 	}
 	
 	ai_weight = {
-		weight = 0
-		
-		modifier = {	# really good, but only build if we are already doing this...
-			weight = 10000
-			OR = {
-				has_building = building_commercial_zone
-				has_building = building_commercial_megaplex
-			}
-		}
-	}
-	
-	ai_resource_production = {
-		energy = 1
-		consumer_goods = 1
-		trigger = {
-			always = yes
-		}
+		weight = 1
 	}
 }

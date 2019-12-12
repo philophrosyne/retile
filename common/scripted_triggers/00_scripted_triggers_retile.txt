@@ -49,66 +49,27 @@ country_uses_goods = {	# country scope
 	}
 }
 
-# Does the planet have any urban districts?
-retile_urban = {	# planet scope
-	custom_tooltip = {
-		fail_text = "retile_requires_urban_district"
-		OR = {
-			num_districts = { type = district_city value > 0 }
-			#num_districts = { type = district_hive value > 0 }
-			#num_districts = { type = district_nexus value > 0 }
-			num_districts = { type = district_hab_housing value > 0 }
-			#num_districts = { type = district_hab_hive value > 0 }
-			#num_districts = { type = district_hab_nexus value > 0 }
-			num_districts = { type = district_rw_city value > 0 }
-			#num_districts = { type = district_rw_hive value > 0 }
-			#num_districts = { type = district_rw_nexus value > 0 }
-			num_districts = { type = district_prison value > 0 }
-			has_deposit = d_central_spire
-			AND = {
-				is_planet_class = pc_city
-				num_districts = { type = any value > 0 }
-			}
-		}
-	}
-}
-
-# Does the planet have any energy districts?
+# Does the planet have any energy deposits?
 retile_energy = {	# planet scope
 	custom_tooltip = {
-		fail_text = "retile_requires_energy_district"
-		OR = {
-			num_districts = { type = district_generator value > 0 }
-			num_districts = { type = district_generator_uncapped value > 0 }
-			num_districts = { type = district_hab_energy value > 0 }
-			num_districts = { type = district_rw_generator value > 0 }
-		}
+		fail_text = "retile_requires_energy_deposit"
+		any_deposit = { has_deposit_category = deposit_cat_energy_active }
 	}
 }
 
-# Does the planet have any minerals districts?
+# Does the planet have any minerals deposits?
 retile_minerals = {	# planet scope
 	custom_tooltip = {
-		fail_text = "retile_requires_minerals_district"
-		OR = {
-			num_districts = { type = district_mining value > 0 }
-			num_districts = { type = district_mining_uncapped value > 0 }
-			num_districts = { type = district_hab_mining value > 0 }
-			num_districts = { type = district_rw_mining value > 0 }
-		}
+		fail_text = "retile_requires_minerals_deposit"
+		any_deposit = { has_deposit_category = deposit_cat_minerals_active }
 	}
 }
 
-# Does the planet have any food districts?
+# Does the planet have any food deposits?
 retile_food = {	# planet scope
 	custom_tooltip = {
-		fail_text = "retile_requires_food_district"
-		OR = {
-			num_districts = { type = district_farming value > 0 }
-			num_districts = { type = district_farming_uncapped value > 0 }
-			num_districts = { type = district_hab_hydroponics value > 0 }
-			num_districts = { type = district_rw_farming value > 0 }
-		}
+		fail_text = "retile_requires_food_deposit"
+		any_deposit = { has_deposit_category = deposit_cat_food_active }
 	}
 }
 

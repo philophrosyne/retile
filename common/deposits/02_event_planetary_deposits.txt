@@ -154,7 +154,8 @@ d_the_zone = {
 	
 	planet_modifier = {
 		planet_jobs_physics_research_produces_mult = 0.15
-		planet_housing_add = 1
+		planet_housing_add = 1.5
+		planet_amenities_add = -20
 	}
 	
 	triggered_planet_modifier = {
@@ -164,7 +165,6 @@ d_the_zone = {
 		}
 		modifier = {
 			job_researcher_add = 1
-			planet_amenities_add = -20
 		}
 	}
 	
@@ -175,7 +175,6 @@ d_the_zone = {
 		}
 		modifier = {
 			job_brain_drone_add = 1
-			planet_amenities_no_happiness_add = -20
 		}
 	}
 	
@@ -186,70 +185,7 @@ d_the_zone = {
 		}
 		modifier = {	
 			# job_calculator_add = 1
-			planet_amenities_no_happiness_add = -20
 		}
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_hyperfertile_valley = {
-	is_for_colonizeable = yes
-	category = deposit_cat_rare
-	
-	icon = d_alien_pets_deposit
-	
-	planet_modifier = {
-		district_farming_max = 5
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		planet_amenities_add = -50
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		planet_amenities_no_happiness_add = -50
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_ancient_mining_site = {
-	is_for_colonizeable = yes
-	category = deposit_cat_rare
-	
-	icon = d_building_complex
-	
-	planet_modifier = {
-		district_mining_max = 5
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		planet_amenities_add = -25
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		planet_amenities_no_happiness_add = -25
 	}
 	
 	drop_weight = {
@@ -266,7 +202,7 @@ d_toy_factory_complex = {
 	planet_modifier = {
 		planet_jobs_society_research_produces_mult = 0.10
 		planet_jobs_engineering_research_produces_mult = 0.20
-		planet_housing_add = 1
+		planet_housing_add = 1.5
 	}
 	
 	triggered_planet_modifier = {
@@ -312,7 +248,8 @@ d_mutant_landfill = {
 	
 	planet_modifier = {
 		planet_jobs_society_research_produces_mult = 0.2
-		planet_housing_add = 1
+		planet_housing_add = 1.5
+		planet_amenities_add = 10
 	}
 	
 	triggered_planet_modifier = {
@@ -322,7 +259,6 @@ d_mutant_landfill = {
 		}
 		modifier = {
 			job_researcher_add = 1
-			planet_amenities_add = 10
 		}
 	}
 	
@@ -333,7 +269,6 @@ d_mutant_landfill = {
 		}
 		modifier = {
 			job_brain_drone_add = 1
-			planet_amenities_no_happiness_add = 10
 		}
 	}
 	
@@ -344,7 +279,6 @@ d_mutant_landfill = {
 		}
 		modifier = {	
 			# job_calculator_add = 1
-			planet_amenities_no_happiness_add = 10
 		}
 	}
 	
@@ -361,7 +295,8 @@ d_ancient_bombardment_craters = {
 	
 	planet_modifier = {
 		planet_jobs_physics_research_produces_mult = 0.2
-		planet_housing_add = 1
+		planet_housing_add = 1.5
+		planet_amenities_add = 5
 	}
 	
 	triggered_planet_modifier = {
@@ -371,7 +306,6 @@ d_ancient_bombardment_craters = {
 		}
 		modifier = {
 			job_researcher_add = 1
-			planet_amenities_add = 5
 		}
 	}
 	
@@ -382,7 +316,6 @@ d_ancient_bombardment_craters = {
 		}
 		modifier = {
 			job_brain_drone_add = 1
-			planet_amenities_no_happiness_add = 5
 		}
 	}
 	
@@ -393,7 +326,6 @@ d_ancient_bombardment_craters = {
 		}
 		modifier = {	
 			# job_calculator_add = 1
-			planet_amenities_no_happiness_add = 5
 		}
 	}
 	
@@ -410,7 +342,8 @@ d_ancient_battlefield = {
 	
 	planet_modifier = {
 		planet_jobs_engineering_research_produces_mult = 0.2
-		planet_housing_add = 1
+		planet_housing_add = 1.5
+			planet_amenities_add = 5
 	}
 	
 	triggered_planet_modifier = {
@@ -420,7 +353,6 @@ d_ancient_battlefield = {
 		}
 		modifier = {
 			job_researcher_add = 1
-			planet_amenities_add = 5
 		}
 	}
 	
@@ -431,7 +363,6 @@ d_ancient_battlefield = {
 		}
 		modifier = {
 			job_brain_drone_add = 1
-			planet_amenities_no_happiness_add = 5
 		}
 	}
 	
@@ -442,7 +373,6 @@ d_ancient_battlefield = {
 		}
 		modifier = {	
 			# job_calculator_add = 1
-			planet_amenities_no_happiness_add = 5
 		}
 	}
 	
@@ -459,7 +389,8 @@ d_irradiated_ruins = {
 	
 	planet_modifier = {
 		planet_jobs_society_research_produces_mult = 0.2
-		planet_housing_add = 1
+		planet_housing_add = 1.5
+		planet_amenities_add = 5
 	}
 	
 	triggered_planet_modifier = {
@@ -469,7 +400,6 @@ d_irradiated_ruins = {
 		}
 		modifier = {
 			job_researcher_add = 1
-			planet_amenities_add = 5
 		}
 	}
 	
@@ -480,7 +410,6 @@ d_irradiated_ruins = {
 		}
 		modifier = {
 			job_brain_drone_add = 1
-			planet_amenities_no_happiness_add = 5
 		}
 	}
 	
@@ -491,39 +420,7 @@ d_irradiated_ruins = {
 		}
 		modifier = {	
 			# job_calculator_add = 1
-			planet_amenities_no_happiness_add = 5
 		}
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_impact_crater = {
-	is_for_colonizeable = yes
-	category = deposit_cat_rare
-	
-	icon = d_crater
-	
-	planet_modifier = {
-		district_mining_max = 3
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		planet_amenities_add = 15
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		planet_amenities_no_happiness_add = 15
 	}
 	
 	drop_weight = {
@@ -564,68 +461,6 @@ d_odd_factory = {
 	}
 }
 
-d_odd_factory_wreckage_1 = {
-	is_for_colonizeable = yes
-	category = deposit_cat_rare
-	
-	icon = d_city_ruins
-	
-	planet_modifier = {
-		district_generator_max = 2
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		planet_amenities_add = 10
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		planet_amenities_no_happiness_add = 10
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_odd_factory_wreckage_2 = {
-	is_for_colonizeable = yes
-	category = deposit_cat_rare
-	
-	icon = d_city_ruins
-	
-	planet_modifier = {
-		district_mining_max = 2
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		planet_amenities_add = 10
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		planet_amenities_no_happiness_add = 10
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
 d_ancient_particle_accelerator = {
 	is_for_colonizeable = yes
 	category = deposit_cat_rare
@@ -634,7 +469,7 @@ d_ancient_particle_accelerator = {
 	
 	planet_modifier = {
 		planet_jobs_physics_research_produces_mult = 0.2
-		planet_housing_add = 1
+		planet_housing_add = 1.5
 	}
 	
 	triggered_planet_modifier = {
@@ -680,7 +515,7 @@ d_underground_vault = {
 	
 	planet_modifier = {
 		planet_jobs_society_research_produces_mult = 0.2
-		planet_housing_add = 1
+		planet_housing_add = 1.5
 	}
 	
 	triggered_planet_modifier = {
@@ -711,22 +546,6 @@ d_underground_vault = {
 		modifier = {	
 			# job_calculator_add = 1
 		}
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_underground_vault_2 = {
-	is_for_colonizeable = yes
-	category = deposit_cat_rare
-	
-	icon = d_bunker_door
-	
-	planet_modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.1
-		district_mining_max = 2
 	}
 	
 	drop_weight = {
@@ -760,7 +579,8 @@ d_flooded_mounds = {
 	
 	planet_modifier = {
 		planet_jobs_society_research_produces_mult = 0.2
-		planet_housing_add = 1
+		planet_housing_add = 1.5
+		planet_amenities_add = -10
 	}
 	
 	triggered_planet_modifier = {
@@ -770,7 +590,6 @@ d_flooded_mounds = {
 		}
 		modifier = {
 			job_researcher_add = 1
-			planet_amenities_add = -10
 		}
 	}
 	
@@ -781,7 +600,6 @@ d_flooded_mounds = {
 		}
 		modifier = {
 			job_brain_drone_add = 1
-			planet_amenities_no_happiness_add = -10
 		}
 	}
 	
@@ -792,7 +610,6 @@ d_flooded_mounds = {
 		}
 		modifier = {	
 			# job_calculator_add = 1
-			planet_amenities_no_happiness_add = -10
 		}
 	}
 	
@@ -819,37 +636,6 @@ d_processing_pens = {
 	}
 }
 
-d_harvester_fields = {
-	is_for_colonizeable = yes
-	category = deposit_cat_rare
-	
-	icon = d_fertile_lands
-	
-	planet_modifier = {
-		district_farming_max = 6
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		planet_amenities_add = -30
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		planet_amenities_no_happiness_add = -30
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
 d_wetware_computer = {
 	is_for_colonizeable = yes
 	category = deposit_cat_rare
@@ -858,7 +644,7 @@ d_wetware_computer = {
 	
 	planet_modifier = {
 		planet_jobs_engineering_research_produces_mult = 0.2
-		planet_housing_add = 1
+		planet_housing_add = 1.5
 	}
 	
 	triggered_planet_modifier = {
@@ -904,7 +690,8 @@ d_savage_wildlands = {
 	
 	planet_modifier = {
 		planet_jobs_society_research_produces_mult = 0.1
-		planet_housing_add = 1
+		planet_housing_add = 1.5
+		planet_amenities_add = -10
 	}
 	
 	triggered_planet_modifier = {
@@ -914,7 +701,6 @@ d_savage_wildlands = {
 		}
 		modifier = {
 			job_researcher_add = 1
-			planet_amenities_add = -10
 		}
 	}
 	
@@ -925,7 +711,6 @@ d_savage_wildlands = {
 		}
 		modifier = {
 			job_brain_drone_add = 1
-			planet_amenities_no_happiness_add = -10
 		}
 	}
 	
@@ -936,7 +721,6 @@ d_savage_wildlands = {
 		}
 		modifier = {	
 			# job_calculator_add = 1
-			planet_amenities_no_happiness_add = -10
 		}
 	}
 	
@@ -953,222 +737,16 @@ d_mothballed_facilities = {
 
 	planet_modifier = { 
 		planet_max_districts_add = -2
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
 		planet_amenities_add = 50
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		planet_amenities_no_happiness_add = 50
 	}
 	
 	on_cleared = {
 		add_deposit = d_worm_mine
 		add_deposit = d_worm_farm
-		add_district = district_mining
-		add_district = district_farming
 	}
 	
 	is_for_colonizeable = yes
 	category = deposit_cat_blockers	
-}
-
-d_worm_mine = {
-	is_for_colonizeable = yes
-	category = deposit_cat_rare
-	
-	icon = d_crystalline_caverns
-	
-	planet_modifier = {
-		district_mining_max = 4
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		planet_amenities_add = -20
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		planet_amenities_no_happiness_add = -20
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_worm_farm = {
-	is_for_colonizeable = yes
-	category = deposit_cat_rare
-	
-	icon = d_fertile_lands
-	
-	planet_modifier = {
-		district_farming_max = 4
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		planet_amenities_add = -40
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		planet_amenities_no_happiness_add = -40
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_organic_landfill = {
-	is_for_colonizeable = yes
-	category = deposit_cat_rare
-	icon = d_organic_landfill
-	
-	planet_modifier = { 
-		district_generator_max = 4
-		planet_jobs_society_research_produces_mult = 0.10
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		planet_amenities_add = 20
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		planet_amenities_no_happiness_add = 20
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-} 
-
-d_underground_farm = {
-	is_for_colonizeable = yes
-	category = deposit_cat_rare
-	
-	icon = d_fungal_caves
-	
-	planet_modifier = {
-		district_farming_max = 3
-		planet_max_districts_add = 2
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		planet_amenities_add = -30
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		planet_amenities_no_happiness_add = -30
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_underground_mine = {
-	is_for_colonizeable = yes
-	category = deposit_cat_rare
-	
-	icon = d_crystalline_caverns
-	
-	planet_modifier = {
-		district_mining_max = 3
-		planet_max_districts_add = 2
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		planet_amenities_add = -15
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		planet_amenities_no_happiness_add = -15
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_underground_generator = {
-	is_for_colonizeable = yes
-	category = deposit_cat_rare
-	
-	icon = d_underwater_vent
-	
-	planet_modifier = {
-		district_generator_max = 3
-		planet_max_districts_add = 2
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		planet_amenities_add = -15
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		planet_amenities_no_happiness_add = -15
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
 }
 
 d_underground_farm_blocked = {
@@ -1327,47 +905,6 @@ d_underground_generator_dead = {
 	}
 }
 
-d_underground_contact_zone = {
-	is_for_colonizeable = yes
-	category = deposit_cat_rare
-	
-	icon = d_quarantine_zone
-	
-	planet_modifier = {
-		district_generator_max = 2
-		planet_max_districts_add = 1
-		planet_housing_add = 1
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_underground_trade_worker_add = 1
-			planet_amenities_add = -10
-			#job_underground_trade_worker_per_pop = 0.05 # 1 per 20
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			job_underground_contact_drone_add = 1
-			planet_amenities_no_happiness_add = -10
-			#job_underground_contact_drone_per_pop = 0.05 # 1 per 20
-		}
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
 d_portal_research_zone = {
 	is_for_colonizeable = yes
 	category = deposit_cat_rare
@@ -1375,7 +912,7 @@ d_portal_research_zone = {
 	icon = d_crystalline_caverns
 	
 	planet_modifier = {
-		planet_housing_add = 1
+		planet_housing_add = 1.5
 	}
 	
 	triggered_planet_modifier = {
@@ -1384,7 +921,6 @@ d_portal_research_zone = {
 			owner = { is_gestalt = no }
 		}
 		job_dimensional_portal_researcher_add = 1
-		#job_dimensional_portal_researcher_per_pop = 0.025 # 1 per 40
 	}
 
 	triggered_planet_modifier = {
@@ -1393,7 +929,6 @@ d_portal_research_zone = {
 			owner = { is_gestalt = yes }
 		}
 		job_dimensional_portal_researcher_gestalt_add = 1
-		#job_dimensional_portal_researcher_gestalt_per_pop = 0.025 # 1 per 40
 	}
 	
 	drop_weight = {
@@ -1408,7 +943,7 @@ d_portal_research_zone_gestalt = { #this is a bit redundant now that triggered j
 	icon = d_crystalline_caverns
 	
 	planet_modifier = {
-		planet_housing_add = 1
+		planet_housing_add = 1.5
 	}
 	
 	triggered_planet_modifier = {
@@ -1417,7 +952,6 @@ d_portal_research_zone_gestalt = { #this is a bit redundant now that triggered j
 			owner = { is_gestalt = no }
 		}
 		job_dimensional_portal_researcher_add = 1
-		#job_dimensional_portal_researcher_per_pop = 0.025 # 1 per 40
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -1425,7 +959,6 @@ d_portal_research_zone_gestalt = { #this is a bit redundant now that triggered j
 			owner = { is_gestalt = yes }
 		}
 		job_dimensional_portal_researcher_gestalt_add = 1
-		#job_dimensional_portal_researcher_gestalt_per_pop = 0.025 # 1 per 40
 	}
 	
 	drop_weight = {
@@ -1439,25 +972,10 @@ d_ancient_one = {
 	
 	icon = d_fungal_forest
 	
-	planet_modifier = { 
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
+	planet_modifier = {
 		planet_amenities_add = -5
 	}
 	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		planet_amenities_no_happiness_add = -5
-	}
-
 	resources = {
 		category = planet_deposits
 		produces = {
@@ -1467,71 +985,5 @@ d_ancient_one = {
 	
 	drop_weight = {
 		weight = 0
-	}
-}
-
-d_numas_breath = {
-	is_for_colonizeable = yes	
-	category = deposit_cat_rare
-	
-	icon = d_geothermal_vent
-
-	planet_modifier = {
-		district_generator_max = 3
-		planet_max_districts_add = 1
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		planet_amenities_add = -15
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		planet_amenities_no_happiness_add = -15
-	}
-	
-	drop_weight = {
-		weight = 0
-		#Bought from Caravaneer Fleet 2
-	}
-}
-
-d_nanosands = {
-	is_for_colonizeable = yes	
-	category = deposit_cat_rare
-	
-	icon = d_dust_desert
-
-	planet_modifier = { 
-		district_mining_max = 2
-		planet_max_districts_add = 1
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		planet_amenities_add = -10
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		planet_amenities_no_happiness_add = -10
-	}
-	
-	drop_weight = {
-		weight = 0
-		#Set from anomaly
 	}
 }

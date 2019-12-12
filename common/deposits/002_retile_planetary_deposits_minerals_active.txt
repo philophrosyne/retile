@@ -30,11 +30,49 @@ d_mineral_striations_active = {
 		produces = {
 			minerals = @retile_rural_production_low
 		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			minerals = @retile_rural_production_low
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			minerals = @retile_rural_production2_low
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			minerals = @retile_rural_production3_low
+		}
+		upkeep = {
+			energy = @retile_rural_upkeep_low
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			energy = @retile_rural_upkeep_low
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			energy = @retile_rural_upkeep2_low
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			energy = @retile_rural_upkeep3_low
+		}
 	}
 	
 	planet_modifier = {
 		planet_amenities_add = @retile_rural_pollution_low
-		#planet_housing_add = @retile_rural_housing_low
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_1 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution_low }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_2 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution2_low }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_3 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution3_low }
 	}
 	
 	ai_weight = {
@@ -73,11 +111,49 @@ d_veiny_cliffs_active = {
 		produces = {
 			minerals = @retile_rural_production_low
 		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			minerals = @retile_rural_production_low
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			minerals = @retile_rural_production2_low
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			minerals = @retile_rural_production3_low
+		}
+		upkeep = {
+			energy = @retile_rural_upkeep_low
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			energy = @retile_rural_upkeep_low
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			energy = @retile_rural_upkeep2_low
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			energy = @retile_rural_upkeep3_low
+		}
 	}
 	
 	planet_modifier = {
 		planet_amenities_add = @retile_rural_pollution_low
-		#planet_housing_add = @retile_rural_housing_low
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_1 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution_low }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_2 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution2_low }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_3 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution3_low }
 	}
 	
 	ai_weight = {
@@ -126,11 +202,49 @@ d_mineral_fields_active = {
 		produces = {
 			minerals = @retile_rural_production_low
 		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			minerals = @retile_rural_production_low
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			minerals = @retile_rural_production2_low
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			minerals = @retile_rural_production3_low
+		}
+		upkeep = {
+			energy = @retile_rural_upkeep_low
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			energy = @retile_rural_upkeep_low
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			energy = @retile_rural_upkeep2_low
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			energy = @retile_rural_upkeep3_low
+		}
 	}
 	
 	planet_modifier = {
 		planet_amenities_add = @retile_rural_pollution_low
-		#planet_housing_add = @retile_rural_housing_low
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_1 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution_low }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_2 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution2_low }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_3 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution3_low }
 	}
 	
 	ai_weight = {
@@ -179,11 +293,49 @@ d_prosperous_mesa_active = {
 		produces = {
 			minerals = @retile_rural_production_med
 		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			minerals = @retile_rural_production_med
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			minerals = @retile_rural_production2_med
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			minerals = @retile_rural_production3_med
+		}
+		upkeep = {
+			energy = @retile_rural_upkeep_med
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			energy = @retile_rural_upkeep_med
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			energy = @retile_rural_upkeep2_med
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			energy = @retile_rural_upkeep3_med
+		}
 	}
 	
 	planet_modifier = {
 		planet_amenities_add = @retile_rural_pollution_med
-		#planet_housing_add = @retile_rural_housing_med
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_1 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution_med }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_2 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution2_med }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_3 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution3_med }
 	}
 	
 	ai_weight = {
@@ -232,11 +384,49 @@ d_ore_rich_caverns_active = {
 		produces = {
 			minerals = @retile_rural_production_med
 		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			minerals = @retile_rural_production_med
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			minerals = @retile_rural_production2_med
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			minerals = @retile_rural_production3_med
+		}
+		upkeep = {
+			energy = @retile_rural_upkeep_med
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			energy = @retile_rural_upkeep_med
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			energy = @retile_rural_upkeep2_med
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			energy = @retile_rural_upkeep3_med
+		}
 	}
 	
 	planet_modifier = {
 		planet_amenities_add = @retile_rural_pollution_med
-		#planet_housing_add = @retile_rural_housing_med
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_1 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution_med }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_2 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution2_med }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_3 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution3_med }
 	}
 	
 	ai_weight = {
@@ -287,11 +477,49 @@ d_rich_mountain_active = {
 		produces = {
 			minerals = @retile_rural_production_high
 		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			minerals = @retile_rural_production_high
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			minerals = @retile_rural_production2_high
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			minerals = @retile_rural_production3_high
+		}
+		upkeep = {
+			energy = @retile_rural_upkeep_high
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			energy = @retile_rural_upkeep_high
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			energy = @retile_rural_upkeep2_high
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			energy = @retile_rural_upkeep3_high
+		}
 	}
 	
 	planet_modifier = {
 		planet_amenities_add = @retile_rural_pollution_high
-		#planet_housing_add = @retile_rural_housing_high
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_1 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution_high }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_2 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution2_high }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_3 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution3_high }
 	}
 	
 	ai_weight = {
@@ -342,11 +570,49 @@ d_submerged_ore_veins_active = {
 		produces = {
 			minerals = @retile_rural_production_high
 		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			minerals = @retile_rural_production_high
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			minerals = @retile_rural_production2_high
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			minerals = @retile_rural_production3_high
+		}
+		upkeep = {
+			energy = @retile_rural_upkeep_high
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			energy = @retile_rural_upkeep_high
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			energy = @retile_rural_upkeep2_high
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			energy = @retile_rural_upkeep3_high
+		}
 	}
 	
 	planet_modifier = {
 		planet_amenities_add = @retile_rural_pollution_high
-		#planet_housing_add = @retile_rural_housing_high
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_1 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution_high }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_2 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution2_high }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_3 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution3_high }
 	}
 	
 	ai_weight = {
@@ -383,3 +649,632 @@ d_submerged_ore_veins_active = {
 		d_rich_mountain
 	}	
 }
+
+##########################
+##### Event Deposits #####
+##########################
+
+d_metal_boneyard_active = {
+	time = @retile_rural_restore_time_ultra
+	icon = d_minerals_exploited_4
+	category = deposit_cat_minerals_active
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = planet_deposits_active
+		produces = {
+			minerals = @retile_rural_production_ultra
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			minerals = @retile_rural_production_ultra
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			minerals = @retile_rural_production2_ultra
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			minerals = @retile_rural_production3_ultra
+		}
+		upkeep = {
+			energy = @retile_rural_upkeep_ultra
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			energy = @retile_rural_upkeep_ultra
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			energy = @retile_rural_upkeep2_ultra
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			energy = @retile_rural_upkeep3_ultra
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_pollution_bad_ultra
+		planet_jobs_society_research_produces_mult = 0.10
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_1 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution_bad_ultra }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_2 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution2_bad_ultra }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_3 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution3_bad_ultra }
+	}
+	
+	ai_weight = {
+		weight = -1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_metal_boneyard
+	}
+}
+
+d_junk_wastes_active = {
+	time = @retile_rural_restore_time_high
+	icon = d_minerals_exploited_3
+	category = deposit_cat_minerals_active
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = planet_deposits_active
+		produces = {
+			minerals = @retile_rural_production_high
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			minerals = @retile_rural_production_high
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			minerals = @retile_rural_production2_high
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			minerals = @retile_rural_production3_high
+		}
+		upkeep = {
+			energy = @retile_rural_upkeep_high
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			energy = @retile_rural_upkeep_high
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			energy = @retile_rural_upkeep2_high
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			energy = @retile_rural_upkeep3_high
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_pollution_bad_high
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_1 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution_bad_high }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_2 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution2_bad_high }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_3 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution3_bad_high }
+	}
+	
+	ai_weight = {
+		weight = -1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_junk_wastes
+	}
+}
+
+d_ancient_mining_site_active = {
+	time = @retile_rural_restore_time_ultra2
+	icon = d_minerals_exploited_5
+	category = deposit_cat_minerals_active
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = planet_deposits_active
+		produces = {
+			minerals = @retile_rural_production_ultra2
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			minerals = @retile_rural_production_ultra2
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			minerals = @retile_rural_production2_ultra2
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			minerals = @retile_rural_production3_ultra2
+		}
+		upkeep = {
+			energy = @retile_rural_upkeep_ultra2
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			energy = @retile_rural_upkeep_ultra2
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			energy = @retile_rural_upkeep2_ultra2
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			energy = @retile_rural_upkeep3_ultra2
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_pollution_bad_high
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_1 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution_bad_high }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_2 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution2_bad_high }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_3 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution3_bad_high }
+	}
+	
+	ai_weight = {
+		weight = -1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_ancient_mining_site
+	}
+}
+
+d_impact_crater_active = {
+	time = @retile_rural_restore_time_high
+	icon = d_minerals_exploited_3
+	category = deposit_cat_minerals_active
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = planet_deposits_active
+		produces = {
+			minerals = @retile_rural_production_high
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			minerals = @retile_rural_production_high
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			minerals = @retile_rural_production2_high
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			minerals = @retile_rural_production3_high
+		}
+		upkeep = {
+			energy = @retile_rural_upkeep_high
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			energy = @retile_rural_upkeep_high
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			energy = @retile_rural_upkeep2_high
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			energy = @retile_rural_upkeep3_high
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_pollution_bad_high
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_1 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution_bad_high }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_2 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution2_bad_high }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_3 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution3_bad_high }
+	}
+	
+	ai_weight = {
+		weight = -1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_impact_crater
+	}
+}
+
+d_odd_factory_wreckage_2_active = {
+	time = @retile_rural_restore_time_med
+	icon = d_minerals_exploited_2
+	category = deposit_cat_minerals_active
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = planet_deposits_active
+		produces = {
+			minerals = @retile_rural_production_med
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			minerals = @retile_rural_production_med
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			minerals = @retile_rural_production2_med
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			minerals = @retile_rural_production3_med
+		}
+		upkeep = {
+			energy = @retile_rural_upkeep_med
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			energy = @retile_rural_upkeep_med
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			energy = @retile_rural_upkeep2_med
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			energy = @retile_rural_upkeep3_med
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_pollution_bad_med
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_1 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution_bad_med }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_2 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution2_bad_med }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_3 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution3_bad_med }
+	}
+	
+	ai_weight = {
+		weight = -1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_odd_factory_wreckage_2
+	}
+}
+
+d_underground_vault_2_active = {
+	time = @retile_rural_restore_time_med
+	icon = d_minerals_exploited_2
+	category = deposit_cat_minerals_active
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = planet_deposits_active
+		produces = {
+			minerals = @retile_rural_production_med
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			minerals = @retile_rural_production_med
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			minerals = @retile_rural_production2_med
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			minerals = @retile_rural_production3_med
+		}
+		upkeep = {
+			energy = @retile_rural_upkeep_med
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			energy = @retile_rural_upkeep_med
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			energy = @retile_rural_upkeep2_med
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			energy = @retile_rural_upkeep3_med
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_pollution_med
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_1 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution_med }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_2 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution2_med }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_3 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution3_med }
+	}
+	
+	ai_weight = {
+		weight = -1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_underground_vault_2
+	}
+}
+
+d_worm_mine_active = {
+	time = @retile_rural_restore_time_ultra
+	icon = d_minerals_exploited_4
+	category = deposit_cat_minerals_active
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = planet_deposits_active
+		produces = {
+			minerals = @retile_rural_production_ultra
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			minerals = @retile_rural_production_ultra
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			minerals = @retile_rural_production2_ultra
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			minerals = @retile_rural_production3_ultra
+		}
+		upkeep = {
+			energy = @retile_rural_upkeep_ultra
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			energy = @retile_rural_upkeep_ultra
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			energy = @retile_rural_upkeep2_ultra
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			energy = @retile_rural_upkeep3_ultra
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_pollution_ultra
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_1 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution_ultra }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_2 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution2_ultra }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_3 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution3_ultra }
+	}
+	
+	ai_weight = {
+		weight = -1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_worm_mine
+	}
+}
+
+d_underground_mine_active = {
+	time = @retile_rural_restore_time_high
+	icon = d_minerals_exploited_3
+	category = deposit_cat_minerals_active
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = planet_deposits_active
+		produces = {
+			minerals = @retile_rural_production_high
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			minerals = @retile_rural_production_high
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			minerals = @retile_rural_production2_high
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			minerals = @retile_rural_production3_high
+		}
+		upkeep = {
+			energy = @retile_rural_upkeep_high
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			energy = @retile_rural_upkeep_high
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			energy = @retile_rural_upkeep2_high
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			energy = @retile_rural_upkeep3_high
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_pollution_high
+		planet_max_districts_add = 1
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_1 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution_high }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_2 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution2_high }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_3 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution3_high }
+	}
+	
+	ai_weight = {
+		weight = -1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_underground_mine
+	}
+}
+
+d_nanosands_active = {
+	time = @retile_rural_restore_time_med
+	icon = d_minerals_exploited_2
+	category = deposit_cat_minerals_active
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = planet_deposits_active
+		produces = {
+			minerals = @retile_rural_production_med
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			minerals = @retile_rural_production_med
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			minerals = @retile_rural_production2_med
+		}
+		produces = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			minerals = @retile_rural_production3_med
+		}
+		upkeep = {
+			energy = @retile_rural_upkeep_med
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_1 } }
+			energy = @retile_rural_upkeep_med
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_2 } }
+			energy = @retile_rural_upkeep2_med
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_minerals_buff_3 } }
+			energy = @retile_rural_upkeep3_med
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_pollution_med
+		planet_max_districts_add = 1
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_1 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution_med }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_2 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution2_med }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_minerals_buff_3 } }
+		modifier = { planet_amenities_add = @retile_rural_pollution3_med }
+	}
+	
+	ai_weight = {
+		weight = -1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_nanosands
+	}
+}
+

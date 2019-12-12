@@ -594,6 +594,9 @@
  retile_damaged_infrastructure:0 "Damaged Infrastructure"
  retile_damaged_infrastructure_desc:0 "Catastrophic damage has been inflicted on this region."
 # planetary production deposits
+ retile_requires_food_deposit:0 "$TRIGGER_FAIL$§RRequires at least one Farm!§!"
+ retile_requires_minerals_deposit:0 "$TRIGGER_FAIL$§RRequires at least one Mine!§!"
+ retile_requires_energy_deposit:0 "$TRIGGER_FAIL$§RRequires at least one Generator!§!"
  d_retile_energy_active:0 "Generator"
  d_retile_minerals_active:0 "Mine"
  d_retile_food_active:0 "Farm"

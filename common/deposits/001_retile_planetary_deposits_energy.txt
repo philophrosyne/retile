@@ -439,3 +439,243 @@ d_tempestous_mountain = {
 		d_underwater_vent
 	}
 }
+
+##########################
+##### Event Deposits #####
+##########################
+
+d_junk_hollows = {
+	time = @retile_rural_exploit_time_high
+	icon = d_organic_landfill
+	category = deposit_cat_energy
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_high
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_bad_high
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_junk_hollows_active
+	}
+}
+
+d_irradiated_valley = {
+	time = @retile_rural_exploit_time_high
+	icon = d_radioactive_wasteland
+	category = deposit_cat_energy
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_high
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_bad_high
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_irradiated_valley_active
+	}
+}
+
+d_odd_factory_wreckage_1 = {
+	time = @retile_rural_exploit_time_med
+	icon = d_city_ruins
+	category = deposit_cat_energy
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_med
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_bad_med
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_odd_factory_wreckage_1_active
+	}
+}
+
+d_organic_landfill = {
+	time = @retile_rural_exploit_time_ultra
+	icon = d_organic_landfill
+	category = deposit_cat_energy
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_ultra
+		}
+	}
+	
+	planet_modifier = {
+		planet_jobs_society_research_produces_mult = 0.10
+		planet_amenities_add = @retile_rural_eco_clean_bad_ultra
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_organic_landfill_active
+	}
+}
+
+d_underground_generator = {
+	time = @retile_rural_exploit_time_high
+	icon = d_underwater_vent
+	category = deposit_cat_energy
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_high
+		}
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = 1
+		planet_amenities_add = @retile_rural_eco_clean_high
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_underground_generator_active
+	}
+}
+
+d_underground_contact_zone = {
+	time = @retile_rural_exploit_time_med
+	icon = d_quarantine_zone
+	category = deposit_cat_energy
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_med
+		}
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = 1
+		planet_housing_add = 1.5
+		planet_amenities_add = @retile_rural_eco_clean_med
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_underground_trade_worker_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_underground_contact_drone_add = 1
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_underground_contact_zone_active
+	}
+}
+
+d_numas_breath = {
+	time = @retile_rural_exploit_time_high
+	icon = d_geothermal_vent
+	category = deposit_cat_energy
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_high
+		}
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = 1
+		planet_amenities_add = @retile_rural_eco_clean_high
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_numas_breath_active
+	}
+}
+

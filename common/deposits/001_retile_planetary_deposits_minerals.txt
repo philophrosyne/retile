@@ -364,8 +364,6 @@ d_submerged_ore_veins = {
 		d_submerged_ore_veins_active
 	}
 	
-	should_swap_blocker_on_terraforming = no
-	
 	use_weights_for_terraforming_swap_types = yes
 	should_swap_deposit_on_terraforming = yes
 	terraforming_swap_types = {
@@ -373,3 +371,276 @@ d_submerged_ore_veins = {
 		d_rich_mountain
 	}
 }
+
+##########################
+##### Event Deposits #####
+##########################
+
+d_metal_boneyard = {
+	time = @retile_rural_exploit_time_ultra
+	category = deposit_cat_minerals
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_ultra
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_bad_ultra
+		planet_jobs_society_research_produces_mult = 0.10
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_metal_boneyard_active
+	}
+}
+
+d_junk_wastes = {
+	time = @retile_rural_exploit_time_high
+	icon = d_organic_landfill
+	category = deposit_cat_minerals
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_high
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_bad_high
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_junk_wastes_active
+	}
+}
+
+d_ancient_mining_site = {
+	time = @retile_rural_exploit_time_ultra2
+	icon = d_building_complex
+	category = deposit_cat_minerals
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_ultra2
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_bad_high
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_ancient_mining_site_active
+	}
+}
+
+d_impact_crater = {
+	time = @retile_rural_exploit_time_high
+	icon = d_crater
+	category = deposit_cat_minerals
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_high
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_bad_high
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_impact_crater_active
+	}
+}
+
+d_odd_factory_wreckage_2 = {
+	time = @retile_rural_exploit_time_med
+	icon = d_city_ruins
+	category = deposit_cat_minerals
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_med
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_bad_med
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_odd_factory_wreckage_2_active
+	}
+}
+
+d_underground_vault_2 = {
+	time = @retile_rural_exploit_time_med
+	icon = d_bunker_door
+	category = deposit_cat_minerals
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_med
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_underground_vault_2_active
+	}
+}
+
+d_worm_mine = {
+	time = @retile_rural_exploit_time_ultra
+	icon = d_crystalline_caverns
+	category = deposit_cat_minerals
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_ultra
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_ultra
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_worm_mine_active
+	}
+}
+
+d_underground_mine = {
+	time = @retile_rural_exploit_time_high
+	icon = d_crystalline_caverns
+	category = deposit_cat_minerals
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_high
+		}
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = 1
+		planet_amenities_add = @retile_rural_eco_clean_high
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_underground_mine_active
+	}
+}
+
+d_nanosands = {
+	time = @retile_rural_exploit_time_med
+	icon = d_dust_desert
+	category = deposit_cat_minerals
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_med
+		}
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = 1
+		planet_amenities_add = @retile_rural_eco_clean_med
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_nanosands_active
+	}
+}
+

@@ -1,31 +1,24 @@
-@cost_low = 500
-@cost_med = 1000
-@cost_high = 1500
-@cost_ultra = 2000
-
 #############
 # Science buildings
 #############
 building_research_lab_1 = {
-	base_buildtime = 360
+	base_buildtime = @retile_building_time_low
 	base_cap_amount = 1
 	category = research
 	can_be_disabled = no
+	upgrades = { building_research_lab_2 }
+	prerequisites = { tech_basic_science_lab_1 }
 	
-	potential = {
+	allow = {
+		num_districts = { type = district_scholars value > 0 }
 		NOT = { has_modifier = resort_colony }	
 		NOT = { has_modifier = slave_colony }
 		NOT = { has_modifier = penal_colony }
 	}
-	
-	allow = {
-		retile_urban = yes
-		#retile_ready = yes
-	}
 
 	destroy_trigger = {
 		OR = {
-			retile_urban = no
+			num_districts = { type = district_scholars value < 1 }
 			has_modifier = slave_colony
 			has_modifier = resort_colony
 			has_modifier = penal_colony
@@ -35,48 +28,19 @@ building_research_lab_1 = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = @cost_low
+			alloys = @retile_building_cost_low
 		}
 		upkeep = {
-			energy = 10
-		}
-		upkeep = {
-			trigger = { owner = { is_hive_empire = yes } }
-			energy = -5
-			consumer_goods = 1
+			energy = @retile_building_upkeep_nrg_low
 		}
 	}
 	
-	upgrades = {
-		"building_research_lab_2"
-	}
-	
-	prerequisites = {
-		"tech_basic_science_lab_1"
+	planet_modifier = {
+		planet_housing_add = @retile_building_housing_low
 	}
 	
 	country_modifier = {
-		country_resource_max_add = 1000
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		modifier = {
-			planet_housing_add = 1
-			job_custodian_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			planet_housing_add = 1
-			job_maintenance_drone_add = 1
-		}
+		country_resource_max_add = @retile_building_storage_low
 	}
 	
 	triggered_desc = {
@@ -87,54 +51,7 @@ building_research_lab_1 = {
 	}
 
 	ai_weight = {
-		weight = 200
-		
-		modifier = {	# Safe to advance our empire?
-			weight = 300
-			retile_advanced_economy = yes
-		}
-		modifier = {
-			weight = 150000
-			is_capital = yes
-		}
-		modifier = {	# behind in tech!!!
-			weight = 100
-			owner = {
-				any_neighbor_country = {
-					is_country_type = default
-					prev = {
-						relative_power = {
-							who = prev
-							category = technology 
-							value > inferior
-						}
-						OR = {
-							NOT = { relative_power = {
-								who = prev 
-								category = all
-								value = overwhelming
-							} }
-							NOT = { relative_power = {
-								who = prev 
-								category = all
-								value < equivalent
-							} }
-						}
-					}
-				}
-			}
-		}
-		modifier = {	# Ministry!!!
-			factor = 5
-			OR = {
-				has_building = building_institute
-				#has_building = building_supercomputer
-			}
-		}
-		modifier = {	# consumer goods collapse!!!
-			factor = -1
-			owner = { has_monthly_income = { resource = consumer_goods value < -50 } }
-		}
+		weight = 1
 	}
 	
 	ai_resource_production = {
@@ -148,71 +65,39 @@ building_research_lab_1 = {
 }
 
 building_research_lab_2 = {
-	base_buildtime = 480
+	base_buildtime = @retile_building_time_med
 	can_build = no
 	category = research
 	can_be_disabled = no
+	upgrades = { building_research_lab_3 }
+	prerequisites = { tech_basic_science_lab_2 }
 
 	destroy_trigger = {
 		OR = {
-			retile_urban = no
+			num_districts = { type = district_scholars value < 1 }
 			has_modifier = slave_colony
 			has_modifier = resort_colony
 			has_modifier = penal_colony
 		}
 	}
 	
-	allow = {
-		#retile_ready = yes
-		always = yes
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = @cost_med
-			rare_crystals = @cost_med
+			alloys = @retile_building_cost_med
+			rare_crystals = @retile_building_cost_rare_med
 		}
 		upkeep = {
-			energy = 25
-		}
-		upkeep = {
-			trigger = { owner = { is_hive_empire = yes } }
-			energy = -15
-			consumer_goods = 2
+			energy = @retile_building_upkeep_nrg_med
 		}
 	}
-	
-	upgrades = {
-		"building_research_lab_3"
-	}
-	
-	prerequisites = {
-		"tech_basic_science_lab_2"
+
+	planet_modifier = {
+		planet_housing_add = @retile_building_housing_med
 	}
 	
 	country_modifier = {
-		country_resource_max_add = 2000
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		modifier = {
-			planet_housing_add = 2
-			job_custodian_add = 2
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			planet_housing_add = 2
-			job_maintenance_drone_add = 2
-		}
+		country_resource_max_add = @retile_building_storage_med
 	}
 	
 	triggered_desc = {
@@ -237,67 +122,38 @@ building_research_lab_2 = {
 }
 
 building_research_lab_3 = {
-	base_buildtime = 600
+	base_buildtime = @retile_building_time_high
 	can_build = no
 	category = research
 	can_be_disabled = no
+	prerequisites = { tech_basic_science_lab_3 }
 	
 	destroy_trigger = {
 		OR = {
-			retile_urban = no
+			num_districts = { type = district_scholars value < 1 }
 			has_modifier = slave_colony
 			has_modifier = resort_colony
 			has_modifier = penal_colony
 		}
 	}
 	
-	allow = {
-		#retile_ready = yes
-		always = yes
-	}
-	
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = @cost_high
-			rare_crystals = @cost_high
+			alloys = @retile_building_cost_high
+			rare_crystals = @retile_building_cost_rare_high
 		}
 		upkeep = {
-			energy = 50
-		}
-		upkeep = {
-			trigger = { owner = { is_hive_empire = yes } }
-			energy = -25
-			consumer_goods = 3
+			energy = @retile_building_upkeep_nrg_high
 		}
 	}
 	
-	prerequisites = {
-		"tech_basic_science_lab_3"
+	planet_modifier = {
+		planet_housing_add = @retile_building_housing_high
 	}
 	
 	country_modifier = {
-		country_resource_max_add = 3000
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		modifier = {
-			planet_housing_add = 3
-			job_custodian_add = 3
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			planet_housing_add = 3
-			job_maintenance_drone_add = 3
-		}
+		country_resource_max_add = @retile_building_storage_high
 	}
 	
 	triggered_desc = {
@@ -322,81 +178,49 @@ building_research_lab_3 = {
 }
 
 building_institute = {
-	base_buildtime = 480
+	base_buildtime = @retile_building_time_med
 	base_cap_amount = 1
 	category = research
 	can_be_disabled = no
-
+	prerequisites = { tech_global_research_initiative }
+	
 	potential = {
+		exists = owner
+		owner = { has_technology = tech_global_research_initiative }
+	}
+
+	allow = {
+		num_districts = { type = district_scholars value > 0 }
 		NOT = { has_modifier = resort_colony }	
 		NOT = { has_modifier = slave_colony }
 		NOT = { has_modifier = penal_colony }
 	}
 
-	allow = {
-		retile_urban = yes
-		#retile_ready = yes
-	}
-
 	destroy_trigger = {
 		OR = {
-			has_modifier = resort_colony
+			num_districts = { type = district_scholars value < 1 }
 			has_modifier = slave_colony
+			has_modifier = resort_colony
 			has_modifier = penal_colony
 		}
 	}
-	
-	#convert_to = {
-	#	building_supercomputer
-	#}
 
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = @cost_low
+			alloys = @retile_building_cost_med
 		}
 		upkeep = {
-			energy = 10
-		}
-		upkeep = {
-			trigger = { owner = { is_hive_empire = yes } }
-			energy = -5
-			consumer_goods = 1
+			energy = @retile_building_upkeep_nrg_med
 		}
 	}
 	
 	planet_modifier = {
-		planet_researchers_produces_mult = 0.25
-	}
-	
-	prerequisites = {
-		"tech_global_research_initiative"
+		planet_housing_add = @retile_building_housing_med
 	}
 	
 	country_modifier = {
-		country_resource_max_add = 2000
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		modifier = {
-			planet_housing_add = 2
-			job_custodian_add = 2
-			#job_head_researcher_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			planet_housing_add = 2
-			job_maintenance_drone_add = 2
-			#job_head_researcher_add = 1
-		}
+		country_resource_max_add = @retile_building_storage_med
 	}
 	
 	triggered_desc = {
@@ -405,22 +229,14 @@ building_institute = {
 	}
 	
 	ai_weight = {	# only built on goods or alloys worlds
-		weight = 0
-		
-		modifier = {	# really good, but only build if we are already doing this...
-			weight = 10000
-			OR = {
-				has_building = building_research_lab_1
-				has_building = building_research_lab_2
-				has_building = building_research_lab_3
-			}
-		}
+		weight = 1
 	}
 	
 	ai_resource_production = {
 		physics_research = 1
 		society_research = 1
 		engineering_research = 1
+		unity = 1
 		trigger = {
 			always = yes
 		}

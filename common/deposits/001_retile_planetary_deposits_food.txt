@@ -863,3 +863,190 @@ d_fungal_forest = {
 		d_tropical_island
 	}
 }
+
+##########################
+##### Event Deposits #####
+##########################
+
+d_junk_canals = {
+	time = @retile_rural_exploit_time_high
+	icon = d_organic_landfill
+	category = deposit_cat_food
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_high
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_bad_high
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_junk_canals_active
+	}
+}
+
+d_abandoned_primitive_homesteads = {
+	time = @retile_rural_exploit_time_med
+	icon = d_tribal_settlement
+	category = deposit_cat_food
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_med
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_med
+		planet_jobs_society_research_produces_mult = 0.10
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_abandoned_primitive_homesteads_active
+	}
+}
+
+d_hyperfertile_valley = {
+	time = @retile_rural_exploit_time_ultra2
+	icon = d_alien_pets_deposit
+	category = deposit_cat_food
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_ultra2
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_ultra2
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_hyperfertile_valley_active
+	}
+}
+
+d_harvester_fields = {
+	time = @retile_rural_exploit_time_ultra3
+	icon = d_fertile_lands
+	category = deposit_cat_food
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_ultra3
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_ultra3
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_harvester_fields_active
+	}
+}
+
+d_worm_farm = {
+	time = @retile_rural_exploit_time_ultra
+	icon = d_fertile_lands
+	category = deposit_cat_food
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_ultra
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_ultra
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_worm_farm_active
+	}
+}
+
+d_underground_farm = {
+	time = @retile_rural_exploit_time_high
+	icon = d_fungal_caves
+	category = deposit_cat_food
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_high
+		}
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = 1
+		planet_amenities_add = @retile_rural_eco_clean_high
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_underground_farm_active
+	}
+}
+

@@ -248,11 +248,11 @@ col_power_station = {
 		}
 		modifier = {
 			add = 1
-			has_building = building_energy_grid
+			has_building = building_energy_buff_1
 		}
 		modifier = {
 			add = 2
-			has_building = building_energy_nexus
+			has_building = building_energy_buff_3
 		}
 	}
 }
@@ -291,11 +291,11 @@ col_mining_station = {
 		}
 		modifier = {
 			add = 1
-			has_building = building_mineral_purification_plant
+			has_building = building_minerals_buff_1
 		}
 		modifier = {
 			add = 2
-			has_building = building_mineral_purification_hub
+			has_building = building_minerals_buff_3
 		}
 	}
 }
@@ -334,11 +334,11 @@ col_farming_station = {
 		}
 		modifier = {
 			add = 1
-			has_building = building_food_processing_facility
+			has_building = building_food_buff_1
 		}
 		modifier = {
 			add = 2
-			has_building = building_food_processing_center
+			has_building = building_food_buff_3
 		}
 	}
 }

@@ -686,7 +686,7 @@ planet_event = {
 				add_building = building_commercial_zone
 			}
 			else = {
-				#add_building = building_maintenance_depot
+				#add_building = building_maintenance_depot_1
 			}
 		}
 		else = {	# +5 jobs total
