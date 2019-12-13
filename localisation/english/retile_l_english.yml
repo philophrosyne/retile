@@ -305,6 +305,7 @@
  planet_beauracrats:0 "Bureaucrat Jobs"
  planet_diplomats:0 "Diplomat Jobs"
  planet_overseers: "0 "Overseer Jobs"
+ planet_pops_upkeep_mult:0 "Pop Upkeep"
  # Jobs
  job_diplomat:0 "Diplomat"
  job_diplomat_plural:0 "Diplomats"

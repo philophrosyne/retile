@@ -679,3 +679,97 @@ d_numas_breath = {
 	}
 }
 
+#########################
+### Starting Deposits ###
+#########################
+
+d_delhi_sprawl = {
+	icon = d_city
+	time = @retile_rural_exploit_time_med
+	category = deposit_cat_energy
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = planet_deposits_active
+		cost = {
+			alloys = @retile_rural_exploit_cost_med
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_med
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_delhi_sprawl_active
+	}
+}
+
+d_boswash_metropolitan_axis = {
+	icon = d_city
+	time = @retile_rural_exploit_time_high
+	category = deposit_cat_energy
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = planet_deposits_active
+		cost = {
+			alloys = @retile_rural_exploit_cost_high
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_high
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_boswash_metropolitan_axis_active
+	}
+}
+
+d_pearl_river_agglomerate = {
+	icon = d_building_complex
+	time = @retile_rural_exploit_time_high
+	category = deposit_cat_energy
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = planet_deposits_active
+		cost = {
+			alloys = @retile_rural_exploit_cost_high
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_high
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_pearl_river_agglomerate_active
+	}
+}
+

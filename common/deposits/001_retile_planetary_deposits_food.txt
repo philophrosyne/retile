@@ -1050,3 +1050,93 @@ d_underground_farm = {
 	}
 }
 
+#########################
+### Starting Deposits ###
+#########################
+
+d_scandinavian_reclamation_sector = {
+	icon = d_radioactive_wasteland
+	time = @retile_rural_exploit_time_low
+	category = deposit_cat_food
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = planet_deposits_active
+		cost = {
+			alloys = @retile_rural_exploit_cost_low
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_low
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_scandinavian_reclamation_sector_active
+	}
+}
+
+d_pacific_algae_tracts = {
+	icon = d_toxic_kelp
+	time = @retile_rural_exploit_time_high
+	category = deposit_cat_food
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = planet_deposits_active
+		cost = {
+			alloys = @retile_rural_exploit_cost_high
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_high
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_pacific_algae_tracts_active
+	}
+}
+
+d_saharan_irrigation_project = {
+	icon = d_green_hills
+	time = @retile_rural_exploit_time_ultra
+	category = deposit_cat_food
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = planet_deposits_active
+		cost = {
+			alloys = @retile_rural_exploit_cost_ultra
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_ultra
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_saharan_irrigation_project_active
+	}
+}
+

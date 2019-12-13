@@ -33,8 +33,7 @@ d_mineral_striations = {
 	
 	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_low
-	}
-	
+	}	
 	
 	ai_weight = {
 		weight = 1
@@ -76,7 +75,6 @@ d_veiny_cliffs = {
 	planet_modifier = {
 		planet_amenities_add = @retile_rural_eco_clean_low
 	}
-	
 	
 	ai_weight = {
 		weight = 1
@@ -641,6 +639,100 @@ d_nanosands = {
 	
 	blocker_swap_types = {
 		d_nanosands_active
+	}
+}
+
+#########################
+### Starting Deposits ###
+#########################
+
+d_mauritanian_security_zone = {
+	icon = d_quarantine_zone
+	time = @retile_rural_exploit_time_low
+	category = deposit_cat_minerals
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_low
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_low
+	}	
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_mauritanian_security_zone_active
+	}
+}
+
+d_mesopotamian_urban_corridor = {
+	icon = d_marvelous_oasis
+	time = @retile_rural_exploit_time_high
+	category = deposit_cat_minerals
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_high
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_high
+	}	
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_mesopotamian_urban_corridor_active
+	}
+}
+
+d_great_albertan_crater = {
+	icon = d_crater
+	time = @retile_rural_exploit_time_high
+	category = deposit_cat_minerals
+	is_for_colonizeable = yes
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			alloys = @retile_rural_exploit_cost_high
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = @retile_rural_eco_clean_high
+	}	
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+	blocker_swap_types = {
+		d_great_albertan_crater_active
 	}
 }
 

@@ -35,6 +35,7 @@ retile_job_seeking = {
 		has_job = no
 		has_job = servant
 		has_job = slave_toiler
+		has_job = custodian
 		has_pop_flag = retile_pop_lfw
 	}
 }
