@@ -284,7 +284,7 @@ tax_collector = {
 	############################################################ Commerce Buildings
 
 	triggered_planet_modifier = {
-		potential = { planet = { has_building = building_commercial_zone } }
+		potential = { planet = { has_building = building_trade_2 } }
 		modifier = {
 			trade_value_add = 6.25
 			planet_amenities_add = 15
@@ -292,21 +292,21 @@ tax_collector = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			planet = { has_building = building_commercial_zone }
+			planet = { has_building = building_trade_2 }
 			has_trait = trait_thrifty
 		}
 		modifier = { trade_value_add = 1.5625 }
 	}
 	triggered_planet_modifier = {
 		potential = {
-			planet = { has_building = building_commercial_zone }
+			planet = { has_building = building_trade_2 }
 			has_trait = trait_nuumismatic_administration
 		}
 		modifier = { trade_value_add = 1.5625 }
 	}
 
 	triggered_planet_modifier = {
-		potential = { planet = { has_building = building_commercial_megaplex } }
+		potential = { planet = { has_building = building_trade_3 } }
 		modifier = {
 			trade_value_add = 12.5
 			planet_amenities_add = 37.5
@@ -314,14 +314,14 @@ tax_collector = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			planet = { has_building = building_commercial_megaplex }
+			planet = { has_building = building_trade_3 }
 			has_trait = trait_thrifty
 		}
 		modifier = { trade_value_add = 3.125 }
 	}
 	triggered_planet_modifier = {
 		potential = {
-			planet = { has_building = building_commercial_megaplex }
+			planet = { has_building = building_trade_3 }
 			has_trait = trait_nuumismatic_administration
 		}
 		modifier = { trade_value_add = 3.125 }
@@ -396,7 +396,7 @@ investor = {
 	############################################################ Commerce Buildings
 
 	triggered_planet_modifier = {
-		potential = { planet = { has_building = building_commercial_zone } }
+		potential = { planet = { has_building = building_trade_2 } }
 		modifier = {
 			trade_value_add = 7.5
 			planet_amenities_add = 22.5
@@ -404,21 +404,21 @@ investor = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			planet = { has_building = building_commercial_zone }
+			planet = { has_building = building_trade_2 }
 			has_trait = trait_thrifty
 		}
 		modifier = { trade_value_add = 1.875 }
 	}
 	triggered_planet_modifier = {
 		potential = {
-			planet = { has_building = building_commercial_zone }
+			planet = { has_building = building_trade_2 }
 			has_trait = trait_nuumismatic_administration
 		}
 		modifier = { trade_value_add = 1.875 }
 	}
 
 	triggered_planet_modifier = {
-		potential = { planet = { has_building = building_commercial_megaplex } }
+		potential = { planet = { has_building = building_trade_3 } }
 		modifier = {
 			trade_value_add = 15
 			planet_amenities_add = 45
@@ -426,14 +426,14 @@ investor = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			planet = { has_building = building_commercial_megaplex }
+			planet = { has_building = building_trade_3 }
 			has_trait = trait_thrifty
 		}
 		modifier = { trade_value_add = 3.75 }
 	}
 	triggered_planet_modifier = {
 		potential = {
-			planet = { has_building = building_commercial_megaplex }
+			planet = { has_building = building_trade_3 }
 			has_trait = trait_nuumismatic_administration
 		}
 		modifier = { trade_value_add = 3.75 }

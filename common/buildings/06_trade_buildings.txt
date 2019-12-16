@@ -6,12 +6,12 @@
 #############
 # Trade buildings
 #############
-building_marketplace = {
+building_trade_1 = {
 	base_buildtime = @retile_building_time_low
 	base_cap_amount = 1
 	category = trade
 	can_be_disabled = no
-	upgrades = { building_commercial_zone }
+	upgrades = { building_trade_2 }
 	
 	potential = {
 		exists = owner
@@ -52,23 +52,20 @@ building_marketplace = {
 		country_resource_max_add = @retile_building_storage_low
 	}
 	
-	triggered_desc = {
-		trigger = { exists = owner }
-		text = retile_marketplace_effect
-	}
+	custom_tooltip = retile_trade_1_effect
 	
 	ai_weight = {
 		weight = 1
 	}
 }
 
-building_commercial_zone = {
+building_trade_2 = {
 	base_buildtime = @retile_building_time_med
 	can_build = no
 	category = trade
 	can_be_disabled = no
 	prerequisites = { tech_interplanetary_commerce }
-	upgrades = { building_commercial_megaplex }
+	upgrades = { building_trade_3 }
 	show_tech_unlock_if = { is_regular_empire = yes }
 	
 	destroy_trigger = {
@@ -99,17 +96,14 @@ building_commercial_zone = {
 		country_resource_max_add = @retile_building_storage_med
 	}
 	
-	triggered_desc = {
-		trigger = { exists = owner }
-		text = retile_commercial_zone_effect
-	}
+	custom_tooltip = retile_trade_2_effect
 	
 	ai_weight = {	# always upgrade
 		weight = 100000
 	}
 }
 
-building_commercial_megaplex = {
+building_trade_3 = {
 	base_buildtime = @retile_building_time_high
 	can_build = no
 	category = trade
@@ -144,6 +138,8 @@ building_commercial_megaplex = {
 	country_modifier = {
 		country_resource_max_add = @retile_building_storage_high
 	}
+	
+	custom_tooltip = retile_trade_3_effect
 	
 	ai_weight = {	# always upgrade
 		weight = 100000

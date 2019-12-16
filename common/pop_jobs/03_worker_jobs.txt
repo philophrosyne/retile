@@ -24,31 +24,6 @@ custodian = {
 		planet_amenities_add = -50
 	}
 	
-	triggered_pop_modifier = {
-		potential = { planet = { has_building = building_maintenance_depot_1 } }
-		modifier = { planet_pops_upkeep_mult = 1 }
-	}
-	triggered_pop_modifier = {
-		potential = { planet = { has_building = building_maintenance_depot_2 } }
-		modifier = { planet_pops_upkeep_mult = 2 }
-	}
-	triggered_pop_modifier = {
-		potential = { planet = { has_building = building_maintenance_depot_3 } }
-		modifier = { planet_pops_upkeep_mult = 3 }
-	}
-	triggered_pop_modifier = {
-		potential = { planet = { has_building = building_solar_panels } }
-		modifier = { planet_pops_upkeep_mult = 2 }
-	}
-	triggered_pop_modifier = {
-		potential = { planet = { has_building = building_recycling_center } }
-		modifier = { planet_pops_upkeep_mult = 2 }
-	}
-	triggered_pop_modifier = {
-		potential = { planet = { has_building = building_hydroponics_farm } }
-		modifier = { planet_pops_upkeep_mult = 2 }
-	}
-	
 	triggered_planet_modifier = {
 		potential = { owner = { has_technology = tech_industrial_metabolism } }
 		modifier = { planet_amenities_add = -10 }

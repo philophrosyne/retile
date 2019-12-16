@@ -69,7 +69,7 @@ generate_start_buildings_and_districts = {
 		#add_building = building_factory_1
 
 		if = { limit = { owner = { is_megacorp = yes } }
-			add_building = building_commercial_zone
+			add_building = building_trade_2
 			remove_district = district_generator
 		}
 	}

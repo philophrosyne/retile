@@ -314,7 +314,6 @@ living_standard_shared_burden = {
 	}
 }
 
-
 living_standard_utopian = {
 	token = living_standard_utopian
 	name = living_standard_utopian

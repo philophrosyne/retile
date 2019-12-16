@@ -683,7 +683,7 @@ planet_event = {
 			if = {	# +2 = 6
 				limit = { owner = { is_gestalt = no } }
 				add_building = building_research_lab_1
-				add_building = building_commercial_zone
+				add_building = building_trade_2
 			}
 			else = {
 				#add_building = building_maintenance_depot_1

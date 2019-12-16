@@ -9,55 +9,9 @@ ruler = {
 	keep_from_former_job = yes
 	demotion_time = 1
 	
-	should_apply_unemployment_penalties = {
-		NOR = {
-			has_very_high_living_standard_type = yes
-			has_high_living_standard_type = yes
-			has_shared_burden_living_standard_type = yes
-		}	
-	}
-	unemployment_penalties = {
-		pop_happiness = -0.40
-	}
-	unemployment_resources = {
-		category = unemployment_resources	
-		
-		# Utopian living standards
-		produces = {
-			trigger = {
-				has_utopian_living_standard_type = yes
-			}
-			society_research = 2
-			physics_research = 2
-			engineering_research = 2
-		}
-		
-		# Welfare
-		produces = {
-			trigger = {
-				OR = {
-					has_very_high_living_standard_type = yes
-					has_high_living_standard_type = yes
-					has_shared_burden_living_standard_type = yes
-				}	
-			}
-			unity = 1
-		}
-
-		# Unemployment Benefits Crime event
-		upkeep = {
-			trigger = {
-				planet = {
-					has_modifier = unemployment_benefits
-				}
-			}
-			consumer_goods = 2
-		}
-	}		
-	
 	weight = {
 		weight = 3
-	}	
+	}
 	
 	pop_modifier = {
 		pop_housing_usage_base = 1
@@ -131,9 +85,7 @@ ruler = {
 		# Organic Upkeep
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
-				is_lithoid = no
-				NOT = { has_trait = trait_plantoid }
+				is_biological = yes
 				has_shared_burden_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
@@ -142,7 +94,6 @@ ruler = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
 				is_lithoid = yes
 				has_shared_burden_living_standard_type = yes
 				owner = { is_primitive = no }
@@ -152,8 +103,7 @@ ruler = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
-				has_trait = trait_plantoid
+				is_plantoid = yes
 				has_shared_burden_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
@@ -161,9 +111,7 @@ ruler = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
-				is_lithoid = no
-				NOT = { has_trait = trait_plantoid }
+				is_biological = yes
 				owner = { is_primitive = no }
 				OR = {
 					has_academic_living_standard_type = yes
@@ -178,7 +126,6 @@ ruler = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
 				is_lithoid = yes
 				owner = { is_primitive = no }
 				OR = {
@@ -194,8 +141,7 @@ ruler = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
-				has_trait = trait_plantoid
+				is_plantoid = yes
 				owner = { is_primitive = no }
 				OR = {
 					has_academic_living_standard_type = yes
@@ -209,9 +155,7 @@ ruler = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
-				is_lithoid = no
-				NOT = { has_trait = trait_plantoid }
+				is_biological = yes
 				has_low_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
@@ -220,7 +164,6 @@ ruler = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
 				is_lithoid = yes
 				has_low_living_standard_type = yes
 				owner = { is_primitive = no }
@@ -230,18 +173,17 @@ ruler = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
-				has_trait = trait_plantoid
+				is_plantoid = yes
 				has_low_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
 			consumer_goods = @living_standard_luxuries_high
 		}
+		
 		# Primitives
 		upkeep = {
 			trigger = {
-				is_lithoid = no
-				NOT = { has_trait = trait_plantoid }
+				is_biological = yes
 				owner = { is_primitive = yes }
 			}
 			food = @living_standard_food_normal
@@ -261,7 +203,7 @@ ruler = {
 				has_shared_burden_living_standard_type = yes
 			}
 			energy = @living_standard_energy_normal
-			consumer_goods = @living_standard_luxuries_shared_burden			
+			consumer_goods = @living_standard_luxuries_shared_burden
 		}		
 		upkeep = {
 			trigger = { 
@@ -358,52 +300,6 @@ specialist = {
 	
 	change_job_threshold = 1.25
 	
-	should_apply_unemployment_penalties = {
-		NOR = {
-			has_very_high_living_standard_type = yes
-			has_high_living_standard_type = yes
-			has_shared_burden_living_standard_type = yes
-		}
-	}
-	unemployment_penalties = {
-		pop_happiness = -0.30
-	}
-	unemployment_resources = {
-		category = unemployment_resources
-		
-		# Utopian living standards
-		produces = {
-			trigger = {
-				has_utopian_living_standard_type = yes
-			}
-			society_research = 2
-			physics_research = 2
-			engineering_research = 2
-		}
-		
-		# Welfare
-		produces = {
-			trigger = {
-				OR = {
-					has_very_high_living_standard_type = yes
-					has_high_living_standard_type = yes
-					has_shared_burden_living_standard_type = yes
-				}	
-			}
-			unity = 1
-		}
-
-		# Unemployment Benefits Crime event
-		upkeep = {
-			trigger = {
-				planet = {
-					has_modifier = unemployment_benefits
-				}
-			}
-			consumer_goods = 2
-		}
-	}
-
 	weight = {
 		weight = 2
 	}	
@@ -488,9 +384,7 @@ specialist = {
 		# Organic Upkeep
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
-				is_lithoid = no
-				NOT = { has_trait = trait_plantoid }
+				is_biological = yes
 				has_shared_burden_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
@@ -499,7 +393,6 @@ specialist = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
 				is_lithoid = yes
 				has_shared_burden_living_standard_type = yes
 				owner = { is_primitive = no }
@@ -509,8 +402,7 @@ specialist = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
-				has_trait = trait_plantoid
+				is_plantoid = yes
 				has_shared_burden_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
@@ -518,9 +410,7 @@ specialist = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
-				is_lithoid = no
-				NOT = { has_trait = trait_plantoid }
+				is_biological = yes
 				owner = { is_primitive = no }
 				OR = {
 					has_academic_living_standard_type = yes
@@ -533,7 +423,6 @@ specialist = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
 				is_lithoid = yes
 				owner = { is_primitive = no }
 				OR = {
@@ -547,8 +436,7 @@ specialist = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
-				has_trait = trait_plantoid
+				is_plantoid = yes
 				owner = { is_primitive = no }
 				OR = {
 					has_academic_living_standard_type = yes
@@ -560,9 +448,7 @@ specialist = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
-				is_lithoid = no
-				NOT = { has_trait = trait_plantoid }
+				is_biological = yes
 				owner = { is_primitive = no }
 				OR = {
 					has_high_living_standard_type = yes
@@ -575,7 +461,6 @@ specialist = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
 				is_lithoid = yes
 				owner = { is_primitive = no }
 				OR = {
@@ -589,8 +474,7 @@ specialist = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
-				has_trait = trait_plantoid
+				is_plantoid = yes
 				owner = { is_primitive = no }
 				OR = {
 					has_high_living_standard_type = yes
@@ -602,9 +486,7 @@ specialist = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
-				is_lithoid = no
-				NOT = { has_trait = trait_plantoid }
+				is_biological = yes
 				has_low_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
@@ -613,7 +495,6 @@ specialist = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
 				is_lithoid = yes
 				has_low_living_standard_type = yes
 				owner = { is_primitive = no }
@@ -623,8 +504,7 @@ specialist = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
-				has_trait = trait_plantoid
+				is_plantoid = yes
 				has_low_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
@@ -654,7 +534,7 @@ specialist = {
 			}
 			energy = @living_standard_energy_normal
 			consumer_goods = @living_standard_luxuries_very_high
-		}				
+		}
 		upkeep = {
 			trigger = { 
 				is_robotic_species = yes

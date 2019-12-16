@@ -33,20 +33,22 @@ building_foundry_1 = {
 		}
 	}
 	
-	planet_modifier = {
-		planet_housing_add = @retile_building_housing_low
-	}
-	
 	country_modifier = {
 		country_resource_max_add = @retile_building_storage_low
 	}
 	
-	triggered_desc = {
-		trigger = { 
-			exists = owner
-		}
-		text = retile_foundry_1_effect
+	planet_modifier = {
+		planet_housing_add = @retile_building_housing_low
+		engineers_bio_food_upkeep_add = @living_standard_food_normal
+		engineers_lith_minerals_upkeep_add = @living_standard_food_normal
+		engineers_mech_energy_upkeep_add = @living_standard_energy_normal
+		engineers_shared_burden_consumer_goods_upkeep_add = @living_standard_luxuries_shared_burden
+		engineers_very_high_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
+		engineers_high_consumer_goods_upkeep_add = @living_standard_luxuries_high
+		engineers_normal_consumer_goods_upkeep_add = @living_standard_luxuries_normal
 	}
+	
+	custom_tooltip = retile_foundry_1_effect
 	
 	ai_weight = {
 		weight = 1
@@ -87,20 +89,22 @@ building_foundry_2 = {
 		}
 	}
 	
-	planet_modifier = {
-		planet_housing_add = @retile_building_housing_med
-	}
-	
 	country_modifier = {
 		country_resource_max_add = @retile_building_storage_med
 	}
 	
-	triggered_desc = {
-		trigger = { 
-			exists = owner
-		}
-		text = retile_foundry_2_effect
+	planet_modifier = {
+		planet_housing_add = @retile_building_housing_med
+		engineers_bio_food_upkeep_add = @living_standard2_food_normal
+		engineers_lith_minerals_upkeep_add = @living_standard2_food_normal
+		engineers_mech_energy_upkeep_add = @living_standard2_energy_normal
+		engineers_shared_burden_consumer_goods_upkeep_add = @living_standard2_luxuries_shared_burden
+		engineers_very_high_consumer_goods_upkeep_add = @living_standard2_luxuries_very_high
+		engineers_high_consumer_goods_upkeep_add = @living_standard2_luxuries_high
+		engineers_normal_consumer_goods_upkeep_add = @living_standard2_luxuries_normal
 	}
+	
+	custom_tooltip = retile_foundry_2_effect
 	
 	ai_weight = {	# always upgrade
 		weight = 100000
@@ -141,20 +145,22 @@ building_foundry_3 = {
 		}
 	}
 	
-	planet_modifier = {
-		planet_housing_add = @retile_building_housing_high
-	}
-	
 	country_modifier = {
 		country_resource_max_add = @retile_building_storage_high
 	}
 	
-	triggered_desc = {
-		trigger = { 
-			exists = owner
-		}
-		text = retile_foundry_3_effect
+	planet_modifier = {
+		planet_housing_add = @retile_building_housing_high
+		engineers_bio_food_upkeep_add = @living_standard3_food_normal
+		engineers_lith_minerals_upkeep_add = @living_standard3_food_normal
+		engineers_mech_energy_upkeep_add = @living_standard3_energy_normal
+		engineers_shared_burden_consumer_goods_upkeep_add = @living_standard3_luxuries_shared_burden
+		engineers_very_high_consumer_goods_upkeep_add = @living_standard3_luxuries_very_high
+		engineers_high_consumer_goods_upkeep_add = @living_standard3_luxuries_high
+		engineers_normal_consumer_goods_upkeep_add = @living_standard3_luxuries_normal
 	}
+
+	custom_tooltip = retile_foundry_3_effect
 	
 	ai_weight = {	# always upgrade
 		weight = 100000
@@ -201,20 +207,22 @@ building_factory_1 = {
 		}
 	}
 	
-	planet_modifier = {
-		planet_housing_add = @retile_building_housing_low
-	}
-	
 	country_modifier = {
 		country_resource_max_add = @retile_building_storage_low
 	}
 	
-	triggered_desc = {
-		trigger = { 
-			exists = owner
-		}
-		text = retile_factory_1_effect
+	planet_modifier = {
+		planet_housing_add = @retile_building_housing_low
+		engineers_bio_food_upkeep_add = @living_standard_food_normal
+		engineers_lith_minerals_upkeep_add = @living_standard_food_normal
+		engineers_mech_energy_upkeep_add = @living_standard_energy_normal
+		engineers_shared_burden_consumer_goods_upkeep_add = @living_standard_luxuries_shared_burden
+		engineers_very_high_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
+		engineers_high_consumer_goods_upkeep_add = @living_standard_luxuries_high
+		engineers_normal_consumer_goods_upkeep_add = @living_standard_luxuries_normal
 	}
+	
+	custom_tooltip = retile_factory_1_effect
 	
 	ai_weight = {
 		weight = 1
@@ -255,20 +263,22 @@ building_factory_2 = {
 		}
 	}
 	
-	planet_modifier = {
-		planet_housing_add = @retile_building_housing_med
-	}
-	
 	country_modifier = {
 		country_resource_max_add = @retile_building_storage_med
 	}
 	
-	triggered_desc = {
-		trigger = { 
-			exists = owner
-		}
-		text = retile_factory_2_effect
+	planet_modifier = {
+		planet_housing_add = @retile_building_housing_med
+		engineers_bio_food_upkeep_add = @living_standard2_food_normal
+		engineers_lith_minerals_upkeep_add = @living_standard2_food_normal
+		engineers_mech_energy_upkeep_add = @living_standard2_energy_normal
+		engineers_shared_burden_consumer_goods_upkeep_add = @living_standard2_luxuries_shared_burden
+		engineers_very_high_consumer_goods_upkeep_add = @living_standard2_luxuries_very_high
+		engineers_high_consumer_goods_upkeep_add = @living_standard2_luxuries_high
+		engineers_normal_consumer_goods_upkeep_add = @living_standard2_luxuries_normal
 	}
+	
+	custom_tooltip = retile_factory_2_effect
 	
 	ai_weight = {	# always upgrade
 		weight = 100000
@@ -309,20 +319,22 @@ building_factory_3 = {
 		}
 	}
 	
-	planet_modifier = {
-		planet_housing_add = @retile_building_housing_high
-	}
-	
 	country_modifier = {
 		country_resource_max_add = @retile_building_storage_high
 	}
 	
-	triggered_desc = {
-		trigger = { 
-			exists = owner
-		}
-		text = retile_factory_3_effect
+	planet_modifier = { 
+		planet_housing_add = @retile_building_housing_high
+		engineers_bio_food_upkeep_add = @living_standard3_food_normal
+		engineers_lith_minerals_upkeep_add = @living_standard3_food_normal
+		engineers_mech_energy_upkeep_add = @living_standard3_energy_normal
+		engineers_shared_burden_consumer_goods_upkeep_add = @living_standard3_luxuries_shared_burden
+		engineers_very_high_consumer_goods_upkeep_add = @living_standard3_luxuries_very_high
+		engineers_high_consumer_goods_upkeep_add = @living_standard3_luxuries_high
+		engineers_normal_consumer_goods_upkeep_add = @living_standard3_luxuries_normal
 	}
+	
+	custom_tooltip = retile_factory_3_effect
 	
 	ai_weight = {	# always upgrade
 		weight = 100000
@@ -375,20 +387,22 @@ building_ministry_production = {
 		}
 	}
 	
-	planet_modifier = {
-		planet_housing_add = @retile_building_housing_med
-	}
-	
 	country_modifier = {
 		country_resource_max_add = @retile_building_storage_med
 	}
 	
-	triggered_desc = {
-		trigger = {
-			exists = owner
-		}
-		text = retile_ministry_production_effect
+	planet_modifier = {
+		planet_housing_add = @retile_building_housing_med
+		engineers_bio_food_upkeep_add = @living_standard2_food_normal
+		engineers_lith_minerals_upkeep_add = @living_standard2_food_normal
+		engineers_mech_energy_upkeep_add = @living_standard2_energy_normal
+		engineers_shared_burden_consumer_goods_upkeep_add = @living_standard2_luxuries_shared_burden
+		engineers_very_high_consumer_goods_upkeep_add = @living_standard2_luxuries_very_high
+		engineers_high_consumer_goods_upkeep_add = @living_standard2_luxuries_high
+		engineers_normal_consumer_goods_upkeep_add = @living_standard2_luxuries_normal
 	}
+	
+	custom_tooltip = retile_ministry_production_effect
 	
 	ai_weight = {
 		weight = 1

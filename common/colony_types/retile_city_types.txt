@@ -75,11 +75,11 @@ col_commercial_arcology = {
 		}
 		modifier = {
 			add = 1
-			has_building = building_commercial_zone
+			has_building = building_trade_2
 		}
 		modifier = {
 			add = 2
-			has_building = building_commercial_megaplex
+			has_building = building_trade_3
 		}
 		modifier = {
 			add = 1

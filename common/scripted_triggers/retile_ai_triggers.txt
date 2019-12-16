@@ -225,8 +225,8 @@ retile_urban_development = {	# planet scope
 		has_building = building_research_lab_1
 		has_building = building_research_lab_2
 		has_building = building_research_lab_3
-		has_building = building_commercial_zone
-		has_building = building_commercial_megaplex
+		has_building = building_trade_2
+		has_building = building_trade_3
 	}
 }
 

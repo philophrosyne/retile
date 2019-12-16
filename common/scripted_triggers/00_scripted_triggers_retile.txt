@@ -93,3 +93,15 @@ retile_diplomacy = {	# counry scope
 is_plantoid_empire = {
 	owner_species = { is_plantoid = yes }
 }
+
+is_plantoid = {
+	species = {
+		is_archetype = PLANTOID
+	}
+}
+
+is_biological = {
+	species = {
+		is_archetype = BIOLOGICAL
+	}
+}
