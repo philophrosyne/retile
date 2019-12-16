@@ -148,25 +148,25 @@
 @base_moon_distance = 10
 
 # TECH COSTS
-@tier1cost1 = 2000
-@tier1cost2 = 2500
-@tier1cost3 = 3000
+@tier1cost1 = 500
+@tier1cost2 = 1000	# 500
+@tier1cost3 = 2000	# 1000
 
-@tier2cost1 = 4000
-@tier2cost2 = 5000
-@tier2cost3 = 6000
+@tier2cost1 = 3500	# 1500
+@tier2cost2 = 5500	# 2000
+@tier2cost3 = 8000	# 2500
 
-@tier3cost1 = 8000
-@tier3cost2 = 10000
-@tier3cost3 = 12000
+@tier3cost1 = 11000	# 3000
+@tier3cost2 = 14500	# 3500
+@tier3cost3 = 18500	# 4000
 
-@tier4cost1 = 16000
-@tier4cost2 = 20000
-@tier4cost3 = 24000
+@tier4cost1 = 23000	# 4500
+@tier4cost2 = 28000	# 5000
+@tier4cost3 = 33500	# 5500
 
-@tier5cost1 = 32000
-@tier5cost2 = 40000
-@tier5cost3 = 48000
+@tier5cost1 = 39500	# 6000
+@tier5cost2 = 46000	# 6500
+@tier5cost3 = 53000	# 7000
 
 # TECH WEIGHTS
 @tier1weight1 = 100
@@ -190,15 +190,15 @@
 @tier5weight3 = 20
 
 # REPEATABLE TECHS
-@repeatableTechBaseCost = 50000
-@repeatableTechLevelCost = 5000
+@repeatableTechBaseCost = 75000
+@repeatableTechLevelCost = 7500
 @repeatableTechTier = 5
 
 @repeatableTechWeight = 25
 @repatableTechFactor = 0.5
 
 # FALLEN EMPIRE TECHS
-@fallentechcost = 50000
+@fallentechcost = 100000
 @fallentechtier = 5
 
 # HORIZON SIGNAL

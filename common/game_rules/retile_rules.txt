@@ -136,3 +136,10 @@ can_terraform_planet = {
 		any_owned_pop = { is_sapient = no }
 	}
 }
+
+# Can the country have robot pop
+# root: country
+can_have_robot_pops = {
+	exists = this
+	NOT = { has_authority = auth_hive_mind }
+}

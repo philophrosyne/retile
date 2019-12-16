@@ -20,20 +20,11 @@ clerk = {
 		}
 		complex_specialist_job_check_trigger = yes
 	}
-
-	planet_modifier = {
-		trade_value_add = 20
-		planet_amenities_add = 60
-	}
-	triggered_planet_modifier = {
-		potential = { has_trait = trait_thrifty }
-		modifier = { trade_value_add = 5 }
-	}
-	triggered_planet_modifier = {
-		potential = { has_trait = trait_nuumismatic_administration }
-		modifier = { trade_value_add = 5 }
-	}
 	
+	planet_modifier = {
+		trade_value_add = 10
+		planet_amenities_add = 30
+	}
 	resources = {
 		category = planet_researchers
 		produces = {
@@ -45,49 +36,26 @@ clerk = {
 	############################################################ Commerce Buildings
 
 	triggered_planet_modifier = {
-		potential = { planet = { has_building = building_trade_2 } }
-		modifier = {
-			trade_value_add = 5
-			planet_amenities_add = 15
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			planet = { has_building = building_trade_2 }
-			has_trait = trait_thrifty
-		}
-		modifier = { trade_value_add = 1.25 }
-	}
-	triggered_planet_modifier = {
-		potential = {
-			planet = { has_building = building_trade_2 }
-			has_trait = trait_nuumismatic_administration
-		}
-		modifier = { trade_value_add = 1.25 }
-	}
-
-	triggered_planet_modifier = {
-		potential = { planet = { has_building = building_trade_3 } }
+		potential = { planet = { has_building = building_trade_1 } }
 		modifier = {
 			trade_value_add = 10
 			planet_amenities_add = 30
 		}
 	}
 	triggered_planet_modifier = {
-		potential = {
-			planet = { has_building = building_trade_3 }
-			has_trait = trait_thrifty
+		potential = { planet = { has_building = building_trade_2 } }
+		modifier = {
+			trade_value_add = 20
+			planet_amenities_add = 60
 		}
-		modifier = { trade_value_add = 2.5 }
 	}
 	triggered_planet_modifier = {
-		potential = {
-			planet = { has_building = building_trade_3 }
-			has_trait = trait_nuumismatic_administration
+		potential = { planet = { has_building = building_trade_3 } }
+		modifier = {
+			trade_value_add = 30
+			planet_amenities_add = 90
 		}
-		modifier = { trade_value_add = 2.5 }
 	}
-
 	############################################################ Clerk Job Weight
 
 	weight = {
@@ -96,13 +64,6 @@ clerk = {
 			factor = 0.01
 			is_enslaved = yes
 			can_take_servant_job = no
-		}
-		modifier = {
-			factor = 1.5
-			OR = {
-				has_trait = trait_thrifty
-				has_trait = trait_nuumismatic_administration
-			}	
 		}
 		modifier = {
 			factor = 0.01
@@ -137,53 +98,54 @@ researcher = {	### Scholar
 	resources = {
 		category = planet_researchers
 		produces = {
-			physics_research = 2.5
-			engineering_research = 2.5
-			society_research = 2.5
-			unity = 2.5
+			physics_research = @retile_job_resource_med
+			engineering_research = @retile_job_resource_med
+			society_research = @retile_job_resource_med
+			unity = @retile_job_resource2_low
 		}
 		upkeep = {
-			consumer_goods = 2.5
+			consumer_goods = @retile_job_resource_med
 		}		
 		produces = {
 			trigger = { planet = { has_building = building_research_lab_1 } }
-			physics_research = 2.5
-			engineering_research = 2.5
-			society_research = 2.5
+			physics_research = @retile_job_resource_med
+			engineering_research = @retile_job_resource_med
+			society_research = @retile_job_resource_med
 		}
 		upkeep = {
 			trigger = { planet = { has_building = building_research_lab_1 } }
-			consumer_goods = 1.25
+			consumer_goods = @retile_job_resource_low
 		}		
 		produces = {
 			trigger = { planet = { has_building = building_research_lab_2 } }
-			physics_research = 5
-			engineering_research = 5
-			society_research = 5
+			physics_research = @retile_job_resource2_med
+			engineering_research = @retile_job_resource2_med
+			society_research = @retile_job_resource2_med
 		}
 		upkeep = {
 			trigger = { planet = { has_building = building_research_lab_2 } }
-			consumer_goods = 2.5
+			consumer_goods = @retile_job_resource2_low
 		}		
 		produces = {
 			trigger = { planet = { has_building = building_research_lab_3 } }
-			physics_research = 7.5
-			engineering_research = 7.5
-			society_research = 7.5
+			physics_research = @retile_job_resource3_med
+			engineering_research = @retile_job_resource3_med
+			society_research = @retile_job_resource3_med
 		}
 		upkeep = {
 			trigger = { planet = { has_building = building_research_lab_3 } }
-			consumer_goods = 3.75
+			consumer_goods = @retile_job_resource3_low
 		}		
 		produces = {
 			trigger = { planet = { has_building = building_institute } }
-			physics_research = 2.5
-			engineering_research = 2.5
-			society_research = 2.5
+			physics_research = @retile_job_resource_med
+			engineering_research = @retile_job_resource_med
+			society_research = @retile_job_resource_med
+			unity = @retile_job_resource_med
 		}
 		upkeep = {
 			trigger = { planet = { has_building = building_institute } }
-			consumer_goods = 1.25
+			consumer_goods = @retile_job_resource2_low
 		}
 		produces = {
 			trigger = { planet = { OR = {
@@ -191,7 +153,7 @@ researcher = {	### Scholar
 				has_building = building_autochthon_monument
 				has_building = building_corporate_monument
 			} } }
-			unity = 2.5
+			unity = @retile_job_resource_med
 		}
 		upkeep = {
 			trigger = { planet = { OR = {
@@ -199,7 +161,7 @@ researcher = {	### Scholar
 				has_building = building_autochthon_monument
 				has_building = building_corporate_monument
 			} } }
-			consumer_goods = 1.25
+			consumer_goods = @retile_job_resource_low
 		}		
 		produces = {
 			trigger = { planet = { OR = {
@@ -207,7 +169,7 @@ researcher = {	### Scholar
 				has_building = building_heritage_site
 				has_building = building_corporate_site
 			} } }
-			unity = 5
+			unity = @retile_job_resource2_med
 		}
 		upkeep = {
 			trigger = { planet = { OR = {
@@ -215,7 +177,7 @@ researcher = {	### Scholar
 				has_building = building_heritage_site
 				has_building = building_corporate_site
 			} } }
-			consumer_goods = 2.5
+			consumer_goods = @retile_job_resource2_low
 		}		
 		produces = {
 			trigger = { planet = { OR = {
@@ -223,7 +185,7 @@ researcher = {	### Scholar
 				has_building = building_hypercomms_forum
 				has_building = building_corporate_forum
 			} } }
-			unity = 7.5
+			unity = @retile_job_resource3_med
 		}
 		upkeep = {
 			trigger = { planet = { OR = {
@@ -231,13 +193,13 @@ researcher = {	### Scholar
 				has_building = building_hypercomms_forum
 				has_building = building_corporate_forum
 			} } }
-			consumer_goods = 3.75
+			consumer_goods = @retile_job_resource3_low
 		}
 		produces = { ### Fallen Empire
 			trigger = { planet = { has_building = building_class_4_singularity } }
-			physics_research = 10
-			engineering_research = 10
-			society_research = 10
+			physics_research = @retile_job_resource_ultra
+			engineering_research = @retile_job_resource_ultra
+			society_research = @retile_job_resource_ultra
 		}
 		produces = { ### Fallen Empire
 			trigger = { planet = { OR = {
@@ -245,30 +207,30 @@ researcher = {	### Scholar
 				has_building = building_master_archive
 				has_building = building_fe_xeno_zoo
 			} } }
-			unity = 10
+			unity = @retile_job_resource_ultra
 		}
 	}
 
 	############################################################ Scholar Pollution
 	
 	planet_modifier = {
-		planet_amenities_add = 15
+		planet_amenities_add = @retile_job_pollution2_med
 	}
 	triggered_planet_modifier = {
 		potential = { planet = { has_building = building_research_lab_1 } }
-		modifier = { planet_amenities_add = 7.5 }
+		modifier = { planet_amenities_add = @retile_job_pollution_med }
 	}
 	triggered_planet_modifier = {
 		potential = { planet = { has_building = building_research_lab_2 } }
-		modifier = { planet_amenities_add = 15 }
+		modifier = { planet_amenities_add = @retile_job_pollution2_med }
 	}
 	triggered_planet_modifier = {
 		potential = { planet = { has_building = building_research_lab_3 } }
-		modifier = { planet_amenities_add = 22.5 }
+		modifier = { planet_amenities_add = @retile_job_pollution3_med }
 	}
 	triggered_planet_modifier = {
 		potential = { planet = { has_building = building_institute } }
-		modifier = { planet_amenities_add = 7.5 }
+		modifier = { planet_amenities_add = @retile_job_pollution2_med }
 	}
 	triggered_planet_modifier = {
 		potential = { planet = { OR = {
@@ -276,7 +238,7 @@ researcher = {	### Scholar
 			has_building = building_autochthon_monument
 			has_building = building_corporate_monument
 		} } }
-		modifier = { planet_amenities_add = 7.5 }
+		modifier = { planet_amenities_add = @retile_job_pollution_med }
 	}
 	triggered_planet_modifier = {
 		potential = { planet = { OR = {
@@ -284,7 +246,7 @@ researcher = {	### Scholar
 			has_building = building_heritage_site
 			has_building = building_corporate_site
 		} } }
-		modifier = { planet_amenities_add = 15 }
+		modifier = { planet_amenities_add = @retile_job_pollution2_med }
 	}
 	triggered_planet_modifier = {
 		potential = { planet = { OR = {
@@ -292,50 +254,7 @@ researcher = {	### Scholar
 			has_building = building_hypercomms_forum
 			has_building = building_corporate_forum
 		} } }
-		modifier = { planet_amenities_add = 22.5 }
-	}
-
-	############################################################ Scholar Pop Upkeep
-
-	triggered_pop_modifier = {
-		potential = { planet = { has_building = building_research_lab_1 } }
-		modifier = { planet_pops_upkeep_mult = 1 }
-	}
-	triggered_pop_modifier = {
-		potential = { planet = { has_building = building_research_lab_2 } }
-		modifier = { planet_pops_upkeep_mult = 2 }
-	}
-	triggered_pop_modifier = {
-		potential = { planet = { has_building = building_research_lab_3 } }
-		modifier = { planet_pops_upkeep_mult = 3 }
-	}
-	triggered_pop_modifier = {
-		potential = { planet = { has_building = building_institute } }
-		modifier = { planet_pops_upkeep_mult = 2 }
-	}
-	triggered_pop_modifier = {
-		potential = { planet = { OR = {
-			has_building = building_temple
-			has_building = building_autochthon_monument
-			has_building = building_corporate_monument
-		} } }
-		modifier = { planet_pops_upkeep_mult = 1 }
-	}
-	triggered_pop_modifier = {
-		potential = { planet = { OR = {
-			has_building = building_holotemple
-			has_building = building_heritage_site
-			has_building = building_corporate_site
-		} } }
-		modifier = { planet_pops_upkeep_mult = 2 }
-	}
-	triggered_pop_modifier = {
-		potential = { planet = { OR = {
-			has_building = building_sacred_nexus
-			has_building = building_hypercomms_forum
-			has_building = building_corporate_forum
-		} } }
-		modifier = { planet_pops_upkeep_mult = 3 }
+		modifier = { planet_amenities_add = @retile_job_pollution3_med }
 	}
 
 	############################################################ Scholar Job Weight
@@ -910,45 +829,6 @@ soldier = {
 			factor = 0
 			can_be_soldier = no
 		}
-	}
-}
-
-roboticist = {
-	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_robot_assembly_plant
-	clothes_texture_index = 3
-		
-	possible_pre_triggers = {
-		has_owner = yes
-		is_enslaved = no
-		is_being_purged = no
-		is_being_assimilated = no
-	}
-
-	possible = {
-		or = {
-			has_job = roboticist
-			retile_job_seeking = yes
-		}
-		specialist_job_check_trigger = yes
-		planet = { free_housing >= 0 }
-	}
-	
-	resources = {
-		category = planet_pop_assemblers
-		upkeep = {
-			minerals = 10
-		}
-	}
-
-	planet_modifier = {
-		planet_amenities_add = 30
-		planet_pop_assembly_add = 2
-	}
-	
-	weight = {
-		weight = 500
 	}
 }
 

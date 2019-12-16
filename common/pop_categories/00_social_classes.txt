@@ -44,6 +44,22 @@ ruler = {
 		energy = 200
 	}
 	
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_warrior_culture }
+		}
+		modifier = {
+			pop_defense_armies_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			can_generate_trade_value = yes
+			has_trait = trait_thrifty
+		}
+		trade_value_add = 1
+	}
 	triggered_planet_modifier = {
 		potential = {
 			can_generate_trade_value = yes
@@ -335,6 +351,22 @@ specialist = {
 		energy = 150
 	}
 	
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_warrior_culture }
+		}
+		modifier = {
+			pop_defense_armies_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			can_generate_trade_value = yes
+			has_trait = trait_thrifty
+		}
+		trade_value_add = 1
+	}
 	triggered_planet_modifier = {
 		potential = {
 			can_generate_trade_value = yes
@@ -672,8 +704,15 @@ worker = {
 			owner = { has_civic = civic_warrior_culture }
 		}
 		modifier = {
-			pop_defense_armies_add = 2
+			pop_defense_armies_add = 1
 		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			can_generate_trade_value = yes
+			has_trait = trait_thrifty
+		}
+		trade_value_add = 1
 	}
 	triggered_planet_modifier = {
 		potential = {

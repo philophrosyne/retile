@@ -35,7 +35,7 @@ district_clerks = {
 	resources = {
 		category = planet_districts_cities
 		cost = {
-			minerals = @retile_city_cost
+			alloys = @retile_city_cost
 		}
 		upkeep = {
 			energy = @retile_city_upkeep
@@ -51,7 +51,7 @@ district_clerks = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1.5
+			planet_housing_add = 2
 			job_clerk_add = 1
 		}
 	}
@@ -94,7 +94,7 @@ district_engineers = {
 	resources = {
 		category = planet_districts_cities
 		cost = {
-			minerals = @retile_city_cost
+			alloys = @retile_city_cost
 		}
 		upkeep = {
 			energy = @retile_city_upkeep
@@ -110,7 +110,7 @@ district_engineers = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1.5
+			planet_housing_add = 2
 			job_foundry_add = 1
 		}
 	}
@@ -153,7 +153,7 @@ district_scholars = {
 	resources = {
 		category = planet_districts_cities
 		cost = {
-			minerals = @retile_city_cost
+			alloys = @retile_city_cost
 		}
 		upkeep = {
 			energy = @retile_city_upkeep
@@ -169,7 +169,7 @@ district_scholars = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1.5
+			planet_housing_add = 2
 			job_researcher_add = 1
 		}
 	}
@@ -212,7 +212,7 @@ district_soldiers = {
 	resources = {
 		category = planet_districts_cities
 		cost = {
-			minerals = @retile_city_cost
+			alloys = @retile_city_cost
 		}
 		upkeep = {
 			energy = @retile_city_upkeep
@@ -228,7 +228,7 @@ district_soldiers = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1.5
+			planet_housing_add = 2
 			job_soldier_add = 1
 		}
 	}

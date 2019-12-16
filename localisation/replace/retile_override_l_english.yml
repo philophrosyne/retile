@@ -22,7 +22,7 @@ planet_pops_consumer_goods_upkeep_mult:0 "£pop£ Pop £consumer_goods£ §Y$con
  civic_tooltip_merchant_guilds_effects:0 "Replaces Administrator Jobs with Merchant Jobs on Capital Buildings"
  civic_tooltip_citizen_service_effects:0 "Naval Capacity +10%\nStability +1 on Soldiers"
  civic_tooltip_police_state_effects:0 "Crime -10%\nStability +1 on Enforcers"
- civic_tooltip_warrior_culture_effects:0 "Worker Jobs generate 2 Defensive Armies"
+ civic_tooltip_warrior_culture_effects:0 "Each pop with living standards of slavery or better produces §G+1§! Defensive Army"
  civic_tooltip_agrarian_idyll_effects:0 "£job_farmer£ §Y$job_farmer_plural$§! also produce §G3§! £unity£ §YUnity§!"
 
  # Traits
@@ -40,6 +40,7 @@ planet_pops_consumer_goods_upkeep_mult:0 "£pop£ Pop £consumer_goods£ §Y$con
  TRAIT_LITHOID_SCINTILLATING_EFFECT:0 "Each pop with living standards of slavery or better produces 0.05 £rare_crystals£ §Y$rare_crystals$§! per month."
  TRAIT_LITHOID_GASEOUS_BYPRODUCTS_EFFECT:0 "Each pop with living standards of slavery or better produces 0.05 £exotic_gases£ §Y$exotic_gases$§! per month."
  TRAIT_LITHOID_VOLATILE_EXCRETIONS_EFFECT:0 "Each pop with living standards of slavery or better produces 0.05 £volatile_motes£ §Y$volatile_motes$§! per month."
+ TRAIT_THRIFTY_EFFECT:0 "Each pop with living standards of slavery or better produces §G+1§! £trade_value£ §YTrade Value§!"
  # Factions
  pft_progressive:0 "Egalitarian Faction"
  pft_progressive_desc:1 "Egalitarian Factions desire non-discrimination within existing social structures and dislike non-representative forms of government.\n\n§LEgalitarian Ethos§!"

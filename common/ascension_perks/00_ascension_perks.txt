@@ -341,7 +341,7 @@ ap_synthetic_evolution = {
 		}
 	}
 	modifier = {
-		planet_jobs_robotic_produces_mult = 0.10
+		planet_pop_assembly_add = 2
 		ROBOT_species_trait_points_add = 1
 		modify_species_cost_mult = -0.50
 	}		

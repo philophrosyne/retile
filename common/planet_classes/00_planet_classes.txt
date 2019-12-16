@@ -615,7 +615,6 @@ pc_machine = {
 	
 	modifier = {
 		planet_jobs_produces_mult = 0.10
-		pop_housing_usage_mult = -0.10
 		pop_environment_tolerance = 0.0
 	}
 	

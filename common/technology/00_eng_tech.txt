@@ -2955,12 +2955,12 @@ tech_robotic_workers = {
 		NOT = { has_ethic = "ethic_gestalt_consciousness" }
 	}
 	
+	modifier = {
+		planet_pop_assembly_add = 2
+	}
+	
 	weight_modifier = {
 		factor = 1.5
-		modifier = {
-			factor = 0
-			has_policy_flag = robots_outlawed
-		}		
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -3022,10 +3022,6 @@ tech_droid_workers = {
 	}	
 	
 	weight_modifier = {
-		modifier = {
-			factor = 0
-			has_policy_flag = robots_outlawed
-		}	
 		modifier = {
 			factor = 2
 			has_valid_civic = civic_mechanists
@@ -3099,10 +3095,6 @@ tech_synthetic_workers = {
 	
 	weight_modifier = {
 		factor = 0.5
-		modifier = {
-			factor = 0
-			has_policy_flag = robots_outlawed
-		}		
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
@@ -3194,10 +3186,6 @@ tech_synthetic_leaders = {
 	}
 	
 	weight_modifier = {
-		modifier = {
-			factor = 0
-			has_policy_flag = robots_outlawed
-		}	
 		modifier = {
 			factor = 0
 			has_policy_flag = ai_outlawed

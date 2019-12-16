@@ -1786,41 +1786,6 @@ artificial_intelligence_policy = {
 	}
 }
 
-robot_pop_policy = {
-
-	potential = {	
-		NOT = { has_ethic = ethic_gestalt_consciousness }
-	}
-	
-	option = {
-		name = "robot_pops_outlawed"
-
-		valid = {
-			always = no
-		}
-		
-		policy_flags = {
-			robots_outlawed
-		}
-		
-		AI_weight = {
-			factor = 0		
-		}
-	}
-	
-	option = {
-		name = "robot_pops_allowed"
-		
-		policy_flags = {
-			robots_allowed
-		}
-		
-		AI_weight = {
-			factor = 10			
-		}
-	}
-}
-
 pre_sapients = {
 	potential = {	
 		OR = {

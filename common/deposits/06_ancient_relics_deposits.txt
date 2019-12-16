@@ -168,7 +168,7 @@ d_central_spire = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			planet_housing_add = 2
+			planet_housing_add = 4
 			job_researcher_add = 1
 			job_foundry_add = 1
 		}
@@ -179,7 +179,7 @@ d_central_spire = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			planet_housing_add = 2
+			planet_housing_add = 4
 			job_brain_drone_add = 1
 			job_artisan_drone_add = 1
 		}
@@ -191,7 +191,7 @@ d_central_spire = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {	
-			planet_housing_add = 2
+			planet_housing_add = 4
 			#job_calculator_add = 1
 			#job_foundry_drone_add = 1
 		}

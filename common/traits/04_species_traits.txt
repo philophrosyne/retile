@@ -14,6 +14,9 @@ trait_agrarian = {
 	cost = 2
 	potential_crossbreeding_chance = 1.0	# 1.0 = 100% chance of being considered for new traits when forming half-species. does not guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL }
+	custom_tooltip = retile_trait_agrarian_effect
+		# custodians improve rural food production by 5%
+	show_only_custom_tooltip = no
 	modifier = {
 		planet_jobs_food_produces_mult = 0.15
 	}
@@ -26,6 +29,9 @@ trait_ingenious = {
 	cost = 2
 	potential_crossbreeding_chance = 1.0
 	allowed_archetypes = { BIOLOGICAL LITHOID }
+	custom_tooltip = retile_trait_agrarian_effect
+		# custodians improve rural energy production by 5%
+	show_only_custom_tooltip = no
 	modifier = {
 		planet_jobs_energy_produces_mult = 0.15
 	}
@@ -38,6 +44,9 @@ trait_industrious = {
 	cost = 2
 	potential_crossbreeding_chance = 1.0
 	allowed_archetypes = { BIOLOGICAL LITHOID }
+	custom_tooltip = retile_trait_agrarian_effect
+		# custodians improve rural minerals production by 5%
+	show_only_custom_tooltip = no
 	modifier = {
 		planet_jobs_minerals_produces_mult = 0.15
 	}
@@ -59,7 +68,7 @@ trait_intelligent = {
 }
 
 trait_thrifty = {
-	cost = 3
+	cost = 1
 	allowed_archetypes = { BIOLOGICAL LITHOID PLANTOID }
 	opposites = { "trait_hive_mind" }
 	custom_tooltip = TRAIT_THRIFTY_EFFECT

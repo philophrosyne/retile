@@ -935,7 +935,7 @@ d_underground_contact_zone_active = {
 	
 	planet_modifier = {
 		planet_max_districts_add = 1
-		planet_housing_add = 1.5
+		planet_housing_add = 2
 		planet_amenities_add = @retile_rural_pollution_med
 	}
 	triggered_planet_modifier = {

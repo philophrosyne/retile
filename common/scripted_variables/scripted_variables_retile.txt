@@ -2,7 +2,34 @@
 ####### Pop Jobs #######
 ########################
 
+@retile_job_resource_low = 1.5
+@retile_job_resource2_low = 3
+@retile_job_resource3_low = 4.5
+@retile_job_resource_med = 3
+@retile_job_resource2_med = 6
+@retile_job_resource3_med = 9
+@retile_job_resource_high = 6
+@retile_job_resource2_high = 12
+@retile_job_resource3_high = 18
+@retile_job_resource_ultra = 12
+@retile_job_resource2_ultra = 24
+@retile_job_resource3_ultra = 36
 
+@retile_job_pollution_low = 5
+@retile_job_pollution2_low = 10
+@retile_job_pollution3_low = 15
+@retile_job_pollution_med = 10
+@retile_job_pollution2_med = 20
+@retile_job_pollution3_med = 30
+@retile_job_pollution_high = 15
+@retile_job_pollution2_high = 30
+@retile_job_pollution3_high = 45
+@retile_job_pollution_ultra = 20
+@retile_job_pollution2_ultra = 40
+@retile_job_pollution3_ultra = 60
+@retile_job_pollution_ultra2 = 30
+@retile_job_pollution2_ultra2 = 60
+@retile_job_pollution3_ultra2 = 90
 
 #########################
 ####### Buildings #######
@@ -42,7 +69,7 @@
 ####### Districts #######
 #########################
 
-@retile_city_cost = 500
+@retile_city_cost = 150
 @retile_city_upkeep = 5
 @retile_city_build_time = 900
 

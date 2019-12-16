@@ -593,7 +593,6 @@ event = { # unscoped gatekeeper
 					has_ascension_perk = ap_the_flesh_is_weak
 					has_policy_flag = ai_full_rights
 					has_country_flag = no_machine_uprising
-					has_policy_flag = robots_outlawed
 				}
 				OR = {
 					has_technology = tech_combat_computers_3
@@ -619,7 +618,6 @@ country_event = { # per-country gatekeeper
 			has_ascension_perk = ap_the_flesh_is_weak
 			has_policy_flag = ai_full_rights
 			has_country_flag = no_machine_uprising
-			has_policy_flag = robots_outlawed
 		}
 		OR = {
 			has_technology = tech_combat_computers_3
@@ -1748,7 +1746,6 @@ country_event = {
 			has_ethic = ethic_gestalt_consciousness
 			has_ascension_perk = ap_the_flesh_is_weak
 			has_policy_flag = ai_full_rights
-			#has_policy_flag = robots_outlawed # should still happen if triggered by ban
 		}
 		# has a dangerous tech
 		OR = {
@@ -3026,37 +3023,17 @@ country_event = {
 }
 
 # Banning robot workers post-Warning Signs causes Uprising evaluation
+# RETILE: Blanked due to removal of robot-worker policy
 country_event = {
 	id = syndaw.1305
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-		#always = no ## RETILE TODO
-		host_has_dlc = "Synthetic Dawn Story Pack"
-		last_changed_policy = robot_pop_policy
-		has_policy_flag = robots_outlawed
-		OR = {
-			has_country_flag = triggered_syndaw_500
-			has_country_flag = triggered_syndaw_505
-			has_country_flag = triggered_syndaw_515
-			has_country_flag = triggered_syndaw_520
-			has_country_flag = triggered_syndaw_525
-			has_country_flag = triggered_syndaw_530
-			has_country_flag = triggered_syndaw_535
-			has_country_flag = triggered_syndaw_540
-			has_country_flag = triggered_syndaw_545
-		}
-		NOT = { has_country_flag = no_machine_uprising }
+		always = no
 	}
 
 	immediate = {
-		set_country_flag = attempted_ban
-		random_list = {
-			3 = { fire_warning_sign = yes }
-			1 = { country_event = { id = syndaw.1000 } }
-		}
-		#country_event = { id = syndaw.402 }
 	}
 }
 

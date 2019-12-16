@@ -611,7 +611,7 @@ d_underground_contact_zone = {
 	
 	planet_modifier = {
 		planet_max_districts_add = 1
-		planet_housing_add = 1.5
+		planet_housing_add = 2
 		planet_amenities_add = @retile_rural_eco_clean_med
 	}
 	

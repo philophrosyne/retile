@@ -59,10 +59,6 @@ tech_robomodding = {
 
 	weight_modifier = {		
 		modifier = {
-			factor = 0
-			has_policy_flag = robots_outlawed
-		}			
-		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = engineering
@@ -117,10 +113,6 @@ tech_robomodding_points_1 = {
 	}	
 	
 	weight_modifier = {
-		modifier = {
-			factor = 0
-			has_policy_flag = robots_outlawed
-		}	
 		modifier = {
 			factor = 2
 			has_valid_civic = civic_mechanists
@@ -183,10 +175,6 @@ tech_robomodding_points_2 = {
 
 	weight_modifier = {
 		factor = 0.5
-		modifier = {
-			factor = 0
-			has_policy_flag = robots_outlawed
-		}
 		modifier = {
 			factor = 2
 			has_valid_civic = civic_mechanists

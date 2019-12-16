@@ -174,10 +174,6 @@ robotic_army = {
 	}
 	
 	prerequisites = { "tech_droid_workers" }
-
-	allow = {
-		owner = { NOT = { has_policy_flag = robots_outlawed } }
-	}
 }
 
 # Psionic Armies

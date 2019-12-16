@@ -181,9 +181,9 @@ underground_trade_worker = {
 		trade_value_add = 10
 	}
 	
-	triggered_pop_modifier = {
-		pop_housing_usage_add = -1
-	}
+	#triggered_pop_modifier = {
+	#	pop_housing_usage_add = -1
+	#}
 	
 	weight = {
 		weight = @specialist_job_weight
@@ -242,9 +242,9 @@ underground_contact_drone = {
 		planet_amenities_add = 3
 	}
 	
-	triggered_pop_modifier = {
-		pop_housing_usage_add = -1
-	}
+	#triggered_pop_modifier = {
+	#	pop_housing_usage_add = -1
+	#}
 	
 	resources = {
 		category = planet_jobs
