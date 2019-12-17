@@ -3,4 +3,19 @@ spriteTypes = {
 		name = "GFX_retile_deposit_entry"
 		textureFile = "gfx/interface/planetview/retile_deposit_entry.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_retile_clear_blocker_button"
+		textureFile = "gfx/interface/planetview/clear_blocker_button.dds"
+	}	
+
+	progressbartype = {
+		name = "GFX_retile_terraform_progressbar"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/progressbars/growth_progressbar.dds"
+		textureFile2 = "gfx/interface/progressbars/growth_progressbar_empty.dds"
+		size = { x = 60 y = 14 }
+		effectFile = "gfx/FX/progress_startend.lua"
+	}
 }
