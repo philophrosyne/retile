@@ -901,8 +901,8 @@ guiTypes = {
 					### Districts Container Window
 					containerWindowType = {
 						name = "districts_window"
-						size = { width = 270 height = 295 }
-						position = { x = 290 y = 45 }
+						size = { width = 540 height = 295 }
+						position = { x = 10 y = 45 }
 
 					#	background = {
 					#		position = { x = 0 y = 0 }
@@ -913,7 +913,7 @@ guiTypes = {
 						containerWindowType = {
 							name = "districts_window_background_container"
 							size = { width = 270 height = 200 }
-							position = { x = 0 y = 186 }
+							position = { x = 280 y = 0 }
 
 							background = {
 								position = { x = 0 y = 0 }
@@ -926,7 +926,7 @@ guiTypes = {
 						containerWindowType = {
 							name = "planet_num_districts"
 							size = { width = 70 height = 45 }
-							position = { x = 192 y = 194 }
+							position = { x = 472 y = 8 }
 
 							
 							background = {
@@ -956,7 +956,7 @@ guiTypes = {
 						# Districts
 						gridBoxType = {
 							name = "districts_grid_box"
-							position = { x = 8 y = 236 }
+							position = { x = 288 y = 50 }
 							size = { width = 260 height = 144 }
 							format = "UPPER_LEFT"
 							slotsize = { width = 65 height = 72 }
@@ -969,7 +969,7 @@ guiTypes = {
 						containerWindowType = {
 							name = "deposits_summary_window"
 							size = { width = 270 height = 60 }
-							position = { x = 0 y = 0 }
+							position = { x = 0 y = 120 }
 
 							background = {
 								name = "background"
@@ -1058,7 +1058,7 @@ guiTypes = {
 						containerWindowType = {
 							name = "available_districts_window"
 							size = { width = 100 height = 45 }
-							position = { x = 93 y = 202 }
+							position = { x = 373 y = 17 }
 
 							gridBoxType = {
 								name = "available_districts_grid_box"
@@ -1075,7 +1075,7 @@ guiTypes = {
 						containerWindowType = {
 							name = "districts_title"
 							size = { width = 350 height = 220 }
-							position = { x = 10 y = 200 }
+							position = { x = 290 y = 16 }
 
 							instantTextBoxType = {
 								name = "districts_text"
@@ -1265,8 +1265,8 @@ guiTypes = {
 				# Planetary Resources  
 				containerWindowType = {
 					name = "planetary_resources"
-					size = { width = 270 height = 160 }
-					position = { x = 10 y = 65 }	
+					size = { width = 270 height = 175 }
+					position = { x = 290 y = 255 }	
 
 					background = {
 						name = "output_background"
@@ -1298,9 +1298,9 @@ guiTypes = {
 
 					instantTextBoxType = {
 						name = "planetary_production_output_title"
-						font = "cg_16b"
+						font = "malgun_goth_24" #"cg_16b"
 						text = "PLANETARY_PRODUCTION"
-						position = { x = 10 y = 10 }
+						position = { x = 10 y = 5 }
 						maxWidth = 250
 						maxHeight = 20
 						fixedSize = yes
@@ -1312,7 +1312,7 @@ guiTypes = {
 					instantTextBoxType={
 						name = "planetary_production_output_amount"
 						font = "cg_16b"
-						position = { x = 10  y = 28 }
+						position = { x = 10  y = 35 }
 						text = "10"
 						maxWidth = 250
 						maxHeight = 50
@@ -1322,9 +1322,9 @@ guiTypes = {
 					
 					instantTextBoxType = {
 						name = "planetary_consumption_output_title"
-						font = "cg_16b"
+						font = "malgun_goth_24"
 						text = "PLANETARY_DEFICIT"
-						position = { x = 10 y = 83 }
+						position = { x = 10 y = 88 }
 						maxWidth = 250
 						maxHeight = 20
 						fixedSize = yes
@@ -1336,7 +1336,7 @@ guiTypes = {
 					instantTextBoxType={
 						name = "planetary_consumption_output_amount"
 						font = "cg_16b"
-						position = { x = 10  y = 101 }
+						position = { x = 10  y = 115 }
 						text = "10"
 						maxWidth = 250
 						maxHeight = 50
@@ -1349,24 +1349,24 @@ guiTypes = {
 				containerWindowType = {
 					name = "trade_value_window"
 					size = { width = 92 height = 30 }
-					position = { x = 10 y=35 }
+					position = { x = 468 y=255 }
 					
-					background = {
-						name = "background"
-						spriteType = "GFX_dark_area_cut"
-					}
+				#	background = {
+				#		name = "background"
+				#		spriteType = "GFX_dark_area_cut"
+				#	}
 
 					iconType = {
 						name = "trade_value_icon"
 						spriteType = "GFX_planetview_trade_value"
-						position = { x=5 y=5 }
-						scale = 0.9
+						position = { x=10 y=5 }
+						scale = 0.75
 					}	
 
 					instantTextBoxType = {
 						name = "trade_value_amount"
 						font = "malgun_goth_24"
-						position = { x = 38 y = 6 }
+						position = { x = 38 y = 4 }
 						text = "5"
 						maxWidth = 50
 						maxHeight = 20
@@ -1383,7 +1383,7 @@ guiTypes = {
 				containerWindowType = {
 					name = "title_buildings"
 					size = { width = 270 height = 110 }
-					position = { x = 290 y = 113 }
+					position = { x = 10 y = 45 }
 
 					background = {
 							position = { x = 0 y = 0 }
@@ -1418,7 +1418,7 @@ guiTypes = {
 				
 				gridBoxType = {
 					name = "buildings_box"
-					position = { x = 300 y = 153 }
+					position = { x = 20 y = 85 }
 					size = { width = 260 height = 60 }
 					format = "UPPER_LEFT"
 					slotsize = { width = 64 height = 60 }
