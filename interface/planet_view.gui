@@ -901,20 +901,32 @@ guiTypes = {
 					### Districts Container Window
 					containerWindowType = {
 						name = "districts_window"
-						size = { width = 258 height = 195 }
-						position = { x = 250 y = 165 }
+						size = { width = 270 height = 295 }
+						position = { x = 290 y = 45 }
 
-						background = {
-							position = { x = 0 y = 0 }
-							name = "districts_window_background"
-							spriteType = "GFX_dark_area_cut"
-						}			
+					#	background = {
+					#		position = { x = 0 y = 0 }
+					#		name = "districts_window_background"
+					#		spriteType = "GFX_dark_area_cut"
+					#	}			
 
+						containerWindowType = {
+							name = "districts_window_background_container"
+							size = { width = 270 height = 200 }
+							position = { x = 0 y = 186 }
+
+							background = {
+								position = { x = 0 y = 0 }
+								name = "districts_window_background"
+								spriteType = "GFX_dark_area_cut"
+							}
+						}
+						
 						# Districts num
 						containerWindowType = {
 							name = "planet_num_districts"
 							size = { width = 70 height = 45 }
-							position = { x = 182 y = 2 }
+							position = { x = 192 y = 194 }
 
 							
 							background = {
@@ -944,29 +956,29 @@ guiTypes = {
 						# Districts
 						gridBoxType = {
 							name = "districts_grid_box"
-							position = { x = 8 y = 44 }
-							size = { width = 244 height = 144 }
+							position = { x = 8 y = 236 }
+							size = { width = 260 height = 144 }
 							format = "UPPER_LEFT"
-							slotsize = { width = 61 height = 72 }
+							slotsize = { width = 65 height = 72 }
 							add_horizontal = yes
 							max_slots_horizontal = 4
 							max_slots_vertical = 2
 						}
 
-						# Planet Features
+						#<---------------------------- DEPOSITS ----------------------------->
 						containerWindowType = {
 							name = "deposits_summary_window"
-							size = { width = 250 height = 40 }
-							position = { x = 0 y = 20}
+							size = { width = 270 height = 60 }
+							position = { x = 0 y = 0 }
 
 							background = {
 								name = "background"
 								spriteType = "GFX_dark_area_cut"
-							}
+							}	
 
 							buttonType = {
 								name = "deposits_button"
-								position = { x = 10 y = 1 }
+								position = { x = 200 y = 11 }
 								spriteType = "GFX_inspect_planet_features"
 								buttonFont = "cg_16b"
 								font = "cg_16b"
@@ -980,7 +992,7 @@ guiTypes = {
 							containerWindowType = {
 								name = "blocker_deposits_window"
 								size = { width = 100 height = 30 }
-								position = { x = 190 y = 10 }																								
+								position = { x = -10000 y = 10 }																								
 								iconType = {
 									name = "blocker_deposit_frame"
 									spriteType = "GFX_blocker_icon"
@@ -1005,13 +1017,13 @@ guiTypes = {
 							containerWindowType = {
 								name = "rare_deposits_window"
 								size = { width = 90 height = 30 }
-								position = { x = 100 y = 10 }								
+								position = { x = -10000 y = 10 }								
 
 								iconType = {
 									name = "blocker_deposit_frame"
 									spriteType = "GFX_resource_strategic_top_bar"
 									position = { x = 6 y = 0 }
-									scale = 1.1
+									scale = 1
 								}				
 
 								instantTextBoxType = {
@@ -1025,14 +1037,28 @@ guiTypes = {
 									format = left
 									orientation = upper_left
 								}												
-							}	
-						}
+							}
+							instantTextBoxType = {
+								name = "retile_deposits_text"
+								font = "malgun_goth_24"
+								position = { x = 10 y = 16 }
+								text = "DEPOSITS_TITLE"
+								maxWidth = 320
+								maxHeight = 20
+								fixedSize = yes
+								format = left
+								orientation = upper_left
+								alwaysTransparent = yes
+							}		
 
+						}
+						
+						
 						# Available District Cubes Container
 						containerWindowType = {
 							name = "available_districts_window"
 							size = { width = 100 height = 45 }
-							position = { x = 83 y = 15 }
+							position = { x = 93 y = 202 }
 
 							gridBoxType = {
 								name = "available_districts_grid_box"
@@ -1041,7 +1067,7 @@ guiTypes = {
 								format = "UPPER_RIGHT"
 								slotsize = { width = 10 height = 10 }
 								max_slots_horizontal = 10
-								max_slots_vertical = 2
+								max_slots_vertical = 3
 								add_horizontal = no
 							}
 						}
@@ -1049,7 +1075,7 @@ guiTypes = {
 						containerWindowType = {
 							name = "districts_title"
 							size = { width = 350 height = 220 }
-							position = { x = 10 y = 10 }
+							position = { x = 10 y = 200 }
 
 							instantTextBoxType = {
 								name = "districts_text"
@@ -1115,8 +1141,8 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "terraforming_panel"
-				size = { width = 258 height = 60 }
-				position = { x = 250 y = 370 }
+				size = { width = 270 height = 60 }
+				position = { x = 10 y = 370 }
 
 				background = {
 						name = "terraforming_background"
@@ -1145,7 +1171,7 @@ guiTypes = {
 				containerWindowType = {
 					name = "terraforming_in_progress"
 					size = { width = 130 height = 30}
-					position = { x = 135 y = 16}
+					position = { x = 135 y = 14}
 
 				#	background = {
 				#		name = "terraforming_bg"
@@ -1154,26 +1180,26 @@ guiTypes = {
 
 					iconType = {
 						name = "terraform_current_planet"
-						position = { x = 5 y = 2 }
+						position = { x = 2 y = 2 }
 						spriteType = "GFX_planet_type"
 						frame = 1
-						scale = 0.65
+						scale = 0.7
 						alwaysTransparent = yes
 					}
 
 					iconType = {
 						name = "terraform_finished_planet"
-						position = { x = 88 y = 2 }
+						position = { x = 103 y = 2 }
 						spriteType = "GFX_planet_type"
 						frame = 1
-						scale = 0.65
+						scale = 0.7
 						alwaysTransparent = yes
 					}
 
 					iconType = {
 						name = "terraform_progress"
-						spriteType = "GFX_retile_terraform_progressbar"
-						position = { x = 30 y = 8 }
+						spriteType = "GFX_terraform_progressbar"
+						position = { x = 30 y = 7 }
 					}
 				}				
 			}
@@ -1239,7 +1265,7 @@ guiTypes = {
 				# Planetary Resources  
 				containerWindowType = {
 					name = "planetary_resources"
-					size = { width = 230 height = 166 }
+					size = { width = 270 height = 160 }
 					position = { x = 10 y = 65 }	
 
 					background = {
@@ -1275,7 +1301,7 @@ guiTypes = {
 						font = "cg_16b"
 						text = "PLANETARY_PRODUCTION"
 						position = { x = 10 y = 10 }
-						maxWidth = 200
+						maxWidth = 250
 						maxHeight = 20
 						fixedSize = yes
 						format = left
@@ -1288,7 +1314,7 @@ guiTypes = {
 						font = "cg_16b"
 						position = { x = 10  y = 28 }
 						text = "10"
-						maxWidth = 200
+						maxWidth = 250
 						maxHeight = 50
 						fixedSize = yes
 						format = left
@@ -1298,8 +1324,8 @@ guiTypes = {
 						name = "planetary_consumption_output_title"
 						font = "cg_16b"
 						text = "PLANETARY_DEFICIT"
-						position = { x = 10 y = 77 }
-						maxWidth = 200
+						position = { x = 10 y = 83 }
+						maxWidth = 250
 						maxHeight = 20
 						fixedSize = yes
 						format = left
@@ -1310,9 +1336,9 @@ guiTypes = {
 					instantTextBoxType={
 						name = "planetary_consumption_output_amount"
 						font = "cg_16b"
-						position = { x = 10  y = 105 }
+						position = { x = 10  y = 101 }
 						text = "10"
-						maxWidth = 200
+						maxWidth = 250
 						maxHeight = 50
 						fixedSize = yes
 						format = left
@@ -1340,7 +1366,7 @@ guiTypes = {
 					instantTextBoxType = {
 						name = "trade_value_amount"
 						font = "malgun_goth_24"
-						position = { x = 35 y = 5 }
+						position = { x = 38 y = 6 }
 						text = "5"
 						maxWidth = 50
 						maxHeight = 20
@@ -1356,8 +1382,8 @@ guiTypes = {
 				# Buildings				
 				containerWindowType = {
 					name = "title_buildings"
-					size = { width = 258 height = 110 }
-					position = { x = 250 y = 45 }
+					size = { width = 270 height = 110 }
+					position = { x = 290 y = 113 }
 
 					background = {
 							position = { x = 0 y = 0 }
@@ -1392,10 +1418,10 @@ guiTypes = {
 				
 				gridBoxType = {
 					name = "buildings_box"
-					position = { x = 260 y = 85 }
-					size = { width = 240 height = 60 }
+					position = { x = 300 y = 153 }
+					size = { width = 260 height = 60 }
 					format = "UPPER_LEFT"
-					slotsize = { width = 60 height = 60 }
+					slotsize = { width = 64 height = 60 }
 					add_horizontal = yes
 					max_slots_horizontal = 4
 					max_slots_vertical = 1
@@ -1407,11 +1433,11 @@ guiTypes = {
 				containerWindowType = {
 					name = "designation_info"
 					size = { width = 270 height = 125}
-					position = { x = 10 y = 50 }
+					position = { x = 10 y = 235 }
 
 					background = {
 						name = "designation_info_background"
-						spriteType = "GFX_tiles_frame"
+						spriteType = "GFX_dark_area_cut"
 					}
 
 					iconType = {
@@ -1516,7 +1542,7 @@ guiTypes = {
 				containerWindowType = {
 					name = "sector_info"
 					size = { width = 270 height = 40 }
-					position = { x = 10 y = 50 }
+					position = { x = 10 y = 235 }
 					
 					buttonType = {
 						name = "sector_action_button"
@@ -1565,8 +1591,8 @@ guiTypes = {
 				# Build Queue
 				containerWindowType = {
 					name = "build_queue"
-					size = { width = 270 height = 245 }
-					position = { x =10 y = 185 }
+					size = { width = 270 height = 385 }
+					position = { x = 570 y = 45 }
 
 					background = {
 						name = "build_queue_background"
@@ -1590,112 +1616,12 @@ guiTypes = {
 						name = "build_queue"
 						position = { x = 10 y = 45 }
 						orientation = upper_left
-						size = { x = 250 y = 190 }
+						size = { x = 250 y = 328 }
 						borderSize = { x = 0 y = 0 }
 						scrollbartype = "standardlistbox_slider"
 					}
 				}
 				
-				#---------------------------RETILE DEPOSITS------------------------#
-				
-		containerWindowType = {
-			name = "side_bar_window"
-			size = { width = 295 height = 400 }
-
-			origo = center
-			orientation = center
-			show_position = { x = 500 y = 40 }
-			hide_position = { x = 500 y = 40 }
-			animation_time = 0
-			animation_type = decelerated
-
-			background = {
-				name = "planet_view_spaceport_construction_panel_background"
-				quadTextureSprite = "GFX_plain_bg_tile"
-			}
-
-			containerWindowType = {
-				name = "deposits_window"
-
-				instantTextBoxType = {
-					name = "header"
-					font = "malgun_goth_24"
-					text = "DEPOSITS_TITLE"
-					position = { x = 45 y = 12 }
-					maxWidth = 195
-					maxHeight = 20
-					fixedSize = yes
-					orientation = "UPPER_LEFT"
-					text_color_code = "E"
-					format = CENTER
-				}	
-
-				# Deposits
-				smoothListboxType = {
-					name = "deposits_list"
-					position = { x = 15 y = 60 }
-					background = ""
-					size = { x = 250 y = 500 }
-					scrollbarType = "standardlistbox_slider"
-					borderSize = { x = 0 y = 0 }
-					orientation = "UPPER_LEFT"
-					spacing = 4
-				}						
-			}		
-		}				containerWindowType = {
-					name = "some_test_window"
-					size = { width = 0 height = 0 }
-					position = { x = -10000 y = 40 }
-
-					#origo = center
-					#orientation = center
-					#show_position = { x = 574 y = -16 }
-					#hide_position = { x = 594 y = -17 }
-					#animation_time = 0
-					#animation_type = decelerated
-
-					background = {
-						name = "planet_view_spaceport_construction_panel_background"
-						quadTextureSprite = "GFX_plain_bg_tile"
-					}
-					
-					containerWindowType = {
-						name = "deposits_window"
-
-						#size = { width = 295 height = 390 }
-						#position = { x = 0 y = 0 }
-
-						#background = {
-						#	name = "build_queue_background"
-						#	spriteType = "GFX_tiles_frame"
-						#}
-						
-						instantTextBoxType = {
-							name = "header"
-							font = "malgun_goth_24"
-							text = "DEPOSITS_TITLE"
-							position = { x = 45 y = 12 }
-							maxWidth = 195
-							maxHeight = 20
-							fixedSize = yes
-							orientation = "UPPER_LEFT"
-							text_color_code = "E"
-							format = CENTER
-						}	
-
-						# Deposits
-						smoothListboxType = {
-							name = "deposits_list"
-							position = { x = 15 y = 60 }
-							background = ""
-							size = { x = 250 y = 500 }
-							scrollbarType = "standardlistbox_slider"
-							borderSize = { x = 0 y = 0 }
-							orientation = "UPPER_LEFT"
-							spacing = 4
-						}						
-					}
-				}
 			}
 		}
 
