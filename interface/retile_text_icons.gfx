@@ -1,0 +1,7 @@
+spriteTypes = {
+#	### disabled: use £planet£ instead, for now at least
+#	spriteType = {
+#		name = "GFX_text_deposits"
+#		textureFile = "gfx/interface/icons/text_icons/icon_text_deposit.dds"
+#	}
+}

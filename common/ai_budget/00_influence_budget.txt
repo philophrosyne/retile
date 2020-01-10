@@ -71,6 +71,7 @@ influence_expenditure_stations = {
 	
 	potential = {
 		has_ai_expansion_plan = yes
+		empire_size < retile_admin_cap
 	}
 	
 	fraction = {

@@ -318,7 +318,7 @@ specialist = {
 	
 	weight = {
 		weight = 2
-	}	
+	}
 	
 	triggered_planet_modifier = {	# Dirty Pop!
 		potential = { has_trait = trait_repugnant }

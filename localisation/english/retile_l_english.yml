@@ -425,6 +425,14 @@
  retile_fe_building_limit:0 "$TRIGGER_FAIL$§RCan't build more than one £building£ §YAscended§R building per planet§!"
  retile_fe_building_limit_fab:0 "$TRIGGER_FAIL$§RCan't build more than one £building£ §Y$building_dimensional_fabricator$§R per empire§!"
 # Districts
+ district_clerks:0 "Commercial Zone"
+ district_engineers:0 "Resource Refinery"
+ district_scholars:0 "University Campus"
+ district_diplomats:0 "Foreign Embassy"
+ district_soldiers:0 "Military Fort"
+ district_enforcers:0 "Precinct Office"
+ district_custodians:0 "Maintenance Facility"
+ district_housing:0 "Housing Complex"
  job_farmer_plantoid_effect_desc:0 "Plantoid Farmers produce §YHabitability§! §G+20§!, §YPop Growth Speed§! §G+5§!, and §R+30§! £amenities£ §YPollution§!"
  district_digsite:0 "Ancient Dig Site"
  district_digsite_arcology:0 "Dig Site Arcology"
@@ -594,6 +602,8 @@
  retile_damaged_infrastructure:0 "Damaged Infrastructure"
  retile_damaged_infrastructure_desc:0 "Catastrophic damage has been inflicted on this region."
 # planetary production deposits
+ planet_deposits_active:0 "Planetary Features"
+ mod_planet_deposits_active_produces_mult:0 "Resources from £planet£ Deposits"
  retile_requires_food_deposit:0 "$TRIGGER_FAIL$§RRequires at least one Farm!§!"
  retile_requires_minerals_deposit:0 "$TRIGGER_FAIL$§RRequires at least one Mine!§!"
  retile_requires_energy_deposit:0 "$TRIGGER_FAIL$§RRequires at least one Generator!§!"

@@ -776,7 +776,7 @@ strategos = {
 	}
 	
 	country_modifier = {
-		country_admin_cap_add = 8
+		country_admin_cap_add = 4
 		country_war_exhaustion_mult = -0.02
 		country_occupation_armies_add = 1
 	}

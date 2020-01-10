@@ -214,7 +214,7 @@ bureaucratic_campaign = {
 	}
 
 	modifier = {
-		country_admin_cap_add = 20
+		#country_admin_cap_add = 20
 		country_starbase_influence_cost_mult = -0.15
 		country_claim_influence_cost_mult = -0.2
 	}

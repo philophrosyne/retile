@@ -12,8 +12,8 @@ NGameplay = {
 	BASE_PLANET_BRANCH_OFFICE_BUILDING_SLOTS	= 1			# 0
 	MAX_PLANET_BRANCH_OFFICE_BUILDING_SLOTS		= 4			# 4
 	BRANCH_OFFICE_INCOME_SCALE					= 0.5		# 0.5	# Per planet trade value	
-	BRANCH_OFFICE_COST_INCREASE_MIN_RANGE		= 3			# 3		# Above this number of hyperlane jumps away, increase cost for branch offices
-	BRANCH_OFFICE_COST_INCREASE_SCALE			= 0.1		# 0.1	# Additional cost per jump
+	BRANCH_OFFICE_COST_INCREASE_MIN_RANGE		= 999		# 3		# Above this number of hyperlane jumps away, increase cost for branch offices
+	BRANCH_OFFICE_COST_INCREASE_SCALE			= 0			# 0.1	# Additional cost per jump
 
 	POPS_BUILDING_SLOTS							= 333
 	BASE_PLANET_BUILDING_SLOTS					= 1
@@ -36,16 +36,16 @@ NGameplay = {
 	EMPIRE_SIZE_FROM_COLONIES					= 0			# 2		# Per planet
 	EMPIRE_SIZE_FROM_BRANCH_OFFICES				= 2			# 2		# Per branch office
 	EMPIRE_SIZE_FROM_POPS						= 0			# 0		# Per pop
-	EMPIRE_SIZE_TECH_COST_PENALTY				= 0.003		# 0.003	# Per empire size above base
-	EMPIRE_SIZE_TRADITION_COST_PENALTY			= 0.005		# 0.005	# Per empire size above base
+	EMPIRE_SIZE_TECH_COST_PENALTY				= 0.01		# 0.003	# Per empire size above base
+	EMPIRE_SIZE_TRADITION_COST_PENALTY			= 0.01		# 0.005	# Per empire size above base
 	
-	LOW_EMPIRE_COHESION							= 0.9		# 0.5	# Show alert below this
-	EMPIRE_COHESION_BASE						= 5			# 5		# Base empire cohesion
-	EMPIRE_COHESION_UPGRADED_STARBASE			= 5			# 3		# Per upgraded starbase
-	EMPIRE_COHESION_OWNED_SYSTEM				= 1			# 1		# Cohesion gain per owned system
-	EMPIRE_COHESION_LOSS_EXTERNAL_HYPERLANE		= 2			# 1		# Cohesion loss per hyperlane entrance into empire
-	EMPIRE_COHESION_LOSS_ENCLAVE				= 3			# 3		# Cohesion loss per enclave (cut off system) in empire
-	EMPIRE_COHESION_EMPIRE_SIZE_MULT			= 5			# 2		# Empire size is multiplied by 1 + this at 0% cohesion
+	LOW_EMPIRE_COHESION							= 0			# 0.5	# Show alert below this
+	EMPIRE_COHESION_BASE						= 1			# 5		# Base empire cohesion
+	EMPIRE_COHESION_UPGRADED_STARBASE			= 0			# 3		# Per upgraded starbase
+	EMPIRE_COHESION_OWNED_SYSTEM				= 0			# 1		# Cohesion gain per owned system
+	EMPIRE_COHESION_LOSS_EXTERNAL_HYPERLANE		= 0			# 1		# Cohesion loss per hyperlane entrance into empire
+	EMPIRE_COHESION_LOSS_ENCLAVE				= 0			# 3		# Cohesion loss per enclave (cut off system) in empire
+	EMPIRE_COHESION_EMPIRE_SIZE_MULT			= 0			# 2		# Empire size is multiplied by 1 + this at 0% cohesion
 
 	ADVANCED_EMPIRE_ALWAYS_COLONIZE_HABITABILITY = 0.50 	# 0.70	# If habitability is at least this, always colonize planet in advanced empire's borders
 

@@ -1,16 +1,5 @@
 namespace = retile_generate
 
-# Mod Flag
-event = {
-	id = retile_generate.1
-	hide_window = yes
-	is_triggered_only = yes
-	
-	trigger = { NOT = { has_global_flag = retile_active } }
-
-	immediate = { set_global_flag = retile_active }
-}
-
 # Generation Step 1
 event = {
 	id = retile_generate.2

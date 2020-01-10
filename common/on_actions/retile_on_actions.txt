@@ -1,6 +1,7 @@
 on_game_start = {
 	events = {
-		retile_generate.1 # Mod Global Flag
+		retile_setup.1 # Mod Global Flag
+		retile_setup.2 # set galaxy size flag
 		retile_generate.2 # Correct Planet Sizes
 	}
 }

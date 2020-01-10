@@ -2,9 +2,102 @@
 # Basic Jobs
 ###################
 
-custodian = {
+laborer = {
 	category = worker
 	is_capped_by_modifier = no
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_residence
+	clothes_texture_index = 2
+	
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible = {
+		can_take_servant_job = no
+		worker_job_check_trigger = yes
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 10
+		planet_jobs_produces_mult = 0.025
+		planet_deposits_active_produces_mult = 0.025
+		trade_value_mult = 0.025
+	}
+
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_agrarian }
+		modifier = { planet_deposits_active_food_produces_mult = 0.05 }
+	}
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_ingenious }
+		modifier = { planet_deposits_active_energy_produces_mult = 0.05 }
+	}
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_industrious }
+		modifier = { planet_deposits_active_minerals_produces_mult = 0.05 }
+	}
+	
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_solar_panels } }
+		modifier = { planet_amenities_add = @retile_job_pollution_high }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_recycling_center } }
+		modifier = { planet_amenities_add = @retile_job_pollution_high }
+	}
+	triggered_planet_modifier = {
+		potential = { planet = { has_building = building_hydroponics_farm } }
+		modifier = { planet_amenities_add = @retile_job_pollution_high }
+	}
+
+	triggered_planet_modifier = {
+		potential = { 
+			planet = { has_building = building_hydroponics_farm } 
+			is_plantoid = yes
+		}
+		modifier = { 
+			pop_environment_tolerance = 0.10
+			pop_growth_speed = 0.5
+		}
+	}
+
+	resources = {
+		category = planet_laborers
+		produces = {
+			trigger = { planet = { has_building = building_solar_panels } }
+			energy = @retile_job_resource_med
+		}
+		produces = {
+			trigger = { planet = { has_building = building_recycling_center } }
+			minerals = @retile_job_resource_med
+		}
+		produces = {
+			trigger = { 
+				planet = { has_building = building_hydroponics_farm }
+				NOT = { is_plantoid = yes }
+			}
+			food = @retile_job_resource_med
+		}
+		produces = {
+			trigger = { 
+				planet = { has_building = building_hydroponics_farm }
+				has_trait = trait_plantoid_fruiting
+			}
+			food = 1
+		}
+	}
+	
+	weight = {
+		weight = @special_job_weight
+	}
+}
+
+custodian = {
+	category = worker
+	is_capped_by_modifier = yes
 	condition_string = WORKER_JOB_TRIGGER
 	building_icon = building_residence
 	clothes_texture_index = 2
@@ -78,28 +171,6 @@ custodian = {
 			trigger = { owner = { has_civic = civic_environmentalist } }
 			unity = @retile_job_resource_med
 		}
-		produces = {
-			trigger = { planet = { has_building = building_solar_panels } }
-			energy = @retile_job_resource_med
-		}
-		produces = {
-			trigger = { planet = { has_building = building_recycling_center } }
-			minerals = @retile_job_resource_med
-		}
-		produces = {
-			trigger = { 
-				planet = { has_building = building_hydroponics_farm }
-				NOT = { is_plantoid = yes }
-			}
-			food = @retile_job_resource_med
-		}
-		produces = {
-			trigger = { 
-				planet = { has_building = building_hydroponics_farm }
-				has_trait = trait_plantoid_fruiting
-			}
-			food = 1
-		}
 		produces = {	### Fallen Empire buildings
 			trigger = { planet = { has_building = building_dimensional_fabricator } }
 			food = @retile_job_resource_med
@@ -145,30 +216,6 @@ custodian = {
 	}
 	
 	triggered_planet_modifier = {
-		potential = { planet = { has_building = building_solar_panels } }
-		modifier = { planet_amenities_add = @retile_job_pollution_high }
-	}
-	triggered_planet_modifier = {
-		potential = { planet = { has_building = building_recycling_center } }
-		modifier = { planet_amenities_add = @retile_job_pollution_high }
-	}
-	triggered_planet_modifier = {
-		potential = { planet = { has_building = building_hydroponics_farm } }
-		modifier = { planet_amenities_add = @retile_job_pollution_high }
-	}
-
-	triggered_planet_modifier = {
-		potential = { 
-			planet = { has_building = building_hydroponics_farm } 
-			is_plantoid = yes
-		}
-		modifier = { 
-			pop_environment_tolerance = 0.10
-			pop_growth_speed = 0.5
-		}
-	}
-
-	triggered_planet_modifier = {
 		potential = { 
 			owner = {
 				is_fallen_empire = yes
@@ -179,7 +226,7 @@ custodian = {
 	}
 
 	weight = {
-		weight = @special_job_weight
+		weight = @worker_job_weight
 	}
 }
 
@@ -197,7 +244,7 @@ servant = {
 	
 	planet_modifier = {
 		planet_amenities_add = 4
-	}	
+	}
 	
 	triggered_planet_modifier = {
 		potential = {

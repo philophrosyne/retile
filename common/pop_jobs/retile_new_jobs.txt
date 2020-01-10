@@ -393,7 +393,7 @@ bureaucrat = {
 	}
 	
 	country_modifier = {
-		country_admin_cap_add = 12
+		country_admin_cap_add = 4
 	}
 	
 	weight = {

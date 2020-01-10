@@ -1,0 +1,58 @@
+namespace = retile_setup
+
+# Mod Flag
+event = {
+	id = retile_setup.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { always = yes }
+
+	immediate = { set_global_flag = retile_active }
+}
+
+# Galaxy Size Flag ### Doesn't work...
+event = {
+	id = retile_setup.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { always = no }
+
+	immediate = {
+	#	get_galaxy_setup_value = {
+	#		setting = num_stars ### This setting can't be checked...
+	#		which = retile_num_stars
+	#	}
+	#	if = {
+	#		limit = { check_variable = { which = retile_num_stars value = 1000 } }
+	#		set_global_flag = retile_galaxy_huge
+	#	}
+	#	if = {
+	#		limit = { check_variable = { which = retile_num_stars value = 800 } }
+	#		set_global_flag = retile_galaxy_large
+	#	}
+	#	if = {
+	#		limit = { check_variable = { which = retile_num_stars value = 600 } }
+	#		set_global_flag = retile_galaxy_medium
+	#	}
+	#	if = {
+	#		limit = { check_variable = { which = retile_num_stars value = 400 } }
+	#		set_global_flag = retile_galaxy_small
+	#	}
+	#	if = {
+	#		limit = { check_variable = { which = retile_num_stars value = 200 } }
+	#		set_global_flag = retile_galaxy_tiny
+	#	}
+	#	if = {	### Default to medium if a non-standard galaxy size was used
+	#		limit = { NOR = {
+	#			has_global_flag = retile_galaxy_huge
+	#			has_global_flag = retile_galaxy_large
+	#			has_global_flag = retile_galaxy_medium
+	#			has_global_flag = retile_galaxy_small
+	#			has_global_flag = retile_galaxy_tiny
+	#		} }
+	#		set_global_flag = retile_galaxy_medium
+	#	}
+	}
+}

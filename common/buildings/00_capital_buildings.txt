@@ -4,6 +4,10 @@
 
 # Colony
 building_colony_shelter = {
+
+	# 2 Housing
+	# 1 Colonist
+	
 	capital = yes
 	can_build = no
 	can_demolish = no
@@ -34,9 +38,8 @@ building_colony_shelter = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 1
+		planet_housing_add = 2
 		job_colonist_add = 1
-		#pop_growth_speed_reduction = 1
 	}
 	
 	triggered_planet_modifier = {
@@ -56,6 +59,11 @@ building_colony_shelter = {
 
 # Planetary Administration
 building_capital = {
+
+	# 4 Housing
+	# 1 Ruler
+	# 1 Soldier
+
 	base_buildtime = 480
 	capital = yes
 	can_build = no
@@ -101,50 +109,12 @@ building_capital = {
 	}
 	
 	planet_modifier = {
-		planet_housing_add = 3
-		job_clerk_add = 1
+		planet_housing_add = 4
 		planet_max_buildings_add = 1
 		planet_max_branch_office_buildings_add = 1
-		#pop_growth_speed_reduction = 1
 	}
 	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { OR = {
-				has_civic = civic_mechanists
-				is_mechanical_empire = yes
-			} }
-		}
-		modifier = {
-			job_clerk_add = -1
-			job_roboticist_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_civic = civic_feudal_realm }
-		}
-		modifier = {
-			job_clerk_add = -1
-			job_tax_collector_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_civic = civic_capitalist }
-		}
-		modifier = {
-			job_clerk_add = -1
-			job_investor_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
+	triggered_planet_modifier = {			### Soldier Jobs
 		potential = {
 			exists = owner
 			owner = { NOT = { has_ascension_perk = ap_land_ethic } }
@@ -164,7 +134,7 @@ building_capital = {
 		}
 	}
 
-	triggered_planet_modifier = {
+	triggered_planet_modifier = {			### Ruler Jobs
 		potential = {
 			exists = owner
 			owner = {
@@ -256,16 +226,17 @@ building_capital = {
 
 	ai_weight = {
 		weight = 1000000
-		
-		#modifier = {
-		#	weight = 0
-		#	retile_ready = no
-		#}
 	}
 }
 
 # Major Capital
 building_major_capital = {
+
+	# 6 Housing
+	# 1 Ruler
+	# 1 Soldier
+	# 1 Enforcer
+
 	base_buildtime = 600
 	capital = yes
 	can_build = no
@@ -311,14 +282,29 @@ building_major_capital = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 4
-		job_clerk_add = 2
+		planet_housing_add = 6
 		planet_max_buildings_add = 2
 		planet_max_branch_office_buildings_add = 2
 		#pop_growth_speed_reduction = 1
 	}
 	
+	triggered_planet_modifier = {			### Enforcer Jobs
+		potential = {
+			exists = owner
+			owner = { NOT = { has_policy_flag = criminal_military_police } }
+		}
+		job_enforcer_add = 1
+	}
+	
 	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_policy_flag = criminal_military_police }
+		}
+		job_soldier_add = 1
+	}
+	
+	triggered_planet_modifier = {			### Soldier Jobs
 		potential = {
 			exists = owner
 			owner = { NOT = { has_ascension_perk = ap_land_ethic } }
@@ -338,43 +324,7 @@ building_major_capital = {
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { OR = {
-				has_civic = civic_mechanists
-				is_mechanical_empire = yes
-			} }
-		}
-		modifier = {
-			job_clerk_add = -1
-			job_roboticist_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_civic = civic_feudal_realm }
-		}
-		modifier = {
-			job_clerk_add = -2
-			job_tax_collector_add = 2
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_civic = civic_capitalist }
-		}
-		modifier = {
-			job_clerk_add = -2
-			job_investor_add = 2
-		}
-	}
-
-	triggered_planet_modifier = {
+	triggered_planet_modifier = {			### Ruler Jobs
 		potential = {
 			exists = owner
 			owner = {
@@ -467,15 +417,17 @@ building_major_capital = {
 
 	ai_weight = {
 		weight = 1000000
-		
-		#modifier = {
-		#	weight = 0
-		#	retile_ready = no
-		#}
 	}
 }
 
 building_system_capital = {
+
+	# 8 Housing
+	# 1 Ruler
+	# 1 Soldier
+	# 1 Enforcer
+	# 1 Diplomat
+
 	base_buildtime = 900
 	capital = yes
 	can_build = no
@@ -517,14 +469,46 @@ building_system_capital = {
 	}
 	
 	planet_modifier = {
-		planet_housing_add = 6
-		job_clerk_add = 2
+		planet_housing_add = 8
 		planet_max_buildings_add = 3
 		planet_max_branch_office_buildings_add = 3
 		#pop_growth_speed_reduction = 1
 	}
 	
+	triggered_planet_modifier = {			### Diplomat Jobs
+		potential = {
+			exists = owner
+			NOR = {
+				owner = { has_policy_flag = xenodiplomacy_embassy }
+				owner = { has_policy_flag = xenodiplomacy_gunboat }
+			}
+		}
+		modifier = {
+			job_bureaucrat_add = 1
+		}
+	}
+	
 	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_policy_flag = xenodiplomacy_embassy }
+		}
+		modifier = {
+			job_diplomat_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_policy_flag = xenodiplomacy_gunboat }
+		}
+		modifier = {
+			job_strategos_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {			### Enforcer Jobs
 		potential = {
 			exists = owner
 			owner = { NOT = { has_policy_flag = criminal_military_police } }
@@ -540,7 +524,7 @@ building_system_capital = {
 		job_soldier_add = 1
 	}
 	
-	triggered_planet_modifier = {
+	triggered_planet_modifier = {			### Soldier Jobs
 		potential = {
 			exists = owner
 			owner = { NOT = { has_ascension_perk = ap_land_ethic } }
@@ -560,113 +544,7 @@ building_system_capital = {
 		}
 	}
 	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				NOT = {
-					has_policy_flag = xenodiplomacy_isolation
-					has_policy_flag = xenodiplomacy_embassy
-					has_policy_flag = xenodiplomacy_gunboat
-					has_civic = civic_feudal_realm
-					has_civic = civic_capitalist
-				}
-			}
-		}
-		job_clerk_add = 1
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				NOR = {
-					has_policy_flag = xenodiplomacy_isolation
-					has_policy_flag = xenodiplomacy_embassy
-					has_policy_flag = xenodiplomacy_gunboat
-				}
-				owner = { has_civic = civic_feudal_realm }
-			}
-		}
-		job_tax_collector_add = 1
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				NOR = {
-					has_policy_flag = xenodiplomacy_isolation
-					has_policy_flag = xenodiplomacy_embassy
-					has_policy_flag = xenodiplomacy_gunboat
-				}
-				owner = { has_civic = civic_capitalist }
-			}
-		}
-		job_investor_add = 1
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_policy_flag = xenodiplomacy_isolation }
-		}
-		job_bureaucrat_add = 1
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_policy_flag = xenodiplomacy_embassy }
-		}
-		job_diplomat_add = 1
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_policy_flag = xenodiplomacy_gunboat }
-		}
-		job_strategos_add = 1
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { OR = {
-				has_civic = civic_mechanists
-				is_mechanical_empire = yes
-			} }
-		}
-		modifier = {
-			job_clerk_add = -1
-			job_roboticist_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_civic = civic_feudal_realm }
-		}
-		modifier = {
-			job_clerk_add = -2
-			job_tax_collector_add = 2
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_civic = civic_capitalist }
-		}
-		modifier = {
-			job_clerk_add = -1
-			job_investor_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
+	triggered_planet_modifier = {			### Ruler Jobs
 		potential = {
 			exists = owner
 			owner = {
@@ -759,10 +637,5 @@ building_system_capital = {
 
 	ai_weight = {
 		weight = 1000000
-		
-		#modifier = {
-		#	weight = 0
-		#	retile_ready = no
-		#}
 	}
 }
