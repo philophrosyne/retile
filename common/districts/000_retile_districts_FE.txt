@@ -38,7 +38,7 @@ district_city = {
 	resources = {
 		category = planet_districts_cities
 		cost = {
-			minerals = @city_cost
+			alloys = @city_cost
 		}
 		upkeep = {
 			trigger = { owner = { is_regular_empire = yes } }
@@ -142,7 +142,7 @@ district_hab_housing = {
 	resources = {
 		category = planet_districts_cities
 		cost = {
-			minerals = @city_cost
+			alloys = @city_cost
 		}
 		upkeep = {
 			trigger = { owner = { is_regular_empire = yes } }
@@ -253,7 +253,7 @@ district_rw_city = {
 	resources = {
 		category = planet_districts_cities
 		cost = {
-			minerals = @city_cost
+			alloys = @city_cost
 		}
 		upkeep = {
 			trigger = { owner = { is_regular_empire = yes } }

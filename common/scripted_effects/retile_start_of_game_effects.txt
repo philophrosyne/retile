@@ -231,17 +231,17 @@ generate_start_deposits_and_blockers = {
 		}
 
 		# 3 + 3 energy
-		add_deposit = d_hot_springs
+		add_deposit = d_hot_springs_active
 		add_deposit = d_searing_desert
 		add_deposit = d_underwater_vent
 
 		# 3 + 4 mining
-		add_deposit = d_veiny_cliffs
+		add_deposit = d_veiny_cliffs_active
 		add_deposit = d_ore_rich_caverns
 		add_deposit = d_submerged_ore_veins
 
 		# 3 + 2 farming
-		add_deposit = d_lichen_fields
+		add_deposit = d_lichen_fields_active
 		add_deposit = d_fungal_caves
 		add_deposit = d_fungal_forest
 	}
@@ -254,13 +254,13 @@ generate_start_deposits_and_blockers = {
 		}
 
 		# 4 + 3 energy
-		add_deposit = d_hot_springs
-		add_deposit = d_searing_desert
+		add_deposit = d_hot_springs_active
+		add_deposit = d_searing_desert_active
 		add_deposit = d_underwater_vent
 		add_deposit = d_searing_desert
 
 		# 4 + 3 mining
-		add_deposit = d_veiny_cliffs
+		add_deposit = d_veiny_cliffs_active
 		add_deposit = d_ore_rich_caverns
 		add_deposit = d_submerged_ore_veins
 
@@ -279,12 +279,12 @@ generate_start_deposits_and_blockers = {
 		set_planet_size = 25
 
 		# 5 + 3 energy
-		add_deposit = d_searing_desert
+		add_deposit = d_searing_desert_active
 		add_deposit = d_underwater_vent
 		add_deposit = d_tempestous_mountain
 
 		# 5 + 3 mining
-		add_deposit = d_ore_rich_caverns
+		add_deposit = d_ore_rich_caverns_active
 		add_deposit = d_prosperous_mesa
 		add_deposit = d_submerged_ore_veins
 
@@ -294,10 +294,10 @@ generate_start_deposits_and_blockers = {
 
 		if = {
 			limit = { owner = { is_lithoid_empire = yes } }
-			add_deposit = d_rich_mountain
+			add_deposit = d_rich_mountain_active
 		}
 		else = {
-			add_deposit = d_black_soil
+			add_deposit = d_black_soil_active
 		}
 
 		# 1 random medium deposit
@@ -318,12 +318,12 @@ generate_start_deposits_and_blockers = {
 		}
 
 		# 3 + 3 energy
-		add_deposit = d_hot_springs
+		add_deposit = d_hot_springs_active
 		add_deposit = d_rushing_waterfalls
 		add_deposit = d_tempestous_mountain
 		if = {
 			limit = { owner = { is_machine_empire = yes } }
-			add_deposit = d_rushing_waterfalls
+			add_deposit = d_rushing_waterfalls_active
 		}
 		if = {
 			limit = { owner = { has_valid_civic = civic_machine_servitor } }
@@ -331,12 +331,12 @@ generate_start_deposits_and_blockers = {
 		}
 
 		# 3 + 3 mining
-		add_deposit = d_veiny_cliffs
+		add_deposit = d_veiny_cliffs_active
 		add_deposit = d_prosperous_mesa
 		add_deposit = d_rich_mountain
 
 		# 4 + 3 farming (lithoids swap 3 for minerals)
-		add_deposit = d_rugged_woods
+		add_deposit = d_rugged_woods_active
 		add_deposit = d_fertile_lands
 		if = {
 			limit = { owner = { is_machine_empire = no } }
@@ -358,7 +358,7 @@ generate_start_deposits_and_blockers = {
 		}
 
 		# 3 + 3 energy
-		add_deposit = d_hot_springs
+		add_deposit = d_hot_springs_active
 		add_deposit = d_rushing_waterfalls
 		add_deposit = d_tempestous_mountain
 		if = {
@@ -371,12 +371,12 @@ generate_start_deposits_and_blockers = {
 		}
 
 		# 3 + 3 mining
-		add_deposit = d_mineral_fields
+		add_deposit = d_mineral_fields_active
 		add_deposit = d_prosperous_mesa
 		add_deposit = d_submerged_ore_veins
 
 		# 4 + 3 farming (lithoids swap 3 for minerals)
-		add_deposit = d_green_hills
+		add_deposit = d_green_hills_active
 		add_deposit = d_lush_jungle
 		if = {
 			limit = { owner = { is_machine_empire = no } }
@@ -397,7 +397,7 @@ generate_start_deposits_and_blockers = {
 		}
 
 		# 3 + 3 energy
-		add_deposit = d_hot_springs
+		add_deposit = d_hot_springs_active
 		add_deposit = d_rushing_waterfalls
 		add_deposit = d_underwater_vent
 		if = {
@@ -410,12 +410,12 @@ generate_start_deposits_and_blockers = {
 		}
 
 		# 3 + 3 mining
-		add_deposit = d_mineral_fields
+		add_deposit = d_mineral_fields_active
 		add_deposit = d_ore_rich_caverns
 		add_deposit = d_submerged_ore_veins
 
 		# 4 + 3 farming (lithoids swap 3 for minerals)
-		add_deposit = d_green_hills
+		add_deposit = d_green_hills_active
 		add_deposit = d_lush_jungle
 		if = {
 			limit = { owner = { is_machine_empire = no } }
@@ -437,7 +437,7 @@ generate_start_deposits_and_blockers = {
 		}
 
 		# 3 + 3 energy
-		add_deposit = d_hot_springs
+		add_deposit = d_hot_springs_active
 		add_deposit = d_frozen_gas_lake
 		add_deposit = d_geothermal_vent
 		if = {
@@ -450,12 +450,12 @@ generate_start_deposits_and_blockers = {
 		}
 
 		# 3 + 3 mining
-		add_deposit = d_veiny_cliffs
+		add_deposit = d_veiny_cliffs_active
 		add_deposit = d_ore_rich_caverns
 		add_deposit = d_rich_mountain
 
 		# 4 + 3 farming (lithoids swap 3 for minerals)
-		add_deposit = d_lichen_fields
+		add_deposit = d_lichen_fields_active
 		add_deposit = d_fungal_caves
 		if = {
 			limit = { owner = { is_machine_empire = no } }
@@ -477,7 +477,7 @@ generate_start_deposits_and_blockers = {
 		}
 
 		# 3 + 3 energy
-		add_deposit = d_hot_springs
+		add_deposit = d_hot_springs_active
 		add_deposit = d_frozen_gas_lake
 		add_deposit = d_geothermal_vent
 		if = {
@@ -490,12 +490,12 @@ generate_start_deposits_and_blockers = {
 		}
 
 		# 3 + 3 mining
-		add_deposit = d_mineral_fields
+		add_deposit = d_mineral_fields_active
 		add_deposit = d_ore_rich_caverns
 		add_deposit = d_rich_mountain
 
 		# 4 + 3 farming (lithoids swap 3 for minerals)
-		add_deposit = d_forgiving_tundra
+		add_deposit = d_forgiving_tundra_active
 		add_deposit = d_fungal_caves
 		if = {
 			limit = { owner = { is_machine_empire = no } }
@@ -517,7 +517,7 @@ generate_start_deposits_and_blockers = {
 		}
 
 		# 3 + 3 energy
-		add_deposit = d_hot_springs
+		add_deposit = d_hot_springs_active
 		add_deposit = d_frozen_gas_lake
 		add_deposit = d_tempestous_mountain
 		if = {
@@ -530,12 +530,12 @@ generate_start_deposits_and_blockers = {
 		}
 
 		# 3 + 3 mining
-		add_deposit = d_veiny_cliffs
+		add_deposit = d_veiny_cliffs_active
 		add_deposit = d_ore_rich_caverns
 		add_deposit = d_rich_mountain
 
 		# 4 + 3 farming (lithoids swap 3 for minerals)
-		add_deposit = d_forgiving_tundra
+		add_deposit = d_forgiving_tundra_active
 		add_deposit = d_fungal_caves
 		if = {
 			limit = { owner = { is_machine_empire = no } }
@@ -557,7 +557,7 @@ generate_start_deposits_and_blockers = {
 		}
 
 		# 3 + 3 energy
-		add_deposit = d_arid_highlands
+		add_deposit = d_arid_highlands_active
 		add_deposit = d_searing_desert
 		add_deposit = d_geothermal_vent
 		if = {
@@ -570,12 +570,12 @@ generate_start_deposits_and_blockers = {
 		}
 
 		# 3 + 3 mining
-		add_deposit = d_mineral_fields
+		add_deposit = d_mineral_fields_active
 		add_deposit = d_ore_rich_caverns
 		add_deposit = d_rich_mountain
 
 		# 4 + 3 farming (lithoids swap 3 for minerals)
-		add_deposit = d_nutritious_mudland
+		add_deposit = d_nutritious_mudland_active
 		add_deposit = d_great_river
 		if = {
 			limit = { owner = { is_machine_empire = no } }
@@ -597,7 +597,7 @@ generate_start_deposits_and_blockers = {
 		}
 
 		# 3 + 3 energy
-		add_deposit = d_arid_highlands
+		add_deposit = d_arid_highlands_active
 		add_deposit = d_searing_desert
 		add_deposit = d_geothermal_vent
 		if = {
@@ -610,12 +610,12 @@ generate_start_deposits_and_blockers = {
 		}
 
 		# 3 + 3 mining
-		add_deposit = d_veiny_cliffs
+		add_deposit = d_veiny_cliffs_active
 		add_deposit = d_ore_rich_caverns
 		add_deposit = d_rich_mountain
 
 		# 4 + 3 farming (lithoids swap 3 for minerals)
-		add_deposit = d_bountiful_plains
+		add_deposit = d_bountiful_plains_active
 		add_deposit = d_great_river
 		if = {
 			limit = { owner = { is_machine_empire = no } }
@@ -637,7 +637,7 @@ generate_start_deposits_and_blockers = {
 		}
 
 		# 3 + 3 energy
-		add_deposit = d_arid_highlands
+		add_deposit = d_arid_highlands_active
 		add_deposit = d_searing_desert
 		add_deposit = d_geothermal_vent
 		if = {
@@ -650,12 +650,12 @@ generate_start_deposits_and_blockers = {
 		}
 
 		# 3 + 3 mining
-		add_deposit = d_mineral_fields
+		add_deposit = d_mineral_fields_active
 		add_deposit = d_prosperous_mesa
 		add_deposit = d_submerged_ore_veins
 
 		# 4 + 3 farming (lithoids swap 3 for minerals)
-		add_deposit = d_bountiful_plains
+		add_deposit = d_bountiful_plains_active
 		add_deposit = d_fertile_lands
 		if = {
 			limit = { owner = { is_machine_empire = no } }

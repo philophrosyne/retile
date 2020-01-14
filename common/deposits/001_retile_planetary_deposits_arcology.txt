@@ -4,7 +4,7 @@
 
 d_energy_arcology_1a = {
 	time = @retile_rural_exploit_time_low_rare
-	icon = d_arcology_1
+	icon = "arcology/d_arcology_1"
 	category = deposit_cat_arcology
 	is_for_colonizeable = yes
 	
@@ -33,13 +33,20 @@ d_energy_arcology_1a = {
 }
 
 d_energy_arcology_1a_active = {
-	icon = d_arcology_1_exploited
+	icon = "arcology/d_arcology_1_exploited"
 	category = deposit_cat_arcology_active
 	is_for_colonizeable = yes
 	
 	planet_modifier = {
 		planet_amenities_add = @retile_arcology_pollution_low
 		planet_max_districts_add = @retile_arcology_districts_low
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_arcology_project }
+		}
 		planet_jobs_engineering_research_produces_mult = @retile_arcology_bonus_low
 		planet_jobs_physics_research_produces_mult = @retile_arcology_bonus_low
 		planet_jobs_society_research_produces_mult = @retile_arcology_bonus_low
@@ -92,6 +99,13 @@ d_energy_arcology_1b_active = {
 	planet_modifier = {
 		planet_amenities_add = @retile_arcology_pollution_low
 		planet_max_districts_add = @retile_arcology_districts_low
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_arcology_project }
+		}
 		trade_value_mult = @retile_arcology_bonus_low
 	}
 	
@@ -142,6 +156,13 @@ d_energy_arcology_2a_active = {
 	planet_modifier = {
 		planet_amenities_add = @retile_arcology_pollution_med
 		planet_max_districts_add = @retile_arcology_districts_med
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_arcology_project }
+		}
 		planet_jobs_engineering_research_produces_mult = @retile_arcology_bonus_med
 		planet_jobs_physics_research_produces_mult = @retile_arcology_bonus_med
 		planet_jobs_society_research_produces_mult = @retile_arcology_bonus_med
@@ -194,6 +215,13 @@ d_energy_arcology_2b_active = {
 	planet_modifier = {
 		planet_amenities_add = @retile_arcology_pollution_med
 		planet_max_districts_add = @retile_arcology_districts_med
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_arcology_project }
+		}
 		trade_value_mult = @retile_arcology_bonus_med
 	}
 	
@@ -244,6 +272,13 @@ d_energy_arcology_3a_active = {
 	planet_modifier = {
 		planet_amenities_add = @retile_arcology_pollution_high
 		planet_max_districts_add = @retile_arcology_districts_high
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_arcology_project }
+		}
 		planet_jobs_engineering_research_produces_mult = @retile_arcology_bonus_high
 		planet_jobs_physics_research_produces_mult = @retile_arcology_bonus_high
 		planet_jobs_society_research_produces_mult = @retile_arcology_bonus_high
@@ -296,6 +331,13 @@ d_energy_arcology_3b_active = {
 	planet_modifier = {
 		planet_amenities_add = @retile_arcology_pollution_high
 		planet_max_districts_add = @retile_arcology_districts_high
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_arcology_project }
+		}
 		trade_value_mult = @retile_arcology_bonus_high
 	}
 	
@@ -350,6 +392,13 @@ d_minerals_arcology_1a_active = {
 	planet_modifier = {
 		planet_amenities_add = @retile_arcology_pollution_low
 		planet_max_districts_add = @retile_arcology_districts_low
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_arcology_project }
+		}
 		planet_jobs_consumer_goods_produces_mult = @retile_arcology_bonus_low
 	}
 	
@@ -400,6 +449,13 @@ d_minerals_arcology_1b_active = {
 	planet_modifier = {
 		planet_amenities_add = @retile_arcology_pollution_low
 		planet_max_districts_add = @retile_arcology_districts_low
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_arcology_project }
+		}
 		planet_jobs_alloys_produces_mult = @retile_arcology_bonus_low
 	}
 	
@@ -450,6 +506,13 @@ d_minerals_arcology_2a_active = {
 	planet_modifier = {
 		planet_amenities_add = @retile_arcology_pollution_med
 		planet_max_districts_add = @retile_arcology_districts_med
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_arcology_project }
+		}
 		planet_jobs_consumer_goods_produces_mult = @retile_arcology_bonus_med
 	}
 	
@@ -500,6 +563,13 @@ d_minerals_arcology_2b_active = {
 	planet_modifier = {
 		planet_amenities_add = @retile_arcology_pollution_med
 		planet_max_districts_add = @retile_arcology_districts_med
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_arcology_project }
+		}
 		planet_jobs_alloys_produces_mult = @retile_arcology_bonus_med
 	}
 	
@@ -550,6 +620,13 @@ d_minerals_arcology_3a_active = {
 	planet_modifier = {
 		planet_amenities_add = @retile_arcology_pollution_high
 		planet_max_districts_add = @retile_arcology_districts_high
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_arcology_project }
+		}
 		planet_jobs_consumer_goods_produces_mult = @retile_arcology_bonus_high
 	}
 	
@@ -600,6 +677,13 @@ d_minerals_arcology_3b_active = {
 	planet_modifier = {
 		planet_amenities_add = @retile_arcology_pollution_high
 		planet_max_districts_add = @retile_arcology_districts_high
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_arcology_project }
+		}
 		planet_jobs_alloys_produces_mult = @retile_arcology_bonus_high
 	}
 	
@@ -655,6 +739,13 @@ d_food_arcology_1a_active = {
 	planet_modifier = {
 		planet_amenities_add = @retile_arcology_pollution_low
 		planet_max_districts_add = @retile_arcology_districts_low
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_arcology_project }
+		}
 		planet_jobs_unity_produces_mult = @retile_arcology_bonus_low
 	}
 	
@@ -705,6 +796,13 @@ d_food_arcology_1b_active = {
 	planet_modifier = {
 		planet_amenities_add = @retile_arcology_pollution_low
 		planet_max_districts_add = @retile_arcology_districts_low
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_arcology_project }
+		}
 		pop_growth_speed = @retile_arcology_bonus_low
 	}
 	
@@ -755,6 +853,13 @@ d_food_arcology_2a_active = {
 	planet_modifier = {
 		planet_amenities_add = @retile_arcology_pollution_med
 		planet_max_districts_add = @retile_arcology_districts_med
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_arcology_project }
+		}
 		planet_jobs_unity_produces_mult = @retile_arcology_bonus_med
 	}
 	
@@ -805,6 +910,13 @@ d_food_arcology_2b_active = {
 	planet_modifier = {
 		planet_amenities_add = @retile_arcology_pollution_med
 		planet_max_districts_add = @retile_arcology_districts_med
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_arcology_project }
+		}
 		pop_growth_speed = @retile_arcology_bonus_med
 	}
 	
@@ -855,6 +967,13 @@ d_food_arcology_3a_active = {
 	planet_modifier = {
 		planet_amenities_add = @retile_arcology_pollution_high
 		planet_max_districts_add = @retile_arcology_districts_high
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_arcology_project }
+		}
 		planet_jobs_unity_produces_mult = @retile_arcology_bonus_high
 	}
 	
@@ -905,6 +1024,13 @@ d_food_arcology_3b_active = {
 	planet_modifier = {
 		planet_amenities_add = @retile_arcology_pollution_high
 		planet_max_districts_add = @retile_arcology_districts_high
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_arcology_project }
+		}
 		pop_growth_speed = @retile_arcology_bonus_high
 	}
 	

@@ -16,9 +16,9 @@ trait_agrarian = {
 	allowed_archetypes = { BIOLOGICAL }
 	custom_tooltip = retile_trait_agrarian_effect
 		# custodians improve rural food production by 5%
-	show_only_custom_tooltip = no
 	modifier = {
-		planet_jobs_food_produces_mult = 0.15
+		#planet_jobs_food_produces_mult = 0.15
+		planet_deposits_active_food_produces_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
@@ -31,9 +31,9 @@ trait_ingenious = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	custom_tooltip = retile_trait_agrarian_effect
 		# custodians improve rural energy production by 5%
-	show_only_custom_tooltip = no
 	modifier = {
-		planet_jobs_energy_produces_mult = 0.15
+		#planet_jobs_energy_produces_mult = 0.15
+		planet_deposits_active_energy_produces_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
@@ -46,9 +46,9 @@ trait_industrious = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	custom_tooltip = retile_trait_agrarian_effect
 		# custodians improve rural minerals production by 5%
-	show_only_custom_tooltip = no
 	modifier = {
-		planet_jobs_minerals_produces_mult = 0.15
+		#planet_jobs_minerals_produces_mult = 0.15
+		planet_deposits_active_minerals_produces_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
