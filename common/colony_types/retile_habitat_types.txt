@@ -24,6 +24,7 @@ col_residential_station = {
 	icon = 20
 	
 	potential = {
+		always = no ### Disabled in rural deposit overhaul
 		exists = owner
 		owner = { is_regular_empire = yes}
 		is_capital = no
@@ -43,11 +44,11 @@ col_residential_station = {
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_hab_housing value > 0 }
+			#num_districts = { type = district_hab_housing value > 0 }
 		}
 		modifier = {
 			add = 2
-			num_districts = { type = district_hab_housing value > 1 }
+			#num_districts = { type = district_hab_housing value > 1 }
 		}
 	}
 }
@@ -57,6 +58,7 @@ col_industrial_station = {
 	icon = 21
 	
 	potential = {
+		always = no ### Disabled in rural deposit overhaul
 		exists = owner
 		owner = { is_regular_empire = yes}
 		is_capital = no
@@ -77,21 +79,21 @@ col_industrial_station = {
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_hab_energy value > 0 }
-			num_districts = { type = district_hab_mining value > 0 }
-			num_districts = { type = district_hab_hydroponics value > 0 }
+			#num_districts = { type = district_hab_energy value > 0 }
+			#num_districts = { type = district_hab_mining value > 0 }
+			#num_districts = { type = district_hab_hydroponics value > 0 }
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_hab_energy value > 1 }
-			num_districts = { type = district_hab_mining value > 1 }
-			num_districts = { type = district_hab_hydroponics value > 1 }
+			#num_districts = { type = district_hab_energy value > 1 }
+			#num_districts = { type = district_hab_mining value > 1 }
+			#num_districts = { type = district_hab_hydroponics value > 1 }
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_hab_energy value > 2 }
-			num_districts = { type = district_hab_mining value > 2 }
-			num_districts = { type = district_hab_hydroponics value > 2 }
+			#num_districts = { type = district_hab_energy value > 2 }
+			#num_districts = { type = district_hab_mining value > 2 }
+			#num_districts = { type = district_hab_hydroponics value > 2 }
 		}
 	}
 }
@@ -122,7 +124,7 @@ col_manufacturing_station = {
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_hab_housing value > 0 }
+			num_districts = { type = district_engineers value > 0 }
 		}
 		modifier = {
 			add = 1
@@ -178,7 +180,7 @@ col_research_station = {
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_hab_housing value > 0 }
+			num_districts = { type = district_scholars value > 0 }
 		}
 		modifier = {
 			add = 1
@@ -219,6 +221,7 @@ col_power_station = {
 	icon = 19
 	
 	potential = {
+		always = no ### Disabled in rural deposit overhaul
 		exists = owner
 		owner = { is_regular_empire = yes}
 		is_capital = no
@@ -236,15 +239,15 @@ col_power_station = {
 	weight_modifier = {
 		modifier = {
 			add = 1
-			num_districts = { type = district_hab_energy value > 0 }
+			#num_districts = { type = district_hab_energy value > 0 }
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_hab_energy value > 1 }
+			#num_districts = { type = district_hab_energy value > 1 }
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_hab_energy value > 2 }
+			#num_districts = { type = district_hab_energy value > 2 }
 		}
 		modifier = {
 			add = 1
@@ -252,6 +255,10 @@ col_power_station = {
 		}
 		modifier = {
 			add = 2
+			has_building = building_energy_buff_2
+		}
+		modifier = {
+			add = 3
 			has_building = building_energy_buff_3
 		}
 	}
@@ -262,6 +269,7 @@ col_mining_station = {
 	icon = 23
 	
 	potential = {
+		always = no ### Disabled in rural deposit overhaul
 		exists = owner
 		owner = { is_regular_empire = yes}
 		is_capital = no
@@ -279,15 +287,15 @@ col_mining_station = {
 	weight_modifier = {
 		modifier = {
 			add = 1
-			num_districts = { type = district_hab_mining value > 0 }
+			#num_districts = { type = district_hab_mining value > 0 }
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_hab_mining value > 1 }
+			#num_districts = { type = district_hab_mining value > 1 }
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_hab_mining value > 2 }
+			#num_districts = { type = district_hab_mining value > 2 }
 		}
 		modifier = {
 			add = 1
@@ -295,6 +303,10 @@ col_mining_station = {
 		}
 		modifier = {
 			add = 2
+			has_building = building_minerals_buff_2
+		}
+		modifier = {
+			add = 3
 			has_building = building_minerals_buff_3
 		}
 	}
@@ -305,6 +317,7 @@ col_farming_station = {
 	icon = 24
 	
 	potential = {
+		always = no ### Disabled in rural deposit overhaul
 		exists = owner
 		owner = { is_regular_empire = yes}
 		is_capital = no
@@ -322,15 +335,15 @@ col_farming_station = {
 	weight_modifier = {
 		modifier = {
 			add = 1
-			num_districts = { type = district_hab_hydroponics value > 0 }
+			#num_districts = { type = district_hab_hydroponics value > 0 }
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_hab_hydroponics value > 1 }
+			#num_districts = { type = district_hab_hydroponics value > 1 }
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_hab_hydroponics value > 2 }
+			#num_districts = { type = district_hab_hydroponics value > 2 }
 		}
 		modifier = {
 			add = 1
@@ -338,6 +351,10 @@ col_farming_station = {
 		}
 		modifier = {
 			add = 2
+			has_building = building_food_buff_2
+		}
+		modifier = {
+			add = 3
 			has_building = building_food_buff_3
 		}
 	}

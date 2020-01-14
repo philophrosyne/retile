@@ -179,7 +179,11 @@ cara_generate_deal2 = {
 							is_planet_class = pc_desert
 							is_planet_class = pc_arid
 						}
-						num_districts = { type = district_generator value < 3 }
+						#num_districts = { type = district_generator value < 3 } ### RETILE RURAL
+						count_deposits = {
+							limit = { is_active_energy_deposit = yes }
+							count >= 2
+						}
 					}
 				}
 			}
@@ -778,7 +782,8 @@ cara_generate_deal3 = {
 		limit = { has_country_flag = fleet3deal8 }
 		random_owned_planet = {
 			limit = {
-				has_district = district_generator
+				# has_district = district_generator ### RETILE RURAL
+				any_deposit = { is_active_energy_deposit = yes }
 			}
 			weights = {
 				base = 1

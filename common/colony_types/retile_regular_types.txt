@@ -101,11 +101,11 @@ col_urban_world = {
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_city value > 0 }
+			num_districts = { type = any value > 0 }
 		}
 		modifier = {
 			add = 2
-			num_districts = { type = district_city value > 1 }
+			num_districts = { type = any value > 1 }
 		}
 	}
 }
@@ -115,6 +115,7 @@ col_rural_world = {
 	icon = 13
 	
 	potential = {
+		always = no ### Disabled in rural deposit overhaul
 		exists = owner
 		owner = { is_regular_empire = yes}
 		is_capital = no
@@ -141,25 +142,25 @@ col_rural_world = {
 		modifier = {
 			add = 1
 			OR = { 
-				num_districts = { type = district_generator value > 0 }
-				num_districts = { type = district_mining value > 0 }
-				num_districts = { type = district_farming value > 0 }
+				#num_districts = { type = district_generator value > 0 }
+				#num_districts = { type = district_mining value > 0 }
+				#num_districts = { type = district_farming value > 0 }
 			}
 		}
 		modifier = {
 			add = 1
 			OR = {
-				num_districts = { type = district_generator value > 1 }
-				num_districts = { type = district_mining value > 1 }
-				num_districts = { type = district_farming value > 1 }
+				#num_districts = { type = district_generator value > 1 }
+				#num_districts = { type = district_mining value > 1 }
+				#num_districts = { type = district_farming value > 1 }
 			}
 		}
 		modifier = {
 			add = 1
 			OR = {
-				num_districts = { type = district_generator value > 2 }
-				num_districts = { type = district_mining value > 2 }
-				num_districts = { type = district_farming value > 2 }
+				#num_districts = { type = district_generator value > 2 }
+				#num_districts = { type = district_mining value > 2 }
+				#num_districts = { type = district_farming value > 2 }
 			}
 		}
 	}
@@ -196,7 +197,7 @@ col_manufacturing_world = {
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_city value > 0 }
+			num_districts = { type = district_engineers value > 0 }
 		}
 		modifier = {
 			add = 1
@@ -248,7 +249,7 @@ col_refining_world = {
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_city value > 0 }
+			num_districts = { type = district_engineers value > 0 }
 		}
 		modifier = {
 			add = 1
@@ -303,8 +304,7 @@ col_research_world = {
 		modifier = {
 			add = 1
 			OR = {
-				num_districts = { type = district_city value > 0 }
-				num_districts = { type = district_digsite value > 0 }
+				num_districts = { type = district_scholars value > 0 }
 			}
 		}
 		modifier = {
@@ -364,8 +364,7 @@ col_scholastic_world = {
 		modifier = {
 			add = 1
 			OR = {
-				num_districts = { type = district_city value > 0 }
-				num_districts = { type = district_digsite value > 0 }
+				num_districts = { type = district_scholars value > 0 }
 			}
 		}
 		modifier = {
@@ -404,6 +403,7 @@ col_generator_world = {
 	icon = 4
 	
 	potential = {
+		always = no ### Disabled in rural deposit overhaul
 		exists = owner
 		owner = { is_regular_empire = yes}
 		is_capital = no
@@ -426,15 +426,15 @@ col_generator_world = {
 	weight_modifier = {
 		modifier = {
 			add = 1
-			num_districts = { type = district_generator value > 0 }
+			#num_districts = { type = district_generator value > 0 }
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_generator value > 1 }
+			#num_districts = { type = district_generator value > 1 }
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_generator value > 2 }
+			#num_districts = { type = district_generator value > 2 }
 		}
 		modifier = {
 			add = 1
@@ -452,6 +452,7 @@ col_mining_world = {
 	icon = 2
 	
 	potential = {
+		always = no ### Disabled in rural deposit overhaul
 		exists = owner
 		owner = { is_regular_empire = yes}
 		is_capital = no
@@ -474,15 +475,15 @@ col_mining_world = {
 	weight_modifier = {
 		modifier = {
 			add = 1
-			num_districts = { type = district_mining value > 0 }
+			#num_districts = { type = district_mining value > 0 }
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_mining value > 1 }
+			#num_districts = { type = district_mining value > 1 }
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_mining value > 2 }
+			#num_districts = { type = district_mining value > 2 }
 		}
 		modifier = {
 			add = 1
@@ -500,6 +501,7 @@ col_farming_world = {
 	icon = 3
 	
 	potential = {
+		always = no ### Disabled in rural deposit overhaul
 		exists = owner
 		owner = { is_regular_empire = yes}
 		is_capital = no
@@ -523,15 +525,15 @@ col_farming_world = {
 	weight_modifier = {
 		modifier = {
 			add = 1
-			num_districts = { type = district_farming value > 0 }
+			#num_districts = { type = district_farming value > 0 }
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_farming value > 1 }
+			#num_districts = { type = district_farming value > 1 }
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_farming value > 2 }
+			#num_districts = { type = district_farming value > 2 }
 		}
 		modifier = {
 			add = 1

@@ -166,10 +166,11 @@ retile_flag_ai_food_world = {
 				has_planet_flag = ai_city_development_sticky
 			}
 			OR = {
-				num_free_districts = { type = district_farming value > 0 }
-				num_free_districts = { type = district_farming_uncapped value > 0 }
-				num_free_districts = { type = district_hab_hydroponics value > 0 }
-				num_free_districts = { type = district_rw_farming value > 0 }
+				any_deposit = { is_inactive_food_deposit = yes }
+				#num_free_districts = { type = district_farming value > 0 }
+				#num_free_districts = { type = district_farming_uncapped value > 0 }
+				#num_free_districts = { type = district_hab_hydroponics value > 0 }
+				#num_free_districts = { type = district_rw_farming value > 0 }
 			}
 		} }
 		random_owned_planet = {	### Sticky energy world found!!! Designate it...
@@ -189,10 +190,11 @@ retile_flag_ai_food_world = {
 					has_planet_flag = ai_city_development_sticky
 				}
 				OR = {
-					num_free_districts = { type = district_farming value > 0 }
-					num_free_districts = { type = district_farming_uncapped value > 0 }
-					num_free_districts = { type = district_hab_hydroponics value > 0 }
-					num_free_districts = { type = district_rw_farming value > 0 }
+					any_deposit = { is_inactive_food_deposit = yes }
+					#num_free_districts = { type = district_farming value > 0 }
+					#num_free_districts = { type = district_farming_uncapped value > 0 }
+					#num_free_districts = { type = district_hab_hydroponics value > 0 }
+					#num_free_districts = { type = district_rw_farming value > 0 }
 				}
 			}
 			remove_planet_flag = ai_food_development_former
@@ -207,19 +209,20 @@ retile_flag_ai_food_world = {
 					is_under_colonization = yes
 				}
 				OR = {
-					num_free_districts = { type = district_farming value > 0 }
-					num_free_districts = { type = district_farming_uncapped value > 0 }
-					num_free_districts = { type = district_hab_hydroponics value > 0 }
-					num_free_districts = { type = district_rw_farming value > 0 }
+					any_deposit = { is_inactive_food_deposit = yes }
+					#num_free_districts = { type = district_farming value > 0 }
+					#num_free_districts = { type = district_farming_uncapped value > 0 }
+					#num_free_districts = { type = district_hab_hydroponics value > 0 }
+					#num_free_districts = { type = district_rw_farming value > 0 }
 				}
 			}
 			weights = {
 				base = 1
-				modifier = {	### Static high weight for uncapped planets.
-					add = 10000
-					num_free_districts = { type = district_farming value < 1 } # must be an uncapped planet
-					ai_good_food_world = yes
-				}
+			#	modifier = {	### Static high weight for uncapped planets.
+			#		add = 10000
+			#		num_free_districts = { type = district_farming value < 1 } # must be an uncapped planet
+			#		ai_good_food_world = yes
+			#	}
 				modifier = {	### World is good for food ???
 					add = 3
 					check_variable = { which = rtd_farming value >= 1 }
@@ -451,10 +454,11 @@ retile_flag_ai_energy_world = {
 				has_planet_flag = ai_city_development_sticky
 			}
 			OR = {
-				num_free_districts = { type = district_generator value > 0 }
-				num_free_districts = { type = district_generator_uncapped value > 0 }
-				num_free_districts = { type = district_hab_energy value > 0 }
-				num_free_districts = { type = district_rw_generator value > 0 }
+				any_deposit = { is_inactive_energy_deposit = yes }
+				#num_free_districts = { type = district_generator value > 0 }
+				#num_free_districts = { type = district_generator_uncapped value > 0 }
+				#num_free_districts = { type = district_hab_energy value > 0 }
+				#num_free_districts = { type = district_rw_generator value > 0 }
 			}
 		} }
 		random_owned_planet = {	### Sticky energy world found!!! Designate it...
@@ -474,10 +478,11 @@ retile_flag_ai_energy_world = {
 					has_planet_flag = ai_city_development_sticky
 				}
 				OR = {
-					num_free_districts = { type = district_generator value > 0 }
-					num_free_districts = { type = district_generator_uncapped value > 0 }
-					num_free_districts = { type = district_hab_energy value > 0 }
-					num_free_districts = { type = district_rw_generator value > 0 }
+					any_deposit = { is_inactive_energy_deposit = yes }
+					#num_free_districts = { type = district_generator value > 0 }
+					#num_free_districts = { type = district_generator_uncapped value > 0 }
+					#num_free_districts = { type = district_hab_energy value > 0 }
+					#num_free_districts = { type = district_rw_generator value > 0 }
 				}
 			}
 			remove_planet_flag = ai_energy_development_former
@@ -492,19 +497,20 @@ retile_flag_ai_energy_world = {
 					is_under_colonization = yes
 				}
 				OR = {
-					num_free_districts = { type = district_generator value > 0 }
-					num_free_districts = { type = district_generator_uncapped value > 0 }
-					num_free_districts = { type = district_hab_energy value > 0 }
-					num_free_districts = { type = district_rw_generator value > 0 }
+					any_deposit = { is_inactive_energy_deposit = yes }
+					#num_free_districts = { type = district_generator value > 0 }
+					#num_free_districts = { type = district_generator_uncapped value > 0 }
+					#num_free_districts = { type = district_hab_energy value > 0 }
+					#num_free_districts = { type = district_rw_generator value > 0 }
 				}
 			}
 			weights = {
 				base = 1
-				modifier = {	### Static high weight for uncapped planets.
-					add = 10000
-					num_free_districts = { type = district_generator value < 1 } # must be an uncapped planet
-					ai_good_energy_world = yes
-				}
+			#	modifier = {	### Static high weight for uncapped planets.
+			#		add = 10000
+			#		num_free_districts = { type = district_generator value < 1 } # must be an uncapped planet
+			#		ai_good_energy_world = yes
+			#	}
 				modifier = {	### World is good for Energy ???
 					add = 3
 					check_variable = { which = rtd_generator value >= 1 }
@@ -736,10 +742,11 @@ retile_flag_ai_minerals_world = {
 				has_planet_flag = ai_city_development_sticky
 			}
 			OR = {
-				num_free_districts = { type = district_mining value > 0 }
-				num_free_districts = { type = district_mining_uncapped value > 0 }
-				num_free_districts = { type = district_hab_mining value > 0 }
-				num_free_districts = { type = district_rw_mining value > 0 }
+				any_deposit = { is_inactive_minerals_deposit = yes }
+				#num_free_districts = { type = district_mining value > 0 }
+				#num_free_districts = { type = district_mining_uncapped value > 0 }
+				#num_free_districts = { type = district_hab_mining value > 0 }
+				#num_free_districts = { type = district_rw_mining value > 0 }
 			}
 		} }
 		random_owned_planet = {	### Sticky minerals world found!!! Designate it...
@@ -759,10 +766,11 @@ retile_flag_ai_minerals_world = {
 					has_planet_flag = ai_city_development_sticky
 				}
 				OR = {
-					num_free_districts = { type = district_mining value > 0 }
-					num_free_districts = { type = district_mining_uncapped value > 0 }
-					num_free_districts = { type = district_hab_mining value > 0 }
-					num_free_districts = { type = district_rw_mining value > 0 }
+					any_deposit = { is_inactive_minerals_deposit = yes }
+					#num_free_districts = { type = district_mining value > 0 }
+					#num_free_districts = { type = district_mining_uncapped value > 0 }
+					#num_free_districts = { type = district_hab_mining value > 0 }
+					#num_free_districts = { type = district_rw_mining value > 0 }
 				}
 			}
 			remove_planet_flag = ai_minerals_development_former
@@ -777,19 +785,20 @@ retile_flag_ai_minerals_world = {
 					is_under_colonization = yes
 				}
 				OR = {
-					num_free_districts = { type = district_mining value > 0 }
-					num_free_districts = { type = district_mining_uncapped value > 0 }
-					num_free_districts = { type = district_hab_mining value > 0 }
-					num_free_districts = { type = district_rw_mining value > 0 }
+					any_deposit = { is_inactive_minerals_deposit = yes }
+					#num_free_districts = { type = district_mining value > 0 }
+					#num_free_districts = { type = district_mining_uncapped value > 0 }
+					#num_free_districts = { type = district_hab_mining value > 0 }
+					#num_free_districts = { type = district_rw_mining value > 0 }
 				}
 			}
 			weights = {
 				base = 1
-				modifier = {	### Static high weight for uncapped planets.
-					add = 10000
-					num_free_districts = { type = district_mining value < 1 } # must be an uncapped planet
-					ai_good_minerals_world = yes
-				}
+			#	modifier = {	### Static high weight for uncapped planets.
+			#		add = 10000
+			#		num_free_districts = { type = district_mining value < 1 } # must be an uncapped planet
+			#		ai_good_minerals_world = yes
+			#	}
 				modifier = {	### World is good for Minerals ???
 					add = 3
 					check_variable = { which = rtd_mining value >= 1 }
@@ -1102,24 +1111,27 @@ retile_flag_ai_city_world = {
 						has_planet_flag = ai_city_development	# can have more than 1, eventually
 						AND = {
 							has_planet_flag = ai_energy_development_sticky
-							num_free_districts = { type = district_generator value > 0 }
-							num_free_districts = { type = district_generator_uncapped value > 0 }
-							num_free_districts = { type = district_hab_energy value > 0 }
-							num_free_districts = { type = district_rw_generator value > 0 }
+							any_deposit = { is_inactive_energy_deposit = yes }
+							#num_free_districts = { type = district_generator value > 0 }
+							#num_free_districts = { type = district_generator_uncapped value > 0 }
+							#num_free_districts = { type = district_hab_energy value > 0 }
+							#num_free_districts = { type = district_rw_generator value > 0 }
 						}
 						AND = {
 							has_planet_flag = ai_minerals_development_sticky
-							num_free_districts = { type = district_mining value > 0 }
-							num_free_districts = { type = district_mining_uncapped value > 0 }
-							num_free_districts = { type = district_hab_mining value > 0 }
-							num_free_districts = { type = district_rw_mining value > 0 }
+							any_deposit = { is_inactive_minerals_deposit = yes }
+							#num_free_districts = { type = district_mining value > 0 }
+							#num_free_districts = { type = district_mining_uncapped value > 0 }
+							#num_free_districts = { type = district_hab_mining value > 0 }
+							#num_free_districts = { type = district_rw_mining value > 0 }
 						}
 						AND = {
 							has_planet_flag = ai_food_development_sticky
-							num_free_districts = { type = district_farming value > 0 }
-							num_free_districts = { type = district_farming_uncapped value > 0 }
-							num_free_districts = { type = district_hab_hydroponics value > 0 }
-							num_free_districts = { type = district_rw_farming value > 0 }
+							any_deposit = { is_inactive_food_deposit = yes }
+							#num_free_districts = { type = district_farming value > 0 }
+							#num_free_districts = { type = district_farming_uncapped value > 0 }
+							#num_free_districts = { type = district_hab_hydroponics value > 0 }
+							#num_free_districts = { type = district_rw_farming value > 0 }
 						}
 					}
 				}

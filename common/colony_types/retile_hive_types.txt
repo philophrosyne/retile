@@ -85,7 +85,7 @@ col_hive_manufacturing = {
 	weight_modifier = {
 		modifier = {
 			add = 3
-			num_districts = { type = district_city value > 0 }
+			num_districts = { type = district_engineers value > 0 }
 		}
 		modifier = {
 			add = 3
@@ -115,7 +115,7 @@ col_hive_refining = {
 	weight_modifier = {
 		modifier = {
 			add = 3
-			num_districts = { type = district_city value > 0 }
+			num_districts = { type = district_engineers value > 0 }
 		}
 		modifier = {
 			add = 3
@@ -133,6 +133,7 @@ col_hive_farming = {
 	icon = 1
 	
 	potential = {
+		always = no ### Disabled in rural deposit overhaul
 		exists = owner
 		owner = { is_hive_empire = yes}
 		is_capital = no
@@ -146,18 +147,18 @@ col_hive_farming = {
 		modifier = {
 			add = 3
 			OR = {
-				num_districts = { type = district_farming value > 0 }
-				num_districts = { type = district_farming_uncapped value > 0 }
-				num_districts = { type = district_hab_hydroponics value > 0 }
-				num_districts = { type = district_rw_farming value > 0 }
+				#num_districts = { type = district_farming value > 0 }
+				#num_districts = { type = district_farming_uncapped value > 0 }
+				#num_districts = { type = district_hab_hydroponics value > 0 }
+				#num_districts = { type = district_rw_farming value > 0 }
 			}
 		}
 		modifier = {
 			add = 3
-				num_districts = { type = district_farming value > 2 }
-				num_districts = { type = district_farming_uncapped value > 2 }
-				num_districts = { type = district_hab_hydroponics value > 2 }
-				num_districts = { type = district_rw_farming value > 2 }
+				#num_districts = { type = district_farming value > 2 }
+				#num_districts = { type = district_farming_uncapped value > 2 }
+				#num_districts = { type = district_hab_hydroponics value > 2 }
+				#num_districts = { type = district_rw_farming value > 2 }
 		}
 	}
 }
@@ -167,6 +168,7 @@ col_hive_mining = {
 	icon = 1
 	
 	potential = {
+		always = no ### Disabled in rural deposit overhaul
 		exists = owner
 		owner = { is_hive_empire = yes}
 		is_capital = no
@@ -180,18 +182,18 @@ col_hive_mining = {
 		modifier = {
 			add = 3
 			OR = {
-				num_districts = { type = district_mining value > 0 }
-				num_districts = { type = district_mining_uncapped value > 0 }
-				num_districts = { type = district_hab_mining value > 0 }
-				num_districts = { type = district_rw_mining value > 0 }
+				#num_districts = { type = district_mining value > 0 }
+				#num_districts = { type = district_mining_uncapped value > 0 }
+				#num_districts = { type = district_hab_mining value > 0 }
+				#num_districts = { type = district_rw_mining value > 0 }
 			}
 		}
 		modifier = {
 			add = 3
-				num_districts = { type = district_mining value > 2 }
-				num_districts = { type = district_mining_uncapped value > 2 }
-				num_districts = { type = district_hab_mining value > 2 }
-				num_districts = { type = district_rw_mining value > 2 }
+				#num_districts = { type = district_mining value > 2 }
+				#num_districts = { type = district_mining_uncapped value > 2 }
+				#num_districts = { type = district_hab_mining value > 2 }
+				#num_districts = { type = district_rw_mining value > 2 }
 		}
 	}
 }
@@ -201,6 +203,7 @@ col_hive_energy = {
 	icon = 1
 	
 	potential = {
+		always = no ### Disabled in rural deposit overhaul
 		exists = owner
 		owner = { is_hive_empire = yes}
 		is_capital = no
@@ -214,18 +217,18 @@ col_hive_energy = {
 		modifier = {
 			add = 3
 			OR = {
-				num_districts = { type = district_generator value > 0 }
-				num_districts = { type = district_generator_uncapped value > 0 }
-				num_districts = { type = district_hab_energy value > 0 }
-				num_districts = { type = district_rw_generator value > 0 }
+				#num_districts = { type = district_generator value > 0 }
+				#num_districts = { type = district_generator_uncapped value > 0 }
+				#num_districts = { type = district_hab_energy value > 0 }
+				#num_districts = { type = district_rw_generator value > 0 }
 			}
 		}
 		modifier = {
 			add = 3
-				num_districts = { type = district_generator value > 2 }
-				num_districts = { type = district_generator_uncapped value > 2 }
-				num_districts = { type = district_hab_energy value > 2 }
-				num_districts = { type = district_rw_generator value > 2 }
+				#num_districts = { type = district_generator value > 2 }
+				#num_districts = { type = district_generator_uncapped value > 2 }
+				#num_districts = { type = district_hab_energy value > 2 }
+				#num_districts = { type = district_rw_generator value > 2 }
 		}
 	}
 }
@@ -247,7 +250,7 @@ col_hive_unity = {
 	weight_modifier = {
 		modifier = {
 			add = 3
-			num_districts = { type = district_city value > 0 }
+			num_districts = { type = district_scholars value > 0 }
 		}
 		modifier = {
 			add = 3
@@ -279,7 +282,7 @@ col_hive_research = {
 	weight_modifier = {
 		modifier = {
 			add = 3
-			num_districts = { type = district_city value > 0 }
+			num_districts = { type = district_scholars value > 0 }
 		}
 		modifier = {
 			add = 3

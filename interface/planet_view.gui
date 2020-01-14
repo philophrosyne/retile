@@ -4855,6 +4855,18 @@ guiTypes = {
 			}
 		}	
 	
+		instantTextBoxType={
+			name = "deposit_effects"
+			font = "cg_16b"
+			text = "Deposit effects go here"
+			position = { x = -10000 y = -10000 }
+			maxWidth = 0
+			maxHeight = 0
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+		}	
+
 		iconType = {
 			name = "deposit_icon"
 			spriteType = "GFX_deposit_unknown"
@@ -5988,16 +6000,16 @@ guiTypes = {
 			alwaysTransparent = yes
 		}				
 		
-	#	instantTextBoxType={
-	#		name = "unlock_at_pops"
-	#		font = "cg_16b"
-	#		position = { x = 0 y = 35 }
-	#		text = "10"
-	#		maxWidth = 58
-	#		maxHeight = 20
-	#		fixedSize = yes
-	#		format = center
-	#	}
+		instantTextBoxType={
+			name = "unlock_at_pops"
+			font = "cg_16b"
+			position = { x = -10000 y = -10000 }
+			text = "10"
+			maxWidth = 0
+			maxHeight = 0
+			fixedSize = yes
+			format = center
+		}
 		
 		iconType = {
 			name = "disabled_building"

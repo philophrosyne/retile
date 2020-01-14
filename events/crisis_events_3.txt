@@ -2691,9 +2691,10 @@ country_event = {
 			has_country_flag = machine_power_failure
 		}
 		any_owned_planet = {
-			num_districts = {
-				type = district_generator
-				value > 3
+			#num_districts = { type = district_generator value > 3 } ### RETILE RURAL
+			count_deposits = {
+				limit = { is_active_energy_deposit = yes }
+				count >= 2
 			}
 		}
 	}
@@ -2704,9 +2705,10 @@ country_event = {
 			count = 3
 			random_owned_planet = {
 				limit = {
-					num_districts = {
-						type = district_generator
-						value > 3
+					#num_districts = { type = district_generator value > 3 } ### RETILE RURAL
+					count_deposits = {
+						limit = { is_active_energy_deposit = yes }
+						count >= 2
 					}
 					NOT = { has_modifier = contingency_sabotage }
 				}

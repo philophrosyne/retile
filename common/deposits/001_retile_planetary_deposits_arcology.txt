@@ -63,7 +63,7 @@ d_energy_arcology_1a_active = {
 
 d_energy_arcology_1b = {
 	time = @retile_rural_exploit_time_low_rare
-	icon = d_arcology_1
+	icon = "arcology/d_arcology_1"
 	category = deposit_cat_arcology
 	is_for_colonizeable = yes
 	
@@ -92,7 +92,7 @@ d_energy_arcology_1b = {
 }
 
 d_energy_arcology_1b_active = {
-	icon = d_arcology_1_exploited
+	icon = "arcology/d_arcology_1_exploited"
 	category = deposit_cat_arcology_active
 	is_for_colonizeable = yes
 	
@@ -120,7 +120,7 @@ d_energy_arcology_1b_active = {
 
 d_energy_arcology_2a = {
 	time = @retile_rural_exploit_time_med_rare
-	icon = d_arcology_2
+	icon = "arcology/d_arcology_2"
 	category = deposit_cat_arcology
 	is_for_colonizeable = yes
 	
@@ -149,7 +149,7 @@ d_energy_arcology_2a = {
 }
 
 d_energy_arcology_2a_active = {
-	icon = d_arcology_2_exploited
+	icon = "arcology/d_arcology_2_exploited"
 	category = deposit_cat_arcology_active
 	is_for_colonizeable = yes
 	
@@ -179,7 +179,7 @@ d_energy_arcology_2a_active = {
 
 d_energy_arcology_2b = {
 	time = @retile_rural_exploit_time_med_rare
-	icon = d_arcology_2
+	icon = "arcology/d_arcology_2"
 	category = deposit_cat_arcology
 	is_for_colonizeable = yes
 	
@@ -208,7 +208,7 @@ d_energy_arcology_2b = {
 }
 
 d_energy_arcology_2b_active = {
-	icon = d_arcology_2_exploited
+	icon = "arcology/d_arcology_2_exploited"
 	category = deposit_cat_arcology_active
 	is_for_colonizeable = yes
 	
@@ -236,7 +236,7 @@ d_energy_arcology_2b_active = {
 
 d_energy_arcology_3a = {
 	time = @retile_rural_exploit_time_high_rare
-	icon = d_arcology_3
+	icon = "arcology/d_arcology_3"
 	category = deposit_cat_arcology
 	is_for_colonizeable = yes
 	
@@ -265,7 +265,7 @@ d_energy_arcology_3a = {
 }
 
 d_energy_arcology_3a_active = {
-	icon = d_arcology_3_exploited
+	icon = "arcology/d_arcology_3_exploited"
 	category = deposit_cat_arcology_active
 	is_for_colonizeable = yes
 	
@@ -295,7 +295,7 @@ d_energy_arcology_3a_active = {
 
 d_energy_arcology_3b = {
 	time = @retile_rural_exploit_time_high_rare
-	icon = d_arcology_3
+	icon = "arcology/d_arcology_3"
 	category = deposit_cat_arcology
 	is_for_colonizeable = yes
 	
@@ -324,7 +324,7 @@ d_energy_arcology_3b = {
 }
 
 d_energy_arcology_3b_active = {
-	icon = d_arcology_3_exploited
+	icon = "arcology/d_arcology_3_exploited"
 	category = deposit_cat_arcology_active
 	is_for_colonizeable = yes
 	
@@ -356,7 +356,7 @@ d_energy_arcology_3b_active = {
 
 d_minerals_arcology_1a = {
 	time = @retile_rural_exploit_time_low_rare
-	icon = d_arcology_1
+	icon = "arcology/d_arcology_1"
 	category = deposit_cat_arcology
 	is_for_colonizeable = yes
 	
@@ -385,7 +385,7 @@ d_minerals_arcology_1a = {
 }
 
 d_minerals_arcology_1a_active = {
-	icon = d_arcology_1_exploited
+	icon = "arcology/d_arcology_1_exploited"
 	category = deposit_cat_arcology_active
 	is_for_colonizeable = yes
 	
@@ -413,7 +413,7 @@ d_minerals_arcology_1a_active = {
 
 d_minerals_arcology_1b = {
 	time = @retile_rural_exploit_time_low_rare
-	icon = d_arcology_1
+	icon = "arcology/d_arcology_1"
 	category = deposit_cat_arcology
 	is_for_colonizeable = yes
 	
@@ -442,7 +442,7 @@ d_minerals_arcology_1b = {
 }
 
 d_minerals_arcology_1b_active = {
-	icon = d_arcology_1_exploited
+	icon = "arcology/d_arcology_1_exploited"
 	category = deposit_cat_arcology_active
 	is_for_colonizeable = yes
 	
@@ -470,7 +470,7 @@ d_minerals_arcology_1b_active = {
 
 d_minerals_arcology_2a = {
 	time = @retile_rural_exploit_time_med_rare
-	icon = d_arcology_2
+	icon = "arcology/d_arcology_2"
 	category = deposit_cat_arcology
 	is_for_colonizeable = yes
 	
@@ -499,7 +499,7 @@ d_minerals_arcology_2a = {
 }
 
 d_minerals_arcology_2a_active = {
-	icon = d_arcology_2_exploited
+	icon = "arcology/d_arcology_2_exploited"
 	category = deposit_cat_arcology_active
 	is_for_colonizeable = yes
 	
@@ -527,7 +527,7 @@ d_minerals_arcology_2a_active = {
 
 d_minerals_arcology_2b = {
 	time = @retile_rural_exploit_time_med_rare
-	icon = d_arcology_2
+	icon = "arcology/d_arcology_2"
 	category = deposit_cat_arcology
 	is_for_colonizeable = yes
 	
@@ -556,7 +556,7 @@ d_minerals_arcology_2b = {
 }
 
 d_minerals_arcology_2b_active = {
-	icon = d_arcology_2_exploited
+	icon = "arcology/d_arcology_2_exploited"
 	category = deposit_cat_arcology_active
 	is_for_colonizeable = yes
 	
@@ -584,7 +584,7 @@ d_minerals_arcology_2b_active = {
 
 d_minerals_arcology_3a = {
 	time = @retile_rural_exploit_time_high_rare
-	icon = d_arcology_3
+	icon = "arcology/d_arcology_3"
 	category = deposit_cat_arcology
 	is_for_colonizeable = yes
 	
@@ -613,7 +613,7 @@ d_minerals_arcology_3a = {
 }
 
 d_minerals_arcology_3a_active = {
-	icon = d_arcology_3_exploited
+	icon = "arcology/d_arcology_3_exploited"
 	category = deposit_cat_arcology_active
 	is_for_colonizeable = yes
 	
@@ -641,7 +641,7 @@ d_minerals_arcology_3a_active = {
 
 d_minerals_arcology_3b = {
 	time = @retile_rural_exploit_time_high_rare
-	icon = d_arcology_3
+	icon = "arcology/d_arcology_3"
 	category = deposit_cat_arcology
 	is_for_colonizeable = yes
 	
@@ -670,7 +670,7 @@ d_minerals_arcology_3b = {
 }
 
 d_minerals_arcology_3b_active = {
-	icon = d_arcology_3_exploited
+	icon = "arcology/d_arcology_3_exploited"
 	category = deposit_cat_arcology_active
 	is_for_colonizeable = yes
 	
@@ -703,7 +703,7 @@ d_minerals_arcology_3b_active = {
 
 d_food_arcology_1a = {
 	time = @retile_rural_exploit_time_low_rare
-	icon = d_arcology_1
+	icon = "arcology/d_arcology_1"
 	category = deposit_cat_arcology
 	is_for_colonizeable = yes
 	
@@ -732,7 +732,7 @@ d_food_arcology_1a = {
 }
 
 d_food_arcology_1a_active = {
-	icon = d_arcology_1_exploited
+	icon = "arcology/d_arcology_1_exploited"
 	category = deposit_cat_arcology_active
 	is_for_colonizeable = yes
 	
@@ -760,7 +760,7 @@ d_food_arcology_1a_active = {
 
 d_food_arcology_1b = {
 	time = @retile_rural_exploit_time_low_rare
-	icon = d_arcology_1
+	icon = "arcology/d_arcology_1"
 	category = deposit_cat_arcology
 	is_for_colonizeable = yes
 	
@@ -789,7 +789,7 @@ d_food_arcology_1b = {
 }
 
 d_food_arcology_1b_active = {
-	icon = d_arcology_1_exploited
+	icon = "arcology/d_arcology_1_exploited"
 	category = deposit_cat_arcology_active
 	is_for_colonizeable = yes
 	
@@ -817,7 +817,7 @@ d_food_arcology_1b_active = {
 
 d_food_arcology_2a = {
 	time = @retile_rural_exploit_time_med_rare
-	icon = d_arcology_2
+	icon = "arcology/d_arcology_2"
 	category = deposit_cat_arcology
 	is_for_colonizeable = yes
 	
@@ -846,7 +846,7 @@ d_food_arcology_2a = {
 }
 
 d_food_arcology_2a_active = {
-	icon = d_arcology_2_exploited
+	icon = "arcology/d_arcology_2_exploited"
 	category = deposit_cat_arcology_active
 	is_for_colonizeable = yes
 	
@@ -874,7 +874,7 @@ d_food_arcology_2a_active = {
 
 d_food_arcology_2b = {
 	time = @retile_rural_exploit_time_med_rare
-	icon = d_arcology_2
+	icon = "arcology/d_arcology_2"
 	category = deposit_cat_arcology
 	is_for_colonizeable = yes
 	
@@ -903,7 +903,7 @@ d_food_arcology_2b = {
 }
 
 d_food_arcology_2b_active = {
-	icon = d_arcology_2_exploited
+	icon = "arcology/d_arcology_2_exploited"
 	category = deposit_cat_arcology_active
 	is_for_colonizeable = yes
 	
@@ -931,7 +931,7 @@ d_food_arcology_2b_active = {
 
 d_food_arcology_3a = {
 	time = @retile_rural_exploit_time_high_rare
-	icon = d_arcology_3
+	icon = "arcology/d_arcology_3"
 	category = deposit_cat_arcology
 	is_for_colonizeable = yes
 	
@@ -960,7 +960,7 @@ d_food_arcology_3a = {
 }
 
 d_food_arcology_3a_active = {
-	icon = d_arcology_3_exploited
+	icon = "arcology/d_arcology_3_exploited"
 	category = deposit_cat_arcology_active
 	is_for_colonizeable = yes
 	
@@ -988,7 +988,7 @@ d_food_arcology_3a_active = {
 
 d_food_arcology_3b = {
 	time = @retile_rural_exploit_time_high_rare
-	icon = d_arcology_3
+	icon = "arcology/d_arcology_3"
 	category = deposit_cat_arcology
 	is_for_colonizeable = yes
 	
@@ -1017,7 +1017,7 @@ d_food_arcology_3b = {
 }
 
 d_food_arcology_3b_active = {
-	icon = d_arcology_3_exploited
+	icon = "arcology/d_arcology_3_exploited"
 	category = deposit_cat_arcology_active
 	is_for_colonizeable = yes
 	

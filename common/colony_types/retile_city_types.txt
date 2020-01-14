@@ -67,14 +67,18 @@ col_commercial_arcology = {
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_trade_arcology value > 0 }
+			num_districts = { type = district_clerks value > 0 }
 		}
 		modifier = {
 			add = 2
-			num_districts = { type = district_trade_arcology value > 1 }
+			num_districts = { type = district_clerks value > 1 }
 		}
 		modifier = {
 			add = 1
+			has_building = building_trade_1
+		}
+		modifier = {
+			add = 2
 			has_building = building_trade_2
 		}
 		modifier = {
@@ -114,11 +118,11 @@ col_manufacturing_arcology = {
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_engineering_arcology value > 0 }
+			num_districts = { type = district_engineers value > 0 }
 		}
 		modifier = {
 			add = 1
-			num_districts = { type = district_engineering_arcology value > 1 }
+			num_districts = { type = district_engineers value > 1 }
 		}
 		modifier = {
 			add = 1
@@ -175,15 +179,13 @@ col_academic_arcology = {
 		modifier = {
 			add = 1
 			OR = {
-				num_districts = { type = district_research_arcology value > 0 }
-				num_districts = { type = district_digsite_arcology value > 0 }
+				num_districts = { type = district_scholars value > 0 }
 			}
 		}
 		modifier = {
 			add = 1
 			OR = {
-				num_districts = { type = district_research_arcology value > 1 }
-				num_districts = { type = district_digsite_arcology value > 1 }
+				num_districts = { type = district_scholars value > 1 }
 			}
 		}
 		modifier = {
