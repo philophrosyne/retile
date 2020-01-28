@@ -11,6 +11,21 @@ migration_control_yes = {
 			from = { NOT = { has_authority = auth_machine_intelligence } }		
 		}
 	}
+	
+	allow = {
+		if = {
+			limit = { is_same_species = from }
+			NOT = { from = { has_policy_flag = slavery_not_allowed } }
+		} else_if = {
+			limit = { NOT = { is_same_species = from } }
+			if = {
+				limit = { NOT = { from = { has_policy_flag = alien_full_rights } } }
+				always = yes
+			} else = {
+				from = { NOT = { has_policy_flag = slavery_not_allowed } }
+			}
+		}
+	}
 }
 
 migration_control_no = {
@@ -55,9 +70,6 @@ population_control_yes = {
 
 	allow = {
 		hidden_trigger = { exists = from }
-		from = {
-			NOT = { has_policy_flag = population_controls_not_allowed }
-		}
 		if = { 
 			limit = {
 				OR = {
@@ -66,22 +78,17 @@ population_control_yes = {
 				}			
 			}
 			always = yes
-		}
-		else = {
-			custom_tooltip = {
-				fail_text = same_species_disallowed
-				NOT = { is_same_species = from }
+		} else_if = {
+			limit = { NOT = { is_same_species = from } }
+			if = {
+				limit = { from = { has_policy_flag = alien_no_rights } }
+				always = yes
+			} else = {
+				from = { has_policy_flag = population_controls_allowed }
 			}
-			custom_tooltip = {
-				fail_text = empire_xenophile
-				from = {
-					NOR = {
-						has_ethic = ethic_xenophile
-						has_ethic = ethic_fanatic_xenophile
-					}
-				}
-			}		
-		}				
+		} else = {
+			from = { has_policy_flag = population_controls_allowed }	
+		}
 	}
 	ai_will_do = {
 		factor = 2
@@ -149,17 +156,22 @@ colonization_control_yes = {
 				}
 			}
 			always = yes
-		}
-		else = {
-			custom_tooltip = {
-				fail_text = same_species_disallowed
-				NOT = { is_same_species = from }
+		} else_if = {
+			limit = { is_same_species = from }
+			NOT = { from = { has_policy_flag = slavery_not_allowed } }
+		} else_if = {
+			limit = { NOT = { is_same_species = from } }
+			if = {
+				limit = { NOT = { from = { has_policy_flag = alien_full_rights } } }
+				always = yes
+			} else = {
+				from = { NOT = { has_policy_flag = slavery_not_allowed } }
 			}
 		}
 	}
 
 	ai_will_do = {
-		factor = 2
+		factor = 1
 		modifier = {
 			factor = 0
 			from = { 
@@ -223,21 +235,21 @@ colonization_control_no = {
 		}
 		custom_tooltip = {
 			fail_text = "SPECIES_CANNOT_COLONIZE"		
-			NOR = { 
+			NOR = {
 				has_trait = trait_syncretic_proles
 				has_trait = trait_nerve_stapled 
-			}	
-		}	
+			}
+		}
 		custom_tooltip = {
-			fail_text = is_slaves_not_battle_thralls
+			fail_text = is_slaves_not_caste
 			NAND = {
 				has_citizenship_type = { country = from type = citizenship_slavery }
-				NOT = { has_slavery_type = { country = from type = slavery_military } }
+				NOT = { has_slavery_type = { country = from type = slavery_domestic } }
 			}
-		}			
+		}
 	}
 	ai_will_do = {
-		factor = 1
+		factor = 2
 		modifier = {
 			factor = 0
 			from = { has_valid_civic = civic_machine_servitor }

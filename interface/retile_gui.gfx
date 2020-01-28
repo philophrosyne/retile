@@ -7,5 +7,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_retile_clear_blocker_button"
 		textureFile = "gfx/interface/planetview/clear_blocker_button.dds"
-	}	
+	}
+	
+	spriteType = {
+		name = "GFX_retile_line_tiny"
+		textureFile = "gfx/interface/planetview/line_tiny.dds"
+	}
 }

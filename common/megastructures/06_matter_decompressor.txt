@@ -12,7 +12,6 @@ matter_decompressor_0 = {
 		category = megastructures
 		cost = {
 			alloys = 5000
-			influence = 300
 		}
 
 		upkeep = {
@@ -23,7 +22,10 @@ matter_decompressor_0 = {
 	prerequisites = { "tech_matter_decompressor" }
 
 	potential = {
-		has_gw_matter_decompressor = yes
+		OR = { 
+			owner = { has_ascension_perk = ap_galactic_wonders_utopia }
+			owner = { has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp }
+		}
 	}
 	
 	possible = {
@@ -150,7 +152,23 @@ matter_decompressor_1 = {
 		}
 
 		produces = {
+			trigger = { 
+				OR = { 
+					owner = { has_ascension_perk = ap_galactic_wonders_utopia }
+					owner = { has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp }
+				}
+			}
 			minerals = 500
+		}
+		
+		produces = {
+			trigger = { 
+				NOR = { 
+					owner = { has_ascension_perk = ap_galactic_wonders_utopia }
+					owner = { has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp }
+				}
+			}
+			minerals = 250
 		}
 
 		upkeep = {
@@ -186,7 +204,23 @@ matter_decompressor_2 = {
 		}
 
 		produces = {
+			trigger = { 
+				OR = { 
+					owner = { has_ascension_perk = ap_galactic_wonders_utopia }
+					owner = { has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp }
+				}
+			}
 			minerals = 1000
+		}
+		
+		produces = {
+			trigger = { 
+				NOR = { 
+					owner = { has_ascension_perk = ap_galactic_wonders_utopia }
+					owner = { has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp }
+				}
+			}
+			minerals = 500
 		}
 
 		upkeep = {
@@ -221,7 +255,23 @@ matter_decompressor_3 = {
 		}
 
 		produces = {
+			trigger = { 
+				OR = { 
+					owner = { has_ascension_perk = ap_galactic_wonders_utopia }
+					owner = { has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp }
+				}
+			}
 			minerals = 1500
+		}
+		
+		produces = {
+			trigger = { 
+				NOR = { 
+					owner = { has_ascension_perk = ap_galactic_wonders_utopia }
+					owner = { has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp }
+				}
+			}
+			minerals = 750
 		}
 
 		upkeep = {
@@ -257,7 +307,23 @@ matter_decompressor_4 = {
 		}
 
 		produces = {
+			trigger = { 
+				OR = { 
+					owner = { has_ascension_perk = ap_galactic_wonders_utopia }
+					owner = { has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp }
+				}
+			}
 			minerals = 2000
+		}
+		
+		produces = {
+			trigger = { 
+				NOR = { 
+					owner = { has_ascension_perk = ap_galactic_wonders_utopia }
+					owner = { has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp }
+				}
+			}
+			minerals = 1000
 		}
 
 		upkeep = {
@@ -313,7 +379,23 @@ matter_decompressor_restored = {
 		}
 
 		produces = {
+			trigger = { 
+				OR = { 
+					owner = { has_ascension_perk = ap_galactic_wonders_utopia }
+					owner = { has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp }
+				}
+			}
 			minerals = 2000
+		}
+		
+		produces = {
+			trigger = { 
+				NOR = { 
+					owner = { has_ascension_perk = ap_galactic_wonders_utopia }
+					owner = { has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp }
+				}
+			}
+			minerals = 1000
 		}
 
 		upkeep = {

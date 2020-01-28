@@ -93,7 +93,7 @@ guiTypes = {
 		iconType = {
 			name = "hex_bg"
 			spriteType = "GFX_hex_bg"
-			position = { x = -10 y = -23 }
+			position = { x = -16 y = -15 }
 			alwaysTransparent = yes
 		}
 
@@ -908,7 +908,7 @@ guiTypes = {
 					#		position = { x = 0 y = 0 }
 					#		name = "districts_window_background"
 					#		spriteType = "GFX_dark_area_cut"
-					#	}			
+					#	}
 
 						containerWindowType = {
 							name = "districts_window_background_container"
@@ -919,6 +919,13 @@ guiTypes = {
 								position = { x = 0 y = 0 }
 								name = "districts_window_background"
 								spriteType = "GFX_dark_area_cut"
+							}
+							
+							iconType = {
+								name = "hex_bg"
+								spriteType = "GFX_hex_bg"
+								position = { x = -16 y = -3 }
+								alwaysTransparent = yes
 							}
 						}
 						
@@ -974,7 +981,14 @@ guiTypes = {
 							background = {
 								name = "background"
 								spriteType = "GFX_dark_area_cut"
-							}	
+							}
+							
+							iconType = {
+								name = "hex_bg"
+								spriteType = "GFX_hex_bg"
+								position = { x = -16 y = -3 }
+								alwaysTransparent = yes
+							}
 
 							buttonType = {
 								name = "deposits_button"
@@ -1094,8 +1108,8 @@ guiTypes = {
 
 				containerWindowType = {
 					name = "planet_desc_window"	
-					position = { x = 290  y = 50 }
-					size = { width = 545 height = 240 }
+					size = { width = 270 height = 315 }
+					position = { x = 570 y = 45 }
 					
 					background = {
 						name = "planet_desc_background"
@@ -1107,8 +1121,8 @@ guiTypes = {
 						font = "cg_16b"
 						position = { x = 10 y = 10 }
 						text = "blah blah blah"
-						maxWidth = 495
-						maxHeight = 230
+						maxWidth = 255
+						maxHeight = 315
 						fixedSize = yes
 						format = left
 						orientation = upper_left
@@ -1118,7 +1132,7 @@ guiTypes = {
 				containerWindowType = {
 					name = "colonizing_planet_window"
 					size = { width = 350 height = 220 }
-					position = { x = 280 y = 280 }
+					position = { x = 20 y = 40 }
 					
 					instantTextBoxType = {
 						name = "colonizing_planet_label"
@@ -1295,6 +1309,11 @@ guiTypes = {
 					#	}
 					#}
 					
+					background = {
+						name = "build_queue_background"
+						spriteType = "GFX_tiles_frame"
+					}
+					
 
 					instantTextBoxType = {
 						name = "planetary_production_output_title"
@@ -1403,17 +1422,18 @@ guiTypes = {
 							spriteType = "GFX_dark_area_cut"
 					}
 
-					#iconType = {
-					#	name = "title_hex"
-					#	quadTextureSprite = "GFX_small_hex_bg"
-					#	position = { x = -4 y = -7 }
-					#}
+					iconType = {
+						name = "hex_bg"
+						spriteType = "GFX_hex_bg"
+						position = { x = -16 y = -3 }
+						alwaysTransparent = yes
+					}
 
-					#iconType = {
-					#	name = "title_line"
-					#	quadTextureSprite = "GFX_line_short"
-					#	position = { x = 24 y = 30 }
-					#}
+				#	iconType = {
+				#		name = "title_line"
+				#		quadTextureSprite = "GFX_line_short"
+				#		position = { x = 5 y = 35 }
+				#	}
 
 					instantTextBoxType = {
 						name = "title_text"
@@ -1447,6 +1467,11 @@ guiTypes = {
 					size = { width = 550 height = 70}
 					position = { x = 10 y = 45 }
 
+					background = {
+						name = "designation_info_background"
+						spriteType = "GFX_dark_area_cut"
+					}
+					
 					background = {
 						name = "designation_info_background"
 						spriteType = "GFX_dark_area_cut"
@@ -1608,6 +1633,19 @@ guiTypes = {
 					background = {
 						name = "build_queue_background"
 						spriteType = "GFX_tiles_frame"
+					}
+					
+					iconType = {
+						name = "hex_bg"
+						spriteType = "GFX_hex_center_bg"
+						position = { x = -140 y = -10 }
+						alwaysTransparent = yes
+					}
+					
+					iconType = {
+						name = "title_line"
+						quadTextureSprite = "GFX_line_center_short"
+						position = { x = -20 y = 30 }
 					}
 
 					instantTextBoxType = {
@@ -4828,7 +4866,7 @@ guiTypes = {
 	
 	containerWindowType = { ### RETILE NOTES: Planet deposit list
 		name = "planet_deposit_entry"
-		position = { x=0 y=82 }
+		#position = { x=0 y=82 }
 		moveable = no
 		size = { width = 250 height = 100 }
 
@@ -4855,18 +4893,6 @@ guiTypes = {
 			}
 		}	
 	
-		instantTextBoxType={
-			name = "deposit_effects"
-			font = "cg_16b"
-			text = "Deposit effects go here"
-			position = { x = -10000 y = -10000 }
-			maxWidth = 0
-			maxHeight = 0
-			fixedSize = yes
-			format = left
-			alwaysTransparent = yes
-		}	
-
 		iconType = {
 			name = "deposit_icon"
 			spriteType = "GFX_deposit_unknown"
@@ -6000,16 +6026,16 @@ guiTypes = {
 			alwaysTransparent = yes
 		}				
 		
-		instantTextBoxType={
-			name = "unlock_at_pops"
-			font = "cg_16b"
-			position = { x = -10000 y = -10000 }
-			text = "10"
-			maxWidth = 0
-			maxHeight = 0
-			fixedSize = yes
-			format = center
-		}
+	#	instantTextBoxType={
+	#		name = "unlock_at_pops"
+	#		font = "cg_16b"
+	#		position = { x = 0 y = 35 }
+	#		text = "10"
+	#		maxWidth = 58
+	#		maxHeight = 20
+	#		fixedSize = yes
+	#		format = center
+	#	}
 		
 		iconType = {
 			name = "disabled_building"

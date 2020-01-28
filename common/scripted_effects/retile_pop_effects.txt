@@ -45,8 +45,26 @@ retile_apply_growth_malus = {	# country scope
 	every_owned_planet = {
 		limit = { num_pops > 0 }
 		prev = { change_variable = { which = col_count value = 1 } }
+		
+		# Colonialism Tradition Calculation
+		if = {
+			limit = { owner = { has_tradition = tr_expansion_finish } }
+			prev = { change_variable = { which = col_count value = -0.2 } }
+		}
+		
+		# Universal Healthcare
+		if = { 
+			limit = { owner = { has_policy_flag = healthcare_universal } }
+			prev = { change_variable = { which = col_count value = -0.1 } }
+		}
 	}
-
+	
+#	# Pop Sprawl Cap - Shouldn't matter any more
+#	if = {
+#		limit = { check_variable = { which = col_count value > 30 } }
+#		set_variable = { which = col_count value = 30 }
+#	}
+	
 	if = { limit = { check_variable = { which = col_count value < 16 } }
 		if = { limit = { check_variable = { which = col_count value < 8 } }
 			if = { limit = { check_variable = { which = col_count value < 4 } }

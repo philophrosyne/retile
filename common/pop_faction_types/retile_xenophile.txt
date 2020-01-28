@@ -11,14 +11,15 @@ xenoist = {
 	
 	resources = {
 		category = pop_factions
-		produces = {
-			influence = 2
-		}		
+		produces = { influence = 2 }		
 	}
 
 	is_potential = {
-		years_passed > 10
-		has_encountered_other_species = yes
+		OR = {
+			years_passed > 20
+			has_country_flag = first_contact_event
+			has_country_flag = first_alien_life
+		}
 		NOT = { has_ethic = ethic_gestalt_consciousness }
 	}
 	
@@ -32,7 +33,6 @@ xenoist = {
 	}
 	
 	can_join_pre_triggers = {
-		is_enslaved = no
 		is_being_purged = no
 		is_being_assimilated = no
 	}
@@ -44,6 +44,10 @@ xenoist = {
 		OR = {
 			has_ethic = ethic_xenophile
 			has_ethic = ethic_fanatic_xenophile
+		}
+		OR = {
+			is_enslaved = no
+			has_slavery_type = { type = slavery_domestic }
 		}
 	}
 	
@@ -90,174 +94,51 @@ xenoist = {
 		}	
 	}
 	
-	# Wants Environmental Regulation
+	# Wants Herism - If no Megacorp
 	demand = {
-		title = "XENOPHILE_ENVIRONMENTAL_REGULATION"
-		unfulfilled_title = "XENOPHILE_NO_ENVIRONMENTAL_REGULATION"
-		desc = "XENOPHILE_ENVIRONMENTAL_REGULATION_DESC"
+		title = "XENOPHILE_DEFENDER"
+		unfulfilled_title = "XENOPHILE_NO_DEFENDER"
+		desc = "XENOPHILE_DEFENDER_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = -1
-
-		potential = { exists = owner }
-
-		trigger = {
-			owner = { has_policy_flag = environmental_regulation }
-		}
-	}
-	
-	# Wants No Pop Controls
-	demand = {
-		title = "XENOPHILE_NO_POP_CONTROL"
-		unfulfilled_title = "XENOPHILE_NO_NO_POP_CONTROL"
-		desc = "XENOPHILE_NO_POP_CONTROL_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -1
-
-		potential = { exists = owner }
-
-		trigger = {
-			owner = { has_policy_flag = population_controls_not_allowed }
-		}
-	}
-	
-	# Wants Passive Interference
-	demand = {
-		title = "XENOPHILE_PASSIVE_INTERFERENCE"
-		unfulfilled_title = "XENOPHILE_NO_PASSIVE_INTERFERENCE"
-		desc = "XENOPHILE_PASSIVE_INTERFERENCE_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -1
-		
-		potential = {
-			exists = owner
-			owner = {
-				any_relation = { is_country_type = primitive }
-			}
-		}
-		
-		trigger = {
-			owner = { has_policy_flag = interference_passive }
-		}
-	}
-	
-	# Wants to Protect Presapients
-	demand = {
-		title = "XENOPHILE_PROTECT_PRESAPIENTS"
-		unfulfilled_title = "XENOPHILE_NO_PROTECT_PRESAPIENTS"
-		desc = "XENOPHILE_PROTECT_PRESAPIENTS_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -1
+		unfulfilled_effect = 0
 		
 		potential = {
 			exists = owner
 			owner = { 
-				has_country_flag = found_presapients
-				any_planet_within_border = {
-					any_pop = {
-						is_sapient = no
-					}
-				}			
+				num_communications > 2
+				NOT = { host_has_dlc = "Megacorp" }
 			}
 		}
 		
 		trigger = {
-			owner = { has_policy_flag = pre_sapients_protect }
+			owner = {
+				owner = { has_ascension_perk = ap_defender_of_the_galaxy }
+			}
 		}
 	}
 	
-	# Wants Genocide Ban
+	# Wants Hybrids
 	demand = {
-		title = "XENOPHILE_GENOCIDE_BAN"
-		unfulfilled_title = "XENOPHILE_NO_GENOCIDE_BAN"
-		desc = "XENOPHILE_GENOCIDE_BAN_DESC"
+		title = "XENOPHILE_HYBRID"
+		unfulfilled_title = "XENOPHILE_NO_HYBRID"
+		desc = "XENOPHILE_HYBRID_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = -1
+		unfulfilled_effect = 0
 		
-		potential = { exists = owner }
-		
-		trigger = {
-			owner = { has_policy_flag = purge_not_allowed }
-		}
-	}
-	
-	# Wants Refugees
-	demand = {
-		title = "XENOPHILE_REFUGEES"
-		unfulfilled_title = "XENOPHILE_NO_REFUGEES"
-		desc = "XENOPHILE_REFUGEES_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -1
-		
-		potential = { 
+		potential = {
 			exists = owner
-			owner = { has_encountered_other_species = yes }
+			owner = { 
+				num_communications > 2
+				host_has_dlc = "Megacorp"
+			}
 		}
 		
 		trigger = {
-			owner = { has_policy_flag = refugees_allowed }
-		}
-	}
-	
-	# Wants Open Borders
-	demand = {
-		title = "XENOPHILE_OPEN_BORDERS"
-		unfulfilled_title = "XENOPHILE_NO_OPEN_BORDERS"
-		desc = "XENOPHILE_OPEN_BORDERS_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -1
-		
-		potential = { 
-			exists = owner
-			owner = { num_communications > 2 }
-		}
-		
-		trigger = {
-			owner = { has_policy_flag = border_policy_open }
-		}
-	}
-	
-	# Wants Land of Opportunity
-	demand = { 
-		title = "XENOPHILE_OPPORTUNITY"
-		unfulfilled_title = "XENOPHILE_NO_OPPORTUNITY"
-		desc = "XENOPHILE_OPPORTUNITY_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -1
-
-		potential = { 
-			exists = owner
-			owner = { has_tradition = tr_diplomacy_secure_shipping }
-		}
-
-		trigger = {
-			owner = { has_edict = land_of_opportunity }
-		}
-	}
-	
-	# Wants Celebration Campaign
-	demand = { 
-		title = "XENOPHILE_CELEBRATION_CAMPAIGN"
-		unfulfilled_title = "XENOPHILE_NO_CELEBRATION_CAMPAIGN"
-		desc = "XENOPHILE_CELEBRATION_CAMPAIGN_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -1
-
-		potential = { 
-			exists = owner
-			owner = { has_technology = tech_colonial_centralization }
-		}
-
-		trigger = {
-			owner = { has_edict = celebration_campaign }
+			owner = {
+				owner = { has_ascension_perk = ap_xeno_compatibility }
+			}
 		}
 	}
 	
@@ -268,11 +149,11 @@ xenoist = {
 		desc = "XENOPHILE_MIGRATION_TREATIES_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = -1
+		unfulfilled_effect = 0
 
 		potential = {
 			exists = owner
-			owner = { num_communications > 4 }
+			owner = { num_communications > 2 }
 		}
 
 		trigger = {
@@ -292,89 +173,80 @@ xenoist = {
 			}
 		}
 	}
-	
-	# Wants Full Citizenship for Aliens
-	demand = {
-		title = "XENOPHILE_ALIEN_CITIZENSHIP"
-		unfulfilled_title = "XENOPHILE_NO_ALIEN_CITIZENSHIP"
-		desc = "XENOPHILE_ALIEN_CITIZENSHIP_DESC"
+		
+	# Wants to Guarentee Independence
+	demand = { 
+		title = "XENOPHILE_INDEPENDENCE"
+		unfulfilled_title = "XENOPHILE_NO_INDEPENDENCE"
+		desc = "XENOPHILE_INDEPENDENCE_DESC"
 
-		fulfilled_effect = 10
-		unfulfilled_effect = -1
+		fulfilled_effect = 20
+		unfulfilled_effect = 0
 
 		potential = { 
 			exists = owner
-			any_owned_pop = {
-				NOT = { is_same_species = owner_species }
-				is_robot_pop = no
-				is_sapient = yes
-				is_being_purged = no
-			}
+			owner = { num_communications > 2 }
 		}
 
 		trigger = {
-			owner = {  
-				any_owned_pop = { 
+			any_country = { prev.owner = { is_guaranteeing = PREV } }
+		}
+	}
+	
+	# Wants Diversity
+	demand = {
+		title = "XENOPHILE_DIVERSITY"
+		unfulfilled_title = "XENOPHILE_NO_DIVERSITY"
+		desc = "XENOPHILE_DIVERSITY_DESC"
+		
+		fulfilled_effect = 10
+		unfulfilled_effect = 0
+
+		potential = { 
+			exists = owner
+			owner = { has_encountered_other_species = yes }
+		}
+
+		trigger = {
+			owner = {
+				any_owned_pop = {
 					NOT = { is_same_species = owner_species }
-					has_citizenship_type = { type = citizenship_full }
+					is_robot_pop = no
+					is_sapient = yes
+					is_being_purged = no
+					is_enslaved = no
 				}
 			}
 		}
 	}
 	
-	# Hates Pop Controls
+	# Wants Alien Rights
 	demand = {
-		title = "XENOPHILE_POP_CONTROLS"
-		unfulfilled_title = "XENOPHILE_NO_POP_CONTROLS"
-		desc = "XENOPHILE_POP_CONTROLS_DESC"
+		title = "XENOPHILE_ALIEN_RIGHTS"
+		unfulfilled_title = "XENOPHILE_NO_ALIEN_RIGHTS"
+		desc = "XENOPHILE_ALIEN_RIGHTS_DESC"
 
-		fulfilled_effect = 1
-		unfulfilled_effect = -10
+		fulfilled_effect = 20
+		unfulfilled_effect = 0
 
-		potential = { exists = owner }
-
-		trigger = {
-			owner = { NOT = { has_policy_flag = population_controls_allowed } }
-		}
-	}
-	
-	# Wants Killing or Eating Presapients
-	demand = {
-		title = "XENOPHILE_KILL_PRESAPIENTS"
-		unfulfilled_title = "XENOPHILE_NO_KILL_PRESAPIENTS"
-		desc = "XENOPHILE_KILL_PRESAPIENTS_DESC"
-
-		fulfilled_effect = 1
-		unfulfilled_effect = -10
-		
-		potential = {
+		potential = { 
 			exists = owner
-			owner = { 
-				has_country_flag = found_presapients
-				any_planet_within_border = {
-					any_pop = {
-						is_sapient = no
-					}
-				}			
-			}
+			owner = { has_encountered_other_species = yes }
 		}
-		
+
 		trigger = {
-			NOR = {
-				owner = { has_policy_flag = pre_sapients_eat }
-				owner = { has_policy_flag = pre_sapients_purge }
-			}
+			owner = { has_policy_flag = alien_full_rights }
 		}
 	}
 	
-	# Hates Refugee Ban
+	# Wants Refugees
 	demand = {
-		title = "XENOPHILE_REFUGEE_BAN"
-		unfulfilled_title = "XENOPHILE_NO_REFUGEE_BAN"
-		desc = "XENOPHILE_REFUGEE_BAN_DESC"
+		title = "XENOPHILE_REFUGEES"
+		unfulfilled_title = "XENOPHILE_NO_REFUGEES"
+		desc = "XENOPHILE_REFUGEES_DESC"
 
-		fulfilled_effect = 1
-		unfulfilled_effect = -10
+		fulfilled_effect = 20
+		unfulfilled_effect = 0
 		
 		potential = { 
 			exists = owner
@@ -382,48 +254,42 @@ xenoist = {
 		}
 		
 		trigger = {
-			NOR = {
-				owner = { has_policy_flag = refugees_not_allowed }
-				owner = { has_policy_flag = refugees_only_citizens }
-			}
+			owner = { has_policy_flag = refugees_allowed }
 		}
 	}
 	
-	# Hates Closed Borders
+	# Wants to Protect Presapients
 	demand = {
-		title = "XENOPHILE_CLOSED_BORDERS"
-		unfulfilled_title = "XENOPHILE_NO_CLOSED_BORDERS"
-		desc = "XENOPHILE_CLOSED_BORDERS_DESC"
+		title = "XENOPHILE_PROTECT_PRESAPIENTS"
+		unfulfilled_title = "XENOPHILE_NO_PROTECT_PRESAPIENTS"
+		desc = "XENOPHILE_PROTECT_PRESAPIENTS_DESC"
 
-		fulfilled_effect = 1
-		unfulfilled_effect = -10
+		fulfilled_effect = 10
+		unfulfilled_effect = 0
 		
-		potential = { 
+		potential = {
 			exists = owner
-			owner = { num_communications > 2 }
+			owner = { has_encountered_other_species = yes }
 		}
 		
 		trigger = {
-			owner = { NOT = { has_policy_flag = border_policy_closed } }
+			owner = { has_policy_flag = pre_sapients_protect }
 		}
 	}
 	
-	# Hates Geoengineering
+	# Hates Overexpansion
 	demand = {
-		title = "XENOPHILE_GEOENGINEERING"
-		unfulfilled_title = "XENOPHILE_NO_GEOENGINEERING"
-		desc = "XENOPHILE_GEOENGINEERING_DESC"
+		title = "XENOPHILE_OVEREXPANSION"
+		unfulfilled_title = "XENOPHILE_NO_OVEREXPANSION"
+		desc = "XENOPHILE_OVEREXPANSION_DESC"
+
+		fulfilled_effect = 0
+		unfulfilled_effect = -20
 		
-		fulfilled_effect = 1
-		unfulfilled_effect = -10
-
-		potential = { 
-			exists = owner 
-			owner = { has_tradition = tr_expansion_a_new_life }
-		}
-
+		potential = { exists = owner }
+		
 		trigger = {
-			owner = { NOT = { has_edict = climate_engineering } }
+			owner = { NOT = { galaxy_percentage > 0.49 } }
 		}
 	}
 	
@@ -433,7 +299,7 @@ xenoist = {
 		unfulfilled_title = "XENOPHILE_NO_RIVAL"
 		desc = "XENOPHILE_RIVAL_DESC"
 
-		fulfilled_effect = 1
+		fulfilled_effect = 0
 		unfulfilled_effect = -10
 
 		potential = { 
@@ -450,67 +316,104 @@ xenoist = {
 		}
 	}
 	
-	# Hates Alien not Free
+	# Hates Stealing Worlds
 	demand = {
-		title = "XENOPHILE_ALIEN_FREEDOM"
-		unfulfilled_title = "XENOPHILE_NO_ALIEN_FREEDOM"
-		desc = "XENOPHILE_ALIEN_FREEDOM_DESC"
+		title = "XENOPHILE_WORLDS"
+		unfulfilled_title = "XENOPHILE_NO_WORLDS"
+		desc = "XENOPHILE_WORLDS_DESC"
 
-		fulfilled_effect = 1
+		fulfilled_effect = 0
 		unfulfilled_effect = -10
-
-		potential = { 
-			exists = owner
-			any_owned_pop = {
-				NOT = { is_same_species = owner_species }
-				is_robot_pop = no
-				is_sapient = yes
-				is_being_purged = no
-			}
-		}
-
+		
+		potential = { exists = owner }
+		
 		trigger = {
-			owner = { 
-				NOT = { 
-					any_owned_pop = { 
-						NOT = { is_same_species = owner_species }
-						OR = { 
-							has_citizenship_type = { type = citizenship_slavery }
-							has_citizenship_type = { type = citizenship_purge }
-						}
+			NOT = {
+				owner = {
+					any_owned_planet = {
+						num_pops > 0
+						NOT = { is_original_owner = root.owner }
 					}
 				}
 			}
 		}
 	}
 	
-	# Hates Alien Restrictions
+	# Hates Pop Controls
 	demand = {
-		title = "XENOPHILE_ALIEN_RESTRICTION"
-		unfulfilled_title = "XENOPHILE_NO_ALIEN_RESTRICTION"
-		desc = "XENOPHILE_ALIEN_RESTRICTION_DESC"
+		title = "XENOPHILE_POP_CONTROLS"
+		unfulfilled_title = "XENOPHILE_NO_POP_CONTROLS"
+		desc = "XENOPHILE_POP_CONTROLS_DESC"
 
-		fulfilled_effect = 1
+		fulfilled_effect = 0
+		unfulfilled_effect = -20
+
+		potential = { exists = owner }
+
+		trigger = {
+			owner = { NOT = { has_policy_flag = population_controls_allowed } }
+		}
+	}
+	
+	# Hates Killing or Eating Presapients
+	demand = {
+		title = "XENOPHILE_KILL_PRESAPIENTS"
+		unfulfilled_title = "XENOPHILE_NO_KILL_PRESAPIENTS"
+		desc = "XENOPHILE_KILL_PRESAPIENTS_DESC"
+
+		fulfilled_effect = 0
+		unfulfilled_effect = -20
+		
+		potential = {
+			exists = owner
+			owner = { has_encountered_other_species = yes }
+		}
+		
+		trigger = {
+			NOR = {
+				owner = { has_policy_flag = pre_sapients_eat }
+				owner = { has_policy_flag = pre_sapients_purge }
+			}
+		}
+	}
+	
+	# Hates Alien No Rights
+	demand = {
+		title = "XENOPHILE_ALIEN_NO_RIGHTS"
+		unfulfilled_title = "XENOPHILE_NO_ALIEN_NO_RIGHTS"
+		desc = "XENOPHILE_ALIEN_NO_RIGHTS_DESC"
+
+		fulfilled_effect = 0
 		unfulfilled_effect = -10
 
 		potential = { 
 			exists = owner
-			any_owned_pop = {
-				NOT = { is_same_species = owner_species }
-				is_robot_pop = no
-				is_sapient = yes
-				is_being_purged = no
-			}
+			owner = { has_encountered_other_species = yes }
 		}
 
 		trigger = {
-			owner = { 
-				NOT = { 
-					any_owned_pop = { 
-						NOT = { is_same_species = owner_species }
-						has_colonization_control = { value = no country =root }
-					}
-				}
+			owner = { has_policy_flag = alien_full_rights }
+		}
+	}
+	
+	# Hates Refugee Ban
+	demand = {
+		title = "XENOPHILE_REFUGEE_BAN"
+		unfulfilled_title = "XENOPHILE_NO_REFUGEE_BAN"
+		desc = "XENOPHILE_REFUGEE_BAN_DESC"
+
+		fulfilled_effect = 0
+		unfulfilled_effect = -10
+		
+		potential = { 
+			exists = owner
+			owner = { has_encountered_other_species = yes }
+		}
+		
+		trigger = {
+			NOR = {
+				owner = { has_policy_flag = refugees_not_allowed }
+				owner = { has_policy_flag = refugees_only_citizens }
 			}
 		}
 	}
@@ -637,6 +540,7 @@ xenoist = {
 					NOR = { 
 						has_modifier = suppressed_xenophile
 						has_modifier = promoted_xenophile 
+						has_valid_civic = civic_anarchist
 					}
 				}
 			}
@@ -682,6 +586,7 @@ xenoist = {
 					NOR = { 
 						has_modifier = suppressed_xenophile
 						has_modifier = promoted_xenophile 
+						has_valid_civic = civic_anarchist
 					}
 				}
 			}

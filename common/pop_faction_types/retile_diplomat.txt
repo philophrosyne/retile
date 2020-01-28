@@ -10,8 +10,12 @@ prosperity = {
 	support_multiplier = 1
 	
 	is_potential = {
-		years_passed > 10
-		has_encountered_other_species = yes
+		OR = {
+			years_passed > 20
+			has_country_flag = first_contact_event
+			has_ethic = ethic_pacifist
+			has_ethic = ethic_fanatic_pacifist
+		}
 		NOT = { has_ethic = ethic_gestalt_consciousness }
 	}
 	
@@ -26,13 +30,10 @@ prosperity = {
 
 	resources = {
 		category = pop_factions
-		produces = {
-			influence = 2
-		}		
+		produces = { influence = 2 }		
 	}
 
 	can_join_pre_triggers = {
-		is_enslaved = no
 		is_being_purged = no
 		is_being_assimilated = no
 	}
@@ -44,6 +45,10 @@ prosperity = {
 		OR = {
 			has_ethic = ethic_pacifist
 			has_ethic = ethic_fanatic_pacifist
+		}
+		OR = {
+			is_enslaved = no
+			has_slavery_type = { type = slavery_domestic }
 		}
 	}
 	
@@ -95,6 +100,41 @@ prosperity = {
 		}		
 	}
 	
+	# Wants Federation
+	demand = { 
+		title = "DIPLOMAT_FEDERATION"
+		unfulfilled_title = "DIPLOMAT_NO_FEDERATION"
+		desc = "DIPLOMAT_FEDERATION_DESC"
+
+		fulfilled_effect = 20
+		unfulfilled_effect = 0
+
+		potential = { 
+			exists = owner
+			owner = { num_communications > 2 }
+		}
+
+		trigger = {
+			owner = { has_federation = yes }
+		}
+	}
+	
+	# Wants Peace
+	demand = {
+		title = "DIPLOMAT_PEACE"
+		unfulfilled_title = "DIPLOMAT_NO_PEACE"
+		desc = "DIPLOMAT_PEACE_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = 0
+
+		potential = { exists = owner }
+
+		trigger = {
+			owner = { is_at_war = yes }
+		}
+	}
+	
 	# Wants Pacification
 	demand = { 
 		title = "DIPLOMAT_PACIFICATION"
@@ -102,7 +142,7 @@ prosperity = {
 		desc = "DIPLOMAT_PACIFICATION_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = -1
+		unfulfilled_effect = 0
 
 		potential = { 
 			exists = owner
@@ -119,19 +159,19 @@ prosperity = {
 		}
 	}
 	
-	# Wants Two-Tier Healthcare
-	demand = {
-		title = "DIPLOMAT_HEALTHCARE"
-		unfulfilled_title = "DIPLOMAT_NO_HEALTHCARE"
-		desc = "DIPLOMAT_HEALTHCARE_DESC"
+	# Wants Diplomacy
+	demand = { 
+		title = "DIPLOMAT_DIPLOMACY"
+		unfulfilled_title = "DIPLOMAT_NO_DIPLOMACY"
+		desc = "DIPLOMAT_DIPLOMACY_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = -1
+		unfulfilled_effect = 0
 
 		potential = { exists = owner }
 
 		trigger = {
-			owner = { has_policy_flag = healthcare_public_private }
+			owner = { has_tradition = tr_diplomacy_adopt }
 		}
 	}
 	
@@ -141,48 +181,16 @@ prosperity = {
 		unfulfilled_title = "DIPLOMAT_NO_EMBASSIES"
 		desc = "DIPLOMAT_EMBASSIES_DESC"
 
-		fulfilled_effect = 10
-		unfulfilled_effect = -1
+		fulfilled_effect = 20
+		unfulfilled_effect = 0
 
 		potential = { 
 			exists = owner
-			owner = { has_tradition = tr_diplomacy_open_markets }
+			owner = { has_technology = tech_xenodiplomacy }
 		}
 
 		trigger = {
 			owner = { has_policy_flag = xenodiplomacy_embassy }
-		}
-	}
-	
-	# Wants Interference
-	demand = {
-		title = "DIPLOMAT_INTERFERENCE"
-		unfulfilled_title = "DIPLOMAT_NO_INTERFERENCE"
-		desc = "DIPLOMAT_INTERFERENCE_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -1
-
-		potential = { exists = owner }
-
-		trigger = {
-			owner = { has_policy_flag = interference_active }
-		}
-	}
-	
-	# Wants Peaceful Contact
-	demand = {
-		title = "DIPLOMAT_PEACEFUL_CONTACT"
-		unfulfilled_title = "DIPLOMAT_NO_PEACEFUL_CONTACT"
-		desc = "DIPLOMAT_PEACEFUL_CONTACT_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -1
-
-		potential = { exists = owner }
-
-		trigger = {
-			owner = { has_policy_flag = first_contact_attack_not_allowed }
 		}
 	}
 	
@@ -192,13 +200,10 @@ prosperity = {
 		unfulfilled_title = "DIPLOMAT_NO_PACIFISM"
 		desc = "DIPLOMAT_PACIFISM_DESC"
 
-		fulfilled_effect = 10
-		unfulfilled_effect = -1
+		fulfilled_effect = 20
+		unfulfilled_effect = 0
 
-		potential = { 
-			exists = owner
-			owner = { num_communications > 1 }
-		}
+		potential = { exists = owner }
 
 		trigger = {
 			owner = { has_policy_flag = no_wars }
@@ -212,7 +217,7 @@ prosperity = {
 		desc = "DIPLOMAT_PARLEY_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = -1
+		unfulfilled_effect = 0
 
 		potential = { 
 			exists = owner
@@ -224,84 +229,84 @@ prosperity = {
 		}
 	}
 	
-	# Wants Diplomatic Grants
-	demand = { 
-		title = "DIPLOMAT_GRANTS"
-		unfulfilled_title = "DIPLOMAT_NO_GRANTS"
-		desc = "DIPLOMAT_GRANTS_DESC"
+	# Hates Aggressive Wars
+	demand = {
+		title = "DIPLOMAT_NOT_AGGRESSOR"
+		unfulfilled_title = "DIPLOMAT_AGGRESSOR"
+		desc = "DIPLOMAT_NOT_AGGRESSOR_DESC"
 
-		fulfilled_effect = 10
-		unfulfilled_effect = -1
+		fulfilled_effect = 0
+		unfulfilled_effect = -20
 
-		potential = { 
+		potential = {
 			exists = owner
-			owner = { has_tradition = tr_diplomacy_insider_trading }
+			owner = { has_encountered_other_species = yes }
 		}
 
 		trigger = {
-			owner = { has_edict = diplomatic_grants }
-		}
-	}
-	
-	# Wants Bureaucratic Campaign
-	demand = { 
-		title = "DIPLOMAT_BUREAUCRATIC_CAMPAIGN"
-		unfulfilled_title = "DIPLOMAT_NO_BUREAUCRATIC_CAMPAIGN"
-		desc = "DIPLOMAT_BUREAUCRATIC_CAMPAIGN_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -1
-
-		potential = { 
-			exists = owner
-			owner = { has_technology = tech_galactic_administration }
-		}
-
-		trigger = {
-			owner = { has_edict = bureaucratic_campaign }
-		}
-	}
-	
-	# Wants Non-Agression Pacts
-	demand = { 
-		title = "DIPLOMAT_NONAGGRESSION"
-		unfulfilled_title = "DIPLOMAT_NO_NONAGGRESSION"
-		desc = "DIPLOMAT_NONAGGRESSION_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -1
-
-		potential = { 
-			exists = owner
-			owner = { num_communications > 2 }
-		}
-
-		trigger = {
-			any_country = {
-				OR = {
-					prev.owner = { has_non_aggression_pact = PREV }
-					prev.owner = { has_defensive_pact = PREV }
+			owner = {
+				NOR = {
+					has_country_flag = entered_war_as_attacker
+					any_war = { is_war_participant = { who = prev side = attackers } }
 				}
 			}
 		}
 	}
 	
-	# Wants Federation
-	demand = { 
-		title = "DIPLOMAT_FEDERATION"
-		unfulfilled_title = "DIPLOMAT_NO_FEDERATION"
-		desc = "DIPLOMAT_FEDERATION_DESC"
+	# Hates Claims
+	demand = {
+		title = "DIPLOMAT_CLAIM"
+		unfulfilled_title = "DIPLOMAT_CLAIM"
+		desc = "DIPLOMAT_CLAIM_DESC"
 
-		fulfilled_effect = 10
-		unfulfilled_effect = -1
+		fulfilled_effect = 0
+		unfulfilled_effect = -10
 
 		potential = { 
 			exists = owner
-			owner = { num_communications > 2 }
+			owner = { has_encountered_other_species = yes }
 		}
 
 		trigger = {
-			owner = { has_federation = yes }
+			NOT = {
+				any_country = {
+					is_country_type = default
+					has_communications = root.owner
+					has_claim = root.owner
+				}
+			}
+		}
+	}
+	
+	# Hates Supremacy
+	demand = {
+		title = "DIPLOMAT_SUPREMACY"
+		unfulfilled_title = "DIPLOMAT_NO_SUPREMACY"
+		desc = "DIPLOMAT_SUPREMACY_DESC"
+
+		fulfilled_effect = 0
+		unfulfilled_effect = -10
+
+		potential = { exists = owner }
+
+		trigger = {
+			owner = { NOT = { has_tradition = tr_supremacy_adopt } }
+		}
+	}
+	
+	# Hates Purge
+	demand = {
+		title = "DIPLOMAT_PURGE"
+		unfulfilled_title = "DIPLOMAT_NO_PURGE"
+		desc = "DIPLOMAT_PURGET_DESC"
+
+		fulfilled_effect = 0
+		unfulfilled_effect = -20
+
+		potential = { exists = owner }
+
+		trigger = {
+			owner = { NOT = { has_policy_flag = purge_allowed } }
 		}
 	}
 	
@@ -311,8 +316,8 @@ prosperity = {
 		unfulfilled_title = "DIPLOMAT_NO_MILITARY_POLICE"
 		desc = "DIPLOMAT_MILITARY_POLICE_DESC"
 
-		fulfilled_effect = 1
-		unfulfilled_effect = -10
+		fulfilled_effect = 0
+		unfulfilled_effect = -20
 
 		potential = { exists = owner }
 
@@ -327,38 +332,16 @@ prosperity = {
 		unfulfilled_title = "DIPLOMAT_NO_GUNBOAT_DIPLOMACY"
 		desc = "DIPLOMAT_GUNBOAT_DIPLOMACY_DESC"
 
-		fulfilled_effect = 1
+		fulfilled_effect = 0
 		unfulfilled_effect = -10
 
 		potential = { 
 			exists = owner
-			owner = { has_tradition = tr_diplomacy_open_markets }
+			owner = { has_technology = tech_xenodiplomacy }
 		}
 
 		trigger = {
 			owner = { NOT = { has_policy_flag = xenodiplomacy_gunboat } }
-		}
-	}
-	
-	# Hates Indescriminate Bombardment
-	demand = { 
-		title = "DIPLOMAT_BOMBARDMENT"
-		unfulfilled_title = "DIPLOMAT_NO_BOMBARDMENT"
-		desc = "DIPLOMAT_BOMBARDMENT_DESC"
-
-		fulfilled_effect = 1
-		unfulfilled_effect = -10
-
-		potential = { 
-			exists = owner
-			owner = { num_communications > 1 }
-		}
-
-		trigger = {
-			OR = {
-				owner = { NOT = { has_policy_flag = orbital_bombardment_indiscriminate } }
-				owner = { NOT = { has_policy_flag = orbital_bombardment_armageddon } }
-			}
 		}
 	}
 	
@@ -368,162 +351,18 @@ prosperity = {
 		unfulfilled_title = "DIPLOMAT_NO_UNRESTRICTED_WAR"
 		desc = "DIPLOMAT_UNRESTRICTED_WAR_DESC"
 
-		fulfilled_effect = 1
+		fulfilled_effect = 0
 		unfulfilled_effect = -10
 
-		potential = { 
-			exists = owner
-			owner = { num_communications > 1 }
-		}
+		potential = { exists = owner }
 
 		trigger = {
 			owner = { NOT = { has_policy_flag = unrestricted_wars } }
 		}
 	}
 	
-	# Hates Hostile Contact
-	demand = {
-		title = "DIPLOMAT_HOSTILE_CONTACT"
-		unfulfilled_title = "DIPLOMAT_NO_HOSTILE_CONTACT"
-		desc = "DIPLOMAT_HOSTILE_CONTACT_DESC"
-
-		fulfilled_effect = 1
-		unfulfilled_effect = -10
-
-		potential = { exists = owner }
-
-		trigger = {
-			owner = { NOT = { has_policy_flag = first_contact_attack_allowed } }
-		}
-	}
-	
-	# Hates Eating Presapients
-	demand = {
-		title = "DIPLOMAT_EAT_PRESAPIENTS"
-		unfulfilled_title = "DIPLOMAT_NO_EAT_PRESAPIENTS"
-		desc = "DIPLOMAT_EAT_PRESAPIENTS_DESC"
-
-		fulfilled_effect = 1
-		unfulfilled_effect = -10
-
-		potential = { 
-			exists = owner
-			owner = {
-				has_country_flag = found_presapients
-				any_planet_within_border = {
-					any_pop = { is_sapient = no }
-				}
-			}
-		}
-
-		trigger = {
-			owner = { NOT = { has_policy_flag = pre_sapients_eat } }
-		}
-	}
-	
-	# Hates Enemy of the State
-	demand = {
-		title = "DIPLOMAT_PIRACY_HOSTILE"
-		unfulfilled_title = "DIPLOMAT_NO_PIRACY_HOSTILE"
-		desc = "DIPLOMAT_PIRACY_HOSTILE_DESC"
-
-		fulfilled_effect = 1
-		unfulfilled_effect = -10
-
-		potential = { 
-			exists = owner
-			owner = { has_technology = tech_adaptive_bureaucracy }
-		}
-
-		trigger = {
-			owner = { NOT = { has_policy_flag = piracy_hostile } }
-		}
-	}
-	
-	# Hates War Games
-	demand = { 
-		title = "DIPLOMAT_WAR_GAMES"
-		unfulfilled_title = "DIPLOMAT_NO_WAR_GAMES"
-		desc = "DIPLOMAT_WAR_GAMES_DESC"
-
-		fulfilled_effect = 1
-		unfulfilled_effect = -10
-
-		potential = { 
-			exists = owner
-			owner = { has_tradition = tr_supremacy_war_games }
-		}
-
-		trigger = {
-			owner = { NOT = { has_edict = war_games } }
-		}
-	}
-	
-	# Hates Aggressive Wars
-	demand = {
-		title = "DIPLOMAT_NOT_AGGRESSOR"
-		unfulfilled_title = "DIPLOMAT_AGGRESSOR"
-		desc = "DIPLOMAT_NOT_AGGRESSOR_DESC"
-
-		fulfilled_effect = 1
-		unfulfilled_effect = -10
-
-		potential = {
-			exists = owner
-			owner = { num_communications > 1 }
-		}
-
-		trigger = {
-			owner = {
-				NOR = {
-					has_country_flag = entered_war_as_attacker
-					any_war = { is_war_participant = { who = prev side = attackers } }
-				}
-			}
-		}
-	}
-	
-	# Hates Insults
-	demand = { 
-		title = "DIPLOMAT_INSULT"
-		unfulfilled_title = "DIPLOMAT_NO_INSULT"
-		desc = "DIPLOMAT_INSULT_DESC"
-
-		fulfilled_effect = 1
-		unfulfilled_effect = -10
-
-		potential = { 
-			exists = owner
-			owner = { num_communications > 1 }
-		}
-
-		trigger = {
-			any_country = {
-				NOT = { has_opinion_modifier = { who = prev.owner modifier = opinion_insult } }
-			}
-		}
-	}
-	
-	# Hates Planet Killers
-	demand = {
-		title = "DIPLOMAT_DEATH_STAR"
-		unfulfilled_title = "DIPLOMAT_NO_DEATH_STAR"
-		desc = "DIPLOMAT_DEATH_STAR_DESC"
-
-		fulfilled_effect = 1
-		unfulfilled_effect = -10
-
-		potential = {
-			exists = owner
-			owner = { has_country_flag = colossus_project }
-		}
-
-		trigger = {
-			owner = {
-			NOT = { has_country_flag = fired_cracker }
-			NOT = { has_country_flag = fired_neutron }
-			}
-		}
+	on_create = {
+		pop_faction_event = { id = factions.1 }
 	}
 
 	on_destroy = {
@@ -645,6 +484,7 @@ prosperity = {
 					NOR = {
 						has_ethic = ethic_pacifist
 						has_ethic = ethic_fanatic_pacifist
+						has_valid_civic = civic_anarchist
 					}
 				}
 			}
@@ -690,6 +530,7 @@ prosperity = {
 					NOR = {
 						has_modifier = suppressed_pacifist
 						has_modifier = promoted_pacifist
+						has_valid_civic = civic_anarchist
 					}
 				}
 			}

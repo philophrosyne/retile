@@ -6,8 +6,10 @@ event = {
 	hide_window = yes
 	is_triggered_only = yes
 	
+	trigger = { NOT = { has_global_flag = spawn_terraforming_candidiates } }
 
 	immediate = {
+		set_global_flag = spawn_terraforming_candidiates
 		every_planet = {
 			if = {
 				limit = {
@@ -95,7 +97,10 @@ event = {
 	hide_window = yes
 	is_triggered_only = yes
 	
+	trigger = { NOT = { has_global_flag = spawn_retile_deposits } }
+	
 	immediate = {
+		set_global_flag = spawn_retile_deposits
 		every_planet = {
 			if = {
 				limit = { 
@@ -236,11 +241,45 @@ event = {
 	hide_window = yes
 	is_triggered_only = yes
 	
+	trigger = { NOT = { has_global_flag = spawn_sun_modifiers } }
+	
 	immediate = {
+		set_global_flag = spawn_sun_modifiers
 		every_planet = {
 			if = {
-				limit = { has_ring = yes }
+				limit = { 
+					has_ring = yes
+					NOT = { has_modifier = ring_system }
+				}
 				add_modifier = { modifier = ring_system days = -1 }
+			}
+			if = {
+				limit = { has_moon = yes }
+				if = {
+					limit = { num_moons = 1 }
+					if = { 
+						limit = { NOT = { has_modifier = pm_moon } }
+						add_modifier = { modifier = pm_moon days = -1 }
+					}
+				} else_if = {
+					limit = { num_moons = 2 }
+					if = { 
+						limit = { NOT = { has_modifier = pm_twin_moons } }
+						add_modifier = { modifier = pm_twin_moons days = -1 }
+					}
+				} else_if = {
+					limit = { num_moons = 3 }
+					if = { 
+						limit = { NOT = { has_modifier = pm_triple_moons } }
+						add_modifier = { modifier = pm_triple_moons days = -1 }
+					}
+				} else_if = {
+					limit = { num_moons > 3 }
+					if = {
+						limit = { NOT = { has_modifier = extensive_moon_system } }
+						add_modifier = { modifier = extensive_moon_system days = -1 }
+					}
+				}
 			}
 			if = {
 				limit = { 
@@ -417,14 +456,14 @@ event = {
 			remove_modifier = calm_weather
 		}
 		if = {
-			limit = { from = { owner = { has_technology = tech_terrestrial_sculpting } } }
-			add_modifier = { modifier = "recently_terraformed_1" days = 7200 }
+			limit = { from = { owner = { has_technology = tech_climate_restoration } } }
+			add_modifier = { modifier = "recently_terraformed_3" days = 7200 }
 		} else_if = {
 			limit = { from = { owner = { has_technology = tech_ecological_adaptation } } }
 			add_modifier = { modifier = "recently_terraformed_2" days = 7200 }
 		} else_if = {
-			limit = { from = { owner = { has_technology = tech_climate_restoration } } }
-			add_modifier = { modifier = "recently_terraformed_3" days = 7200 }
+			limit = { from = { owner = { has_technology = tech_terrestrial_sculpting } } }
+			add_modifier = { modifier = "recently_terraformed_1" days = 7200 }
 		}
 
 		random_list = {
@@ -629,6 +668,34 @@ planet_event = {
 				NOT = { has_modifier = ring_system }
 			}
 			add_modifier = { modifier = ring_system days = -1 }
+		}
+		if = {
+			limit = { has_moon = yes }
+			if = {
+				limit = { num_moons = 1 }
+				if = { 
+					limit = { NOT = { has_modifier = pm_moon } }
+					add_modifier = { modifier = pm_moon days = -1 }
+				}
+			} else_if = {
+				limit = { num_moons = 2 }
+				if = { 
+					limit = { NOT = { has_modifier = pm_twin_moons } }
+					add_modifier = { modifier = pm_twin_moons days = -1 }
+				}
+			} else_if = {
+				limit = { num_moons = 3 }
+				if = { 
+					limit = { NOT = { has_modifier = pm_triple_moons } }
+					add_modifier = { modifier = pm_triple_moons days = -1 }
+				}
+			} else_if = {
+				limit = { num_moons > 3 }
+				if = {
+					limit = { NOT = { has_modifier = extensive_moon_system } }
+					add_modifier = { modifier = extensive_moon_system days = -1 }
+				}
+			}
 		}
 		if = {
 			limit = { 

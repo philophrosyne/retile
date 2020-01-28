@@ -59,7 +59,7 @@ tech_space_trading = {
 		}
 		modifier = {
 			factor = 1.5
-			has_policy_flag = research_economic_development		
+			has_policy_flag = research_economic_development
 		}
 	}
 	
@@ -2039,6 +2039,7 @@ tech_climate_restoration = {
 	cost = @tier4cost1
 	area = society
 	tier = 4
+	is_rare = yes
 	category = { new_worlds }
 	prerequisites = { "tech_terrestrial_sculpting" }
 	weight = @tier4weight1
@@ -2053,6 +2054,7 @@ tech_climate_restoration = {
 	}
 	
 	weight_modifier = {
+		factor = 0.50
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2063,6 +2065,14 @@ tech_climate_restoration = {
 		modifier = {
 			factor = 1.5
 			has_policy_flag = research_space_exploration		
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
 	
@@ -2092,7 +2102,7 @@ tech_genome_mapping = {
 	gateway = biological
 	
 	modifier = {
-		pop_growth_speed = 0.10
+		pop_growth_speed = 0.20
 	}
 	
 	potential = {
@@ -2271,7 +2281,7 @@ tech_cloning = {
 	weight = @tier2weight2
 	
 	modifier = {
-		pop_growth_speed = 0.10
+		pop_growth_speed = 0.20
 	}
 
 	potential = {
@@ -3187,7 +3197,7 @@ tech_doctrine_fleet_size_5 = {
 	}
 }
 
-#Interstellar Fleet Traditions
+#Interstellar Fleet Traditions (outdated)
 tech_interstellar_fleet_traditions = {
 	cost = @tier2cost2
 	area = society
@@ -3195,35 +3205,17 @@ tech_interstellar_fleet_traditions = {
 	category = { military_theory }
 	prerequisites = {}
 	weight = @tier2weight2
+	
+	potential = {
+		always = no
+	}
 		
 	weight_modifier = {
-		factor = 3
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_military_theory"
-			}
-		}
-		modifier = {
-			factor = 1.5
-			has_policy_flag = research_military_technology		
-		}
+		factor = 0
 	}
 	
 	ai_weight = {
-		factor = 3
-		modifier = {
-			factor = 2
-			is_militarist = yes
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_military_theory"
-			}
-		}
+		factor = 0
 	}
 }
 
@@ -3504,7 +3496,7 @@ tech_centralized_command = {
 	# unlocks military academy
 	
 	modifier = { 
-		country_occupation_armies_add = 2
+		country_occupation_armies_add = 1
 		army_starting_experience_add = 100
 	}
 	
@@ -3547,8 +3539,8 @@ tech_combat_training = {
 	weight = @tier3weight1
 	
 	modifier = { 
-		army_attack_damage_mult = 0.15
-		army_attack_morale_mult = 0.15
+		country_occupation_armies_add = 2
+		army_starting_experience_add = 400
 	}
 	
 	weight_modifier = {
@@ -3591,9 +3583,10 @@ tech_ground_defense_planning = {
 	weight = @tier1weight2
 	
 	modifier = {
-		army_defense_damage_mult = 0.33
+		army_defense_damage_mult = 0.10
+		army_defense_health_mult = 0.10
 		show_only_custom_tooltip = no
-		custom_tooltip = ADD_NAVAL_CAPACITY_FROM_SOLDIERS
+		custom_tooltip = ADD_ARMIES_FROM_SOLDIERS
 	}
 	
 	weight_modifier = {
@@ -3636,10 +3629,11 @@ tech_global_defense_grid = {
 	prerequisites = { "tech_ground_defense_planning" }
 	weight = @tier2weight1
 	
-	# unlocks fortress
-	
 	modifier = {
-		army_defense_health_mult = 0.25
+		army_defense_damage_mult = 0.10
+		army_defense_health_mult = 0.10
+		show_only_custom_tooltip = no
+		custom_tooltip = ADD_ARMIES_FROM_SOLDIERS
 	}	
 	
 	weight_modifier = {
@@ -3749,6 +3743,7 @@ tech_psionic_theory = {
 					any_owned_pop = {
 						pop_has_trait = trait_latent_psionic
 					}
+					has_policy_flag = research_xenoecology	
 				}
 			}
 		}
@@ -4034,7 +4029,7 @@ tech_galactic_ambitions = {
 	weight = @tier2weight2
 	
 	modifier = {
-		country_starbase_capacity_add = 2
+		country_starbase_capacity_add = 3
 	}
 	
 	weight_modifier = {
@@ -4092,7 +4087,7 @@ tech_manifest_destiny = {
 	weight = @tier4weight2
 	
 	modifier = {
-		country_starbase_capacity_add = 2
+		country_starbase_capacity_add = 3
 	}
 	
 	weight_modifier = {
@@ -4153,6 +4148,7 @@ tech_interstellar_campaigns = {
 	prerequisites = { tech_galactic_ambitions }
 	
 	modifier = {
+		country_starbase_influence_cost_mult = -0.10
 		country_claim_influence_cost_mult = -0.1
 		country_war_exhaustion_mult = -0.1
 	}
@@ -4219,6 +4215,7 @@ tech_galactic_campaigns = {
 	prerequisites = { tech_interstellar_campaigns }
 	
 	modifier = {
+		country_starbase_influence_cost_mult = -0.10
 		country_claim_influence_cost_mult = -0.1
 		country_war_exhaustion_mult = -0.1
 	}
@@ -4317,7 +4314,7 @@ tech_planetary_unification = {
 			factor = 1.25
 			research_leader = {
 				area = society
-				has_trait = "research_economic_development"
+				has_trait = "leader_trait_expertise_statecraft"
 			}
 		}
 	}
@@ -4402,6 +4399,10 @@ tech_galactic_administration = {
 	weight = @tier3weight3
 	
 	gateway = capital	# unlocks Empire Capital-Complex
+	
+	modifier = {
+		country_government_civic_points_add = 1
+	}
 	
 	feature_flags = {
 		campaign_edicts
@@ -4543,8 +4544,7 @@ tech_adaptive_bureaucracy = {
 	weight = @tier1weight2
 	
 	modifier = {
-		country_leader_pool_size = 1
-		leaders_cost_mult = -0.20
+		country_admin_cap_add = 12
 		description = tech_adaptive_bureaucracy_effect
 	}
 	
@@ -4598,7 +4598,8 @@ tech_colonial_bureaucracy = {
 	weight = @tier2weight1
 	
 	modifier = {
-		country_admin_cap_add = 20
+		country_admin_cap_add = 12
+		planet_buildings_influence_cost_mult = -0.16
 	}
 	
 	weight_modifier = {
@@ -4651,7 +4652,8 @@ tech_galactic_bureaucracy = {
 	weight = @tier3weight1
 	
 	modifier = {
-		country_admin_cap_add = 20
+		country_admin_cap_add = 12
+		planet_buildings_influence_cost_mult = -0.16
 	}
 	
 	weight_modifier = {
@@ -4709,7 +4711,7 @@ tech_living_state = {
 	}
 	
 	modifier = {
-		pop_factions_influence_produces_add = 1
+		pop_factions_produces_mult = 0.50
 	}
 	
 	weight_modifier = {
@@ -4771,8 +4773,7 @@ tech_collective_self = {
 	weight = @tier3weight3
 	
 	modifier = {
-		leader_skill_levels = 1
-		leaders_upkeep_mult = -0.10
+		planet_pops_upkeep_mult = -0.10
 	}
 	
 	potential = {
@@ -4889,8 +4890,7 @@ tech_embodied_dynamism = {
 	weight = @tier3weight3
 	
 	modifier = {
-		leader_skill_levels = 1
-		leaders_upkeep_mult = -0.10
+		country_government_civic_points_add = 1
 	}
 	
 	potential = {
@@ -5032,7 +5032,7 @@ tech_artificial_moral_codes = {
 	
 	modifier = {
 		planet_crime_mult = -0.10
-		planet_amenities_mult = -0.05
+		pop_government_ethic_attraction = 0.10
 	}
 	
 	potential = {

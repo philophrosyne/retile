@@ -26,10 +26,18 @@ clerk = {
 		planet_amenities_add = 30
 	}
 	resources = {
-		category = planet_researchers
+		category = planet_jobs
 		produces = {
 			trigger = { owner = { has_authority = auth_corporate } }
 			unity = 3
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_restaurant_megachain } }
+			food = 1
+	}
+		upkeep = {
+			trigger = { planet = { has_building = building_business_park } }
+			consumer_goods = 1
 		}
 	}
 
@@ -80,7 +88,6 @@ researcher = {	### Scholar
 
 	possible_pre_triggers = {
 		has_owner = yes
-		is_enslaved = no
 		is_being_purged = no
 		is_being_assimilated = no
 	}
@@ -105,35 +112,77 @@ researcher = {	### Scholar
 		}
 		upkeep = {
 			consumer_goods = @retile_job_resource_med
+		}
+		produces = {
+			trigger = { planet = { has_building = building_metascience_lab_1 } }
+			unity = 2
+		}
+		produces = {
+			trigger = { planet = { has_building = building_metascience_lab_2 } }
+			unity = 3
+		}
+		produces = {
+			trigger = { planet = { has_building = building_metascience_lab_3 } }
+			unity = 4
 		}		
 		produces = {
-			trigger = { planet = { has_building = building_research_lab_1 } }
+			trigger = { 
+				OR = {
+					planet = { has_building = building_research_lab_1 }
+					planet = { has_building = building_metascience_lab_1 }
+				}
+			}
 			physics_research = @retile_job_resource_med
 			engineering_research = @retile_job_resource_med
 			society_research = @retile_job_resource_med
 		}
 		upkeep = {
-			trigger = { planet = { has_building = building_research_lab_1 } }
+			trigger = { 
+				OR = {
+					planet = { has_building = building_research_lab_1 }
+					planet = { has_building = building_metascience_lab_1 }
+				}
+			}
 			consumer_goods = @retile_job_resource_low
 		}		
 		produces = {
-			trigger = { planet = { has_building = building_research_lab_2 } }
+			trigger = { 
+				OR = {
+					planet = { has_building = building_research_lab_2 }
+					planet = { has_building = building_metascience_lab_2 }
+				}
+			}
 			physics_research = @retile_job_resource2_med
 			engineering_research = @retile_job_resource2_med
 			society_research = @retile_job_resource2_med
 		}
 		upkeep = {
-			trigger = { planet = { has_building = building_research_lab_2 } }
+			trigger = { 
+				OR = {
+					planet = { has_building = building_research_lab_2 }
+					planet = { has_building = building_metascience_lab_2 }
+				}
+			}
 			consumer_goods = @retile_job_resource2_low
 		}		
 		produces = {
-			trigger = { planet = { has_building = building_research_lab_3 } }
+			trigger = { 
+				OR = {
+					planet = { has_building = building_research_lab_3 }
+					planet = { has_building = building_metascience_lab_3 }
+				}
+			}
 			physics_research = @retile_job_resource3_med
 			engineering_research = @retile_job_resource3_med
 			society_research = @retile_job_resource3_med
 		}
 		upkeep = {
-			trigger = { planet = { has_building = building_research_lab_3 } }
+			trigger = { 
+				OR = {
+					planet = { has_building = building_research_lab_3 }
+					planet = { has_building = building_metascience_lab_3 }
+				}
+			}
 			consumer_goods = @retile_job_resource3_low
 		}		
 		produces = {
@@ -217,15 +266,30 @@ researcher = {	### Scholar
 		planet_amenities_add = @retile_job_pollution2_med
 	}
 	triggered_planet_modifier = {
-		potential = { planet = { has_building = building_research_lab_1 } }
+		potential = { 
+			OR = {
+				planet = { has_building = building_research_lab_1 }
+				planet = { has_building = building_metascience_lab_1 }
+			}
+		}
 		modifier = { planet_amenities_add = @retile_job_pollution_med }
 	}
 	triggered_planet_modifier = {
-		potential = { planet = { has_building = building_research_lab_2 } }
+		potential = { 
+			OR = {
+				planet = { has_building = building_research_lab_2 }
+				planet = { has_building = building_metascience_lab_2 }
+			}
+		}
 		modifier = { planet_amenities_add = @retile_job_pollution2_med }
 	}
 	triggered_planet_modifier = {
-		potential = { planet = { has_building = building_research_lab_3 } }
+		potential = { 
+			OR = {
+				planet = { has_building = building_research_lab_3 }
+				planet = { has_building = building_metascience_lab_3 }
+			}
+		}
 		modifier = { planet_amenities_add = @retile_job_pollution3_med }
 	}
 	triggered_planet_modifier = {
@@ -350,7 +414,6 @@ foundry = {	### Engineer
 
 	possible_pre_triggers = {
 		has_owner = yes
-		is_enslaved = no
 		is_being_purged = no
 		is_being_assimilated = no
 	}
@@ -536,15 +599,13 @@ enforcer = {
 		planet_crime_add = -35
 		planet_amenities_add = 25
 	}
-
+	
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = { has_civic = civic_police_state }
 		}
-		modifier = {
-			planet_stability_add = 1
-		}		
+		planet_crime_mult = -0.25
 	}
 	
 	triggered_pop_modifier = {
@@ -660,7 +721,7 @@ soldier = {
 	}
 
 	pop_modifier = {
-		pop_defense_armies_add = 6
+		pop_defense_armies_add = 4
 	}
 	
 	country_modifier = {
@@ -673,26 +734,26 @@ soldier = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_policy_flag = criminal_military_police }
+			owner = { has_civic = civic_citizen_service }
 		}
-		planet_crime_add = -25
-		planet_amenities_add = 25
+		modifier = {
+			planet_jobs_produces_mult = 0.05
+	}
 	}
 	
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_civic = civic_citizen_service }
+			owner = { has_policy_flag = criminal_military_police }
 		}
-		modifier = {
-			planet_stability_add = 1
-		}		
+		planet_crime_add = -25
+		planet_amenities_add = 25
 	}
 
 	triggered_country_modifier = {
 		potential = {
 			exists = owner 
-			owner = { has_technology = "tech_ground_defense_planning" }
+			owner = { has_technology = "tech_space_force_command" }
 		}
 		modifier = {
 			country_naval_cap_add = 5
@@ -701,17 +762,23 @@ soldier = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_technology = "tech_ground_defense_planning" }
+			owner = { has_technology = "tech_space_force_command" }
 		}
 		modifier = {
 			planet_amenities_add = 10
 		}
 	}
-
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_ground_defense_planning }
+		}
+		pop_defense_armies_add = 2
+	}
 	triggered_country_modifier = {
 		potential = {
 			exists = owner 
-			owner = { has_technology = "tech_global_defense_grid" }
+			owner = { has_technology = "tech_wargame_simulations" }
 		}
 		modifier = {
 			country_naval_cap_add = 5
@@ -720,7 +787,7 @@ soldier = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_technology = "tech_global_defense_grid" }
+			owner = { has_technology = "tech_wargame_simulations" }
 		}
 		modifier = {
 			planet_amenities_add = 10
@@ -752,6 +819,13 @@ soldier = {
 			planet_amenities_add = 10
 			planet_stability_add = 2
 		}		
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_planetary_shield_generator }
+		}
+		planet_orbital_bombardment_damage = -0.05
 	}
 
 	weight = {
@@ -840,7 +914,6 @@ overseer = {
 
 	possible_pre_triggers = {
 		has_owner = yes
-		is_enslaved = no
 		is_being_purged = no
 		is_being_assimilated = no
 	}

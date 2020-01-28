@@ -13,12 +13,6 @@ on_press_begin = {
 	}
 }
 
-on_entering_battle = {
-	events = {
-		pirate.100
-	}
-}
-
 # Terraforming Results
 on_terraforming_complete = {
 	events = {
@@ -31,5 +25,19 @@ on_terraforming_complete = {
 on_planet_surveyed = {
 	events = {
 		retile_generate.6
+	}
+}
+
+# Add Network to new Outpost
+on_building_starbase_outpost = {
+	events = { 
+		tradition.2
+	}
+}
+
+# Replace Network on Conquered Starbase
+on_starbase_transfer = {
+	events = {
+		tradition.4
 	}
 }

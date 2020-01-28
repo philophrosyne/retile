@@ -6,62 +6,6 @@
 @base_upkeep = 5
 @base_buildtime = 240
 
-##################################################### Spawning Pool
-decision_retile_deposit_spawningpool = {
-	owned_planets_only = yes
-
-	enactment_time = @base_buildtime
-	resources = {
-		category = planets
-		cost = {
-			minerals = @base_cost
-		}
-	}
-	
-	potential = {
-		owner = {
-			is_hive_empire = yes
-		}
-		NOT = { has_deposit = retile_deposit_spawningpool }
-	}
-
-	allow = {
-		free_district_slots > 0
-		#hidden_trigger = {
-		#	retile_ready = yes
-		#}
-	}
-	
-	effect = {
-		custom_tooltip = decision_retile_deposit_spawningpool_effects
-		if = {
-			limit = { NOT = { has_deposit = retile_deposit_spawningpool } }
-			add_deposit = retile_deposit_spawningpool
-		}
-	}
-	
-	ai_weight = {
-		weight = 10000
-	}
-}
-
-decision_retile_deposit_spawningpool_remove = {
-	owned_planets_only = yes
-
-	potential = {
-		has_deposit = retile_deposit_spawningpool
-	}
-	
-	effect = {
-		custom_tooltip = decision_retile_deposit_spawningpool_remove_effects
-		remove_deposit = retile_deposit_spawningpool
-	}
-	
-	ai_weight = {
-		weight = 0
-	}	
-}
-
 ##################################################### Bio Reactor
 decision_retile_deposit_bioreactor = {
 	owned_planets_only = yes
@@ -131,71 +75,6 @@ decision_retile_deposit_bioreactor_remove = {
 			}
 		}
 	}	
-}
-
-##################################################### Precinct House
-decision_retile_deposit_precinct = {
-	owned_planets_only = yes
-
-	enactment_time = @base_buildtime
-	resources = {
-		category = planets
-		cost = {
-			minerals = @base_cost
-		}
-	}
-	
-	potential = {
-		owner = {
-			is_regular_empire = yes
-			has_technology = tech_planetary_government
-		}
-	}
-
-	allow = {
-		free_district_slots > 0
-		hidden_trigger = {
-			retile_ready_crime = yes
-		}
-	}
-	
-	effect = {
-		custom_tooltip = decision_retile_deposit_precinct_effects
-		add_deposit = retile_deposit_precinct
-	}
-	
-	ai_weight = {
-		weight = 100
-		modifier = {
-			weight = 150
-			planet_crime > 66
-		}
-		modifier = {
-			weight = 250
-			planet_crime > 99
-		}
-	}
-}
-
-decision_retile_deposit_precinct_remove = {
-	owned_planets_only = yes
-
-	potential = {
-		has_deposit = retile_deposit_precinct
-	}
-	
-	effect = {
-		custom_tooltip = decision_retile_deposit_precinct_remove_effects
-		remove_deposit = retile_deposit_precinct
-	}
-	
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = 100
-			planet_crime < 1
-		}
-	}
 }
 
 ##################################################### Nuumismatic/Numistic Shrine

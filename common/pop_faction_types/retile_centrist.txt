@@ -6,19 +6,18 @@ supremacist = {
 	election_header = "GFX_faction_header_yellow"
 	
 	unique = yes
-	support_multiplier = 0
+	support_multiplier = 1
 	
 	resources = {
 		category = pop_factions
-		produces = {
-			influence = 2
-		}		
+		produces = { unity = 10 }		
 	}
 
 	is_potential = {
-		years_passed > 10
-		has_encountered_other_species = yes
-		NOT = { has_ethic = ethic_gestalt_consciousness }
+		NOT = { 
+			has_ethic = ethic_gestalt_consciousness
+			has_valid_civic = civic_anarchist
+		}
 	}
 	
 	parameters = {
@@ -31,7 +30,6 @@ supremacist = {
 	}
 	
 	can_join_pre_triggers = {
-		is_enslaved = no
 		is_being_purged = no
 		is_being_assimilated = no
 	}
@@ -50,80 +48,18 @@ supremacist = {
 			has_ethic = ethic_fanatic_xenophile
 			has_ethic = ethic_fanatic_xenophobe
 		}
+		OR = {
+			is_enslaved = no
+			has_slavery_type = { type = slavery_domestic }
+		}
 	}
 	
 	attraction = {
-		base = 100
-		
-		modifier = {
-			factor = 1.20
-			happiness >= 0.90
-		}
-		
-		modifier = {
-			factor = 1.10
-			happiness < 0.90
-			happiness > 0.70
-		}
-		
-		modifier = {
-			factor = 0.80
-			owner = {
-				years_passed >= 50
-				years_passed < 100
-			}
-		}
-		
-		modifier = {
-			factor = 0.60
-			owner = {
-				years_passed >= 100
-				years_passed < 150
-			}
-		}
-		
-		modifier = {
-			factor = 0.40
-			owner = {
-				years_passed >= 150
-				years_passed < 200
-			}
-		}
-		
-		modifier = {
-			factor = 0.20
-			owner = {
-				years_passed >= 200
-				years_passed < 300
-			}
-		}
+		base = 50
 		
 		modifier = {
 			factor = 0.50
-			owner = { years_passed >= 300 }
-		}
-		
-		modifier = {
-			factor = 0.75
-			happiness <= 0.60
-			happiness > 0.50
-		}
-		
-		modifier = {
-			factor = 0.50
-			happiness <= 0.50
-			happiness > 0.40
-		}
-		
-		modifier = {
-			factor = 0.25
-			happiness <= 0.40
-			happiness < 0.30
-		}
-		
-		modifier = {
-			factor = 0
-			happiness <= 0.30
+			has_citizenship_rights = no
 		}
 	}
 	
@@ -131,47 +67,46 @@ supremacist = {
 		base = 100
 	}
 	
-	# Wants Experienced Ruler
+	# Wants Free Speech
 	demand = {
-		title = "CENTRIST_EXPERIENCE"
-		unfulfilled_title = "CENTRIST_NO_EXPERIENCE"
-		desc = "CENTRIST_EXPERIENCE_DESC"
+		title = "CENTRIST_FREE_SPEECH"
+		unfulfilled_title = "CENTRIST_NO_FREE_SPEECH"
+		desc = "CENTRIST_FREE_SPEECH_DESC"
 
 		fulfilled_effect = 10
 		unfulfilled_effect = -10
-
-		potential = { exists = ruler }
-
-		trigger = {
-			ruler = { has_level > 2 }
-		}
-	}
-	
-	# Wants Experienced Ruler
-	demand = {
-		title = "CENTRIST_GOVERNOR"
-		unfulfilled_title = "CENTRIST_NO_GOVERNOR"
-		desc = "CENTRIST_GOVERNOR_DESC"
-
-		fulfilled_effect = -10
-		unfulfilled_effect = 10
 
 		potential = { exists = owner }
 
 		trigger = {
 			owner = {
-				any_sector = {
-					NOT = { exists = leader }
+				NOR = {
+					has_modifier = promoted_authoritarian
+					has_modifier = suppressed_authoritarian
+					has_modifier = promoted_egalitarian
+					has_modifier = suppressed_egalitarian
+					has_modifier = promoted_xenophile
+					has_modifier = suppressed_xenophile
+					has_modifier = promoted_xenophobe
+					has_modifier = suppressed_xenophobe
+					has_modifier = promoted_militarist
+					has_modifier = suppressed_militarist
+					has_modifier = promoted_pacifist
+					has_modifier = suppressed_pacifist
+					has_modifier = promoted_spiritualist
+					has_modifier = suppressed_spiritualist
+					has_modifier = promoted_materialist
+					has_modifier = suppressed_materialist
 				}
 			}
 		}
 	}
 	
-	# Wants Energy Surplus
+	# Wants Stability
 	demand = {
-		title = "CENTRIST_ENERGY_SURPLUS"
-		unfulfilled_title = "CENTRIST_NO_ENERGY_SURPLUS"
-		desc = "CENTRIST_ENERGY_SURPLUS_DESC"
+		title = "CENTRIST_STABILITY"
+		unfulfilled_title = "CENTRIST_NO_STABILITY"
+		desc = "CENTRIST_STABILITY_DESC"
 
 		fulfilled_effect = 10
 		unfulfilled_effect = -10
@@ -179,20 +114,22 @@ supremacist = {
 		potential = { exists = owner }
 
 		trigger = {
-			owner = { 
-				has_monthly_income = {
-					resource = energy
-					value >= 0
+			NOT = {
+				owner = {
+					any_owned_planet = {
+						num_pops > 0
+						planet_stability < 50
+					}
 				}
 			}
 		}
 	}
 	
-	# Wants Mineral Surplus
+	# Wants Less Crime
 	demand = {
-		title = "CENTRIST_MINERAL_SURPLUS"
-		unfulfilled_title = "CENTRIST_NO_MINERAL_SURPLUS"
-		desc = "CENTRIST_MINERAL_SURPLUS_DESC"
+		title = "CENTRIST_CRIME"
+		unfulfilled_title = "CENTRIST_NO_CRIME"
+		desc = "CENTRIST_CRIME_DESC"
 
 		fulfilled_effect = 10
 		unfulfilled_effect = -10
@@ -200,44 +137,22 @@ supremacist = {
 		potential = { exists = owner }
 
 		trigger = {
-			owner = { 
-				has_monthly_income = {
-					resource = minerals
-					value >= 0
+			NOT = {
+				owner = {
+					any_owned_planet = {
+						num_pops > 0
+						planet_crime > 50
+					}
 				}
 			}
 		}
 	}
 	
-	# Wants Food Surplus
+	# Wants Less Pollution
 	demand = {
-		title = "CENTRIST_FOOD_SURPLUS"
-		unfulfilled_title = "CENTRIST_NO_FOOD_SURPLUS"
-		desc = "CENTRIST_FOOD_SURPLUS_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -10
-
-		potential = { 
-			exists = owner
-			owner = { country_uses_food = yes }
-		}
-
-		trigger = {
-			owner = { 
-				has_monthly_income = {
-					resource = food
-					value >= 0
-				}
-			}
-		}
-	}
-	
-	# Wants Goods Surplus
-	demand = {
-		title = "CENTRIST_GOODS_SURPLUS"
-		unfulfilled_title = "CENTRIST_NO_GOODS_SURPLUS"
-		desc = "CENTRIST_GOODS_SURPLUS_DESC"
+		title = "CENTRIST_POLLUTION"
+		unfulfilled_title = "CENTRIST_NO_POLLUTION"
+		desc = "CENTRIST_POLLUTION_DESC"
 
 		fulfilled_effect = 10
 		unfulfilled_effect = -10
@@ -245,20 +160,22 @@ supremacist = {
 		potential = { exists = owner }
 
 		trigger = {
-			owner = { 
-				has_monthly_income = {
-					resource = consumer_goods
-					value >= 0
+			NOT = {
+				owner = {
+					any_owned_planet = {
+						num_pops > 0
+						free_amenities >= 1000
+					}
 				}
 			}
 		}
 	}
 	
-	# Wants Alloys Surplus
+	# Wants Habitability
 	demand = {
-		title = "CENTRIST_ALLOYS_SURPLUS"
-		unfulfilled_title = "CENTRIST_NO_ALLOYS_SURPLUS"
-		desc = "CENTRIST_ALLOYS_SURPLUS_DESC"
+		title = "CENTRIST_HABITABILITY"
+		unfulfilled_title = "CENTRIST_NO_HABITABILITY"
+		desc = "CENTRIST_HABITABILITY_DESC"
 
 		fulfilled_effect = 10
 		unfulfilled_effect = -10
@@ -266,33 +183,7 @@ supremacist = {
 		potential = { exists = owner }
 
 		trigger = {
-			owner = { 
-				has_monthly_income = {
-					resource = alloys
-					value >= 0
-				}
-			}
-		}
-	}
-	
-	# Wants Influence
-	demand = {
-		title = "CENTRIST_INFLUENCE_SURPLUS"
-		unfulfilled_title = "CENTRIST_NO_INFLUENCE_SURPLUS"
-		desc = "CENTRIST_INFLUENCE_SURPLUS_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -10
-
-		potential = { exists = owner }
-
-		trigger = {
-			owner = { 
-				has_monthly_income = {
-					resource = influence
-					value >= 0
-				}
-			}
+			always = yes
 		}
 	}
 	
@@ -318,7 +209,7 @@ supremacist = {
 	actions = {
 		embrace_faction = {
 			title = "EMBRACE_FACTION"
-			description = "EMBRACE_FACTION_DESC"
+			description = "EMBRACE_CENTRISM_DESC"
 			
 			potential = {
 				exists = owner
@@ -331,9 +222,6 @@ supremacist = {
 			}
 			
 			valid = {
-				custom_tooltip = {
-					fail_text = EMBRACE_CENTRIST_COOLDOWN
-				}
 				always = no
 			}
 
@@ -347,14 +235,11 @@ supremacist = {
 		}
 		promote_faction = {
 			title = "PROMOTE_FACTION"
-			description = "PROMOTE_FACTION_DESC"
+			description = "PROMOTE_CENTRISM_DESC"
 			
 			potential = { exists = owner }
 			
 			valid = {
-				custom_tooltip = {
-					fail_text = PROMOTE_CENTRIST_COOLDOWN
-				}
 				always = no
 			}
 
@@ -379,14 +264,11 @@ supremacist = {
 		}
 		suppress_faction = {
 			title = "SUPPRESS_FACTION"
-			description = "SUPPRESS_FACTION_DESC"
+			description = "SUPPRESS_CENTRISM_DESC"
 			
 			potential = { exists = owner }
 			
 			valid = {
-				custom_tooltip = {
-					fail_text = SUPPRESS_CENTRIST_COOLDOWN
-				}
 				always = no
 			}
 

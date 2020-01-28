@@ -11,7 +11,6 @@ ring_world_1 = {
 		category = megastructures
 		cost = {
 			alloys = 5000
-			influence = 300
 		}
 
 		upkeep = {
@@ -279,7 +278,7 @@ ring_world_3_intermediate = {
 					surveyor = FROM
 				}
 				set_all_comms_surveyed = yes
-				retile_clear_blockers = yes
+				clear_blockers = yes
 				save_event_target_as = ring_section
 				trigger_megastructure_icon = yes
 				set_planet_flag = megastructure
@@ -436,7 +435,22 @@ ring_world_restored = {
 					surveyor = FROM
 				}
 				set_all_comms_surveyed = yes
-				retile_clear_blockers = yes
+				clear_blockers = yes
+				if = {
+					limit = {
+						from = { 
+							OR = { 
+								has_ascension_perk = ap_galactic_wonders_utopia
+								has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
+							}
+						}
+						NOT = { has_modifier = galactic_wonder_ringworld }
+					}
+					add_modifier = {
+						modifier = galactic_wonder_ringworld
+						days = -1
+					}
+				}
 				save_event_target_as = ring_section
 				trigger_megastructure_icon = yes
 				set_planet_flag = megastructure

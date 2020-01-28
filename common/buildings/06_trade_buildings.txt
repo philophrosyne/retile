@@ -135,6 +135,10 @@ building_trade_3 = {
 		planet_housing_add = @retile_building_housing_high
 	}
 	
+	upgrades = {
+		"building_galactic_stock_exchange"
+	}
+	
 	country_modifier = {
 		country_resource_max_add = @retile_building_storage_high
 	}
@@ -148,7 +152,8 @@ building_trade_3 = {
 
 building_galactic_stock_exchange = {
 	base_buildtime = @retile_building_time_med
-	base_cap_amount = 1
+	can_build = no
+	
 	category = trade
 	can_be_disabled = no
 	prerequisites = { tech_galactic_markets }
