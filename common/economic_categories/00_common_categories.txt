@@ -661,6 +661,25 @@ planet_pops = {
 			has_job = unemployed
 		}
 	}
+
+	triggered_upkeep_modifier = {
+		key = engineers_pop
+		modifier_types = { mult add }
+		trigger = {
+			is_scope_valid = yes
+			has_job = foundry
+			is_biological = yes
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = scholars_pop
+		modifier_types = { mult add }
+		trigger = {
+			is_scope_valid = yes
+			has_job = researcher
+			is_biological = yes
+		}
+	}
 }
 
 unemployment_resources = {
@@ -716,76 +735,6 @@ pop_category_specialists = {
 	}
 	generate_add_modifiers = {
 		upkeep
-	}
-	
-	### Engineer Pop Upkeep Mods
-
-	triggered_upkeep_modifier = {
-		key = engineers_bio
-		modifier_types = {
-			add
-		}
-		trigger = {
-			has_job = foundry
-			is_biological = yes
-		}
-	}
-	triggered_upkeep_modifier = {
-		key = engineers_lith
-		modifier_types = {
-			add
-		}
-		trigger = {
-			has_job = foundry
-			is_lithoid = yes
-		}
-	}
-	triggered_upkeep_modifier = {
-		key = engineers_mech
-		modifier_types = { add }
-		trigger = {
-			has_job = foundry
-			is_robot_pop = yes
-		}
-	}
-	triggered_upkeep_modifier = {
-		key = engineers_shared_burden
-		modifier_types = { add }
-		trigger = {
-			has_job = foundry
-			has_shared_burden_living_standard_type = yes
-		}
-	}
-	triggered_upkeep_modifier = {
-		key = engineers_very_high
-		modifier_types = { add }
-		trigger = {
-			has_job = foundry
-			OR = {
-				has_academic_living_standard_type = yes
-				has_very_high_living_standard_type = yes
-			}
-		}
-	}
-	triggered_upkeep_modifier = {
-		key = engineers_high
-		modifier_types = { add }
-		trigger = {
-			has_job = foundry
-			OR = {
-				has_high_living_standard_type = yes
-				has_normal_living_standard_type = yes
-				has_stratified_living_standard_type = yes
-			}
-		}
-	}
-	triggered_upkeep_modifier = {
-		key = engineers_normal
-		modifier_types = { add }
-		trigger = {
-			has_job = foundry
-			has_low_living_standard_type = yes
-		}
 	}
 }
 
