@@ -634,19 +634,39 @@ planet_pops = {
 
 	triggered_upkeep_modifier = {
 		key = planet_pops_robotics
-		modifier_types = {
-			mult
-		}
+		modifier_types = { mult add }
 		trigger = {
 			is_robot_pop = yes
 		}
 	}
 	
 	triggered_upkeep_modifier = {
-		key = planet_pops_organics
-		modifier_types = {
-			mult
+		key = planet_pops_biological
+		modifier_types = { mult add }
+		trigger = {
+			is_biological = yes
 		}
+	}
+	
+	triggered_upkeep_modifier = {
+		key = planet_pops_machine
+		modifier_types = { mult add }
+		trigger = {
+			is_robotic_species = yes
+		}
+	}
+	
+	triggered_upkeep_modifier = {
+		key = planet_pops_lithoid
+		modifier_types = { mult add }
+		trigger = {
+			is_lithoid = yes
+		}
+	}
+	
+	triggered_upkeep_modifier = {
+		key = planet_pops_organics
+		modifier_types = { mult add }
 		trigger = {
 			is_robot_pop = no
 		}
@@ -654,30 +674,9 @@ planet_pops = {
 
 	triggered_upkeep_modifier = {
 		key = planet_pops_unemployed
-		modifier_types = {
-			add
-		}
+		modifier_types = { mult add }
 		trigger = {
 			has_job = unemployed
-		}
-	}
-
-	triggered_upkeep_modifier = {
-		key = engineers_pop
-		modifier_types = { mult add }
-		trigger = {
-			is_scope_valid = yes
-			has_job = foundry
-			is_biological = yes
-		}
-	}
-	triggered_upkeep_modifier = {
-		key = scholars_pop
-		modifier_types = { mult add }
-		trigger = {
-			is_scope_valid = yes
-			has_job = researcher
-			is_biological = yes
 		}
 	}
 }
