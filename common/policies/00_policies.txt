@@ -339,7 +339,7 @@ orbital_bombardment = {
 	option = {
 		name = "orbital_bombardment_selective"
 		
-		potential = { has_valid_civic = civic_fanatic_purifiers }
+		potential = { NOT = {has_valid_civic = civic_fanatic_purifiers } }
 		
 		policy_flags = { orbital_bombardment_selective }
 		
